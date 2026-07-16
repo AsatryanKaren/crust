@@ -58,25 +58,6 @@ Available Scripts
 
 CommandDescriptionpnpm devStart the development serverpnpm buildType-check and build for productionpnpm previewPreview the production build locallypnpm eslint .Run linting
 
-Project Structure
-
-src/
-├── main.tsx
-├── App.tsx
-├── style.css
-├── pages/           # Route-level screens
-├── components/       # Reusable UI components
-├── api/               # API client and requests
-├── store/             # Global state (Zustand)
-├── i18n/
-│   └── locales/
-│       ├── hy/
-│       ├── ru/
-│       └── en/
-├── theme/             # Design tokens & Ant Design theme
-└── types/             # Shared TypeScript types
-
-Localization
 
 The app supports Armenian, Russian, and English. Translation strings are stored as JSON files under src/i18n/locales/.
 

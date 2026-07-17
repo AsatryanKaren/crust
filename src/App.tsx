@@ -1,5 +1,9 @@
+import { useTranslation } from 'react-i18next'
+
 function App() {
-  return <h1>bakery-project setup state</h1>
+  const { t } = useTranslation()
+
+  return <h1>{t('app.setupTitle')}</h1>
 }
 
 export default App

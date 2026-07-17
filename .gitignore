@@ -13,6 +13,9 @@ dist-ssr
 *.local
 .env
 
+# AI agent scratch (drafts, logs, plans — never commit)
+ailocal/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

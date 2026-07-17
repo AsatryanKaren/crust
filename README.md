@@ -58,6 +58,37 @@ Available Scripts
 
 CommandDescriptionpnpm devStart the development serverpnpm buildType-check and build for productionpnpm previewPreview the production build locallypnpm eslint .Run linting
 
+Project Structure
+
+src/
+├── main.tsx
+├── App.tsx
+├── style.css
+├── pages/           # Route-level screens
+├── components/       # Reusable UI components
+├── api/               # API client and requests
+├── store/             # Global state (Zustand)
+├── i18n/
+│   └── locales/
+│       ├── hy/
+│       ├── ru/
+│       └── en/
+├── theme/             # Design tokens & Ant Design theme
+└── types/             # Shared TypeScript types
+
+Code conventions (Cursor rules)
+
+Project coding conventions for agents and contributors live in `.cursor/rules/`:
+
+- `file-structure.mdc` — component folders, consts/types/utils/hooks, OwnProps → Props
+- `typescript.mdc` — `type` only, avoid `any` / `!`
+- `styles.mdc` — CSS modules, theme tokens, no inline styles
+- `i18n.mdc` — no hardcoded UI strings; use locale JSON
+- `code-quality.mdc` — English comments, tests, `ailocal/`, README setup docs
+
+Follow these when adding or changing code under `src/`. Agent scratch files go in `ailocal/` (gitignored).
+
+Localization
 
 The app supports Armenian, Russian, and English. Translation strings are stored as JSON files under src/i18n/locales/.
 

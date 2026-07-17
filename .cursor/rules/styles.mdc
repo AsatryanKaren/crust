@@ -1,0 +1,13 @@
+---
+description: Styling — CSS modules, tokens, no inline styles
+globs: src/**/*.{ts,tsx,css}
+alwaysApply: true
+---
+
+# Styles
+
+- No inline `style={...}` in JSX. Styles go through `.module.css` only. Rare exceptions must match existing project patterns.
+- Do not invent arbitrary HEX in styles when an Ant Design token or a variable from `src/theme/` already covers it. HEX only when no token fits.
+- Do not restate default typography. Base font-size / line-height come from the theme and inherit through the app tree.
+- In `.module.css`, set `font-size` / `line-height` only when the value differs from the default — then use theme tokens / modifiers, not hard-coded pixels.
+- If design changes the base size, update the theme token once; do not patch dozens of CSS files.

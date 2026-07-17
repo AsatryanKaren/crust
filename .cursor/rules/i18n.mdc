@@ -1,0 +1,13 @@
+---
+description: i18n — no hardcoded UI strings; use locale JSON
+globs: src/**/*.{ts,tsx,json}
+alwaysApply: true
+---
+
+# Localization (i18next)
+
+- No hardcoded user-facing strings in JSX/TS: placeholders, tooltips, modal titles, button labels, empty states, notifications, `aria-label`, etc. Everything the user sees goes through i18n.
+- Strings live under `src/i18n/locales/` (`hy`, `ru`, `en`). Add keys there; use `useTranslation` / `t(...)` in components.
+- Prefer the nearest existing locale namespace/file for the feature/page. Do not create a new locale file per tiny component when a parent/feature file already fits.
+- Keep the same key across `hy` / `ru` / `en` when adding copy. Source language for new keys is English unless the feature already established another convention.
+- Do not invent a parallel labels/Tanker flow — this project uses i18next JSON locales only.

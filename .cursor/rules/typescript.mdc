@@ -1,0 +1,13 @@
+---
+description: TypeScript conventions — type-only, no any, no non-null
+globs: src/**/*.{ts,tsx}
+alwaysApply: true
+---
+
+# TypeScript
+
+- Use only `type`, never `interface` (including OwnProps / Props).
+- Avoid non-null assertion (`!`); prefer narrowing, guards, optional chaining.
+- Avoid `any`. If unavoidable, leave a short English comment explaining why.
+- Prefer shared utility types from `src/types/` when they exist; do not redefine them locally.
+- Prefer `import type` for type-only imports (`verbatimModuleSyntax` is on).

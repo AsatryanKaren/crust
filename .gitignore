@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 .env
+CLAUDE.md
 
 # AI agent scratch (drafts, logs, plans — never commit)
 ailocal/

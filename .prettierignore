@@ -1,0 +1,8 @@
+node_modules
+dist
+dist-ssr
+pnpm-lock.yaml
+ailocal
+coverage
+*.local
+.env

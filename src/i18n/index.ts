@@ -1,15 +1,15 @@
-import i18n from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
-import { initReactI18next } from 'react-i18next';
+import i18n from 'i18next'
+import LanguageDetector from 'i18next-browser-languagedetector'
+import { initReactI18next } from 'react-i18next'
 
 import {
   DEFAULT_LANGUAGE,
   DEFAULT_NAMESPACE,
   SUPPORTED_LANGUAGES,
-} from './consts';
-import enCommon from './locales/en/common.json';
-import hyCommon from './locales/hy/common.json';
-import ruCommon from './locales/ru/common.json';
+} from './consts'
+import enCommon from './locales/en/common.json'
+import hyCommon from './locales/hy/common.json'
+import ruCommon from './locales/ru/common.json'
 
 void i18n
   .use(LanguageDetector)
@@ -31,6 +31,6 @@ void i18n
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],
     },
-  });
+  })
 
-export default i18n;
+export default i18n

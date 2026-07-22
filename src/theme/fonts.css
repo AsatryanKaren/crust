@@ -21,22 +21,22 @@
 
 @font-face {
   font-family: 'Montserrat ARM';
-  src: url('../fonts/Montserrat-Regular.otf') format('truetype');
+  src: url('../fonts/Montserratarm-Regular.otf') format('opentype');
   font-weight: 400;
 }
 @font-face {
   font-family: 'Montserrat ARM' ;
-  src: url('../fonts/Montserrat-Medium.otf') format('truetype');
+  src: url('../fonts/Montserratarm-Medium.otf') format('opentype');
   font-weight: 500;
 }
 @font-face {
   font-family: 'Montserrat ARM';
-  src: url('../fonts/Montserratarm-SemiBold.otf') format('truetype');
+  src: url('../fonts/Montserratarm-SemiBold.otf') format('opentype');
   font-weight: 600;
 }
 @font-face {
   font-family: 'Montserrat ARM';
-  src: url('../fonts/Montserratarm-Bold.otf') format('truetype');
+  src: url('../fonts/Montserratarm-Bold.otf') format('opentype');
   font-weight: 700;
 }
 

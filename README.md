@@ -8,7 +8,6 @@ Bakery Project is a mobile-first web application that lets customers browse a ba
 
 Features
 
-
 Full product catalog with categories, pricing, and availability
 Cart, checkout, and guest ordering
 Pickup and delivery flows
@@ -18,17 +17,14 @@ Location pages with interactive maps
 Multi-language support (Armenian, Russian, English)
 Installable PWA with offline fallback
 
-
 Tech Stack
 
 CategoryTechnologyFrameworkReact 19 + TypeScriptBuild ToolViteUI LibraryAnt Design 6RoutingReact Router 7Server StateTanStack QueryClient StateZustandForms & ValidationReact Hook Form + ZodLocalizationi18nextMapsLeaflet / React LeafletPWAvite-plugin-pwaLintingESLint + typescript-eslint
 
 Prerequisites
 
-
 Node.js ≥ 18.18
 pnpm
-
 
 Getting Started
 
@@ -64,17 +60,17 @@ src/
 ├── main.tsx
 ├── App.tsx
 ├── style.css
-├── pages/           # Route-level screens
-├── components/       # Reusable UI components
-├── api/               # API client and requests
-├── store/             # Global state (Zustand)
+├── pages/ # Route-level screens
+├── components/ # Reusable UI components
+├── api/ # API client and requests
+├── store/ # Global state (Zustand)
 ├── i18n/
-│   └── locales/
-│       ├── hy/
-│       ├── ru/
-│       └── en/
-├── theme/             # Design tokens & Ant Design theme
-└── types/             # Shared TypeScript types
+│ └── locales/
+│ ├── hy/
+│ ├── ru/
+│ └── en/
+├── theme/ # Design tokens & Ant Design theme
+└── types/ # Shared TypeScript types
 
 Code conventions (Cursor rules)
 
@@ -96,21 +92,17 @@ Progressive Web App
 
 The project is installable on supported devices, with:
 
-
 App manifest and icons
 Offline fallback page
 Fast repeat-load performance via service worker caching
-
 
 Icons are located at public/icons/icon-192.png and public/icons/icon-512.png.
 
 Roadmap
 
-
- Push notifications
- Loyalty points
- Order tracking improvements
-
+Push notifications
+Loyalty points
+Order tracking improvements
 
 License
 

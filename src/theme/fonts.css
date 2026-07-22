@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Montserrat ARM';
+  src: url('../fonts/Montserratarm-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Montserrat ARM';
+  src: url('../fonts/Montserratarm-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Montserrat ARM';
+  src: url('../fonts/Montserratarm-SemiBold.otf') format('opentype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Montserrat ARM';
+  src: url('../fonts/Montserratarm-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+:root {
+  --font-family-base: 'Montserrat', 'Montserrat ARM', system-ui, sans-serif;
+}

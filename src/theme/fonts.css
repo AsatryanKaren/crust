@@ -40,3 +40,6 @@
   font-weight: 700;
 }
 
+:root {
+  --font-family-base: 'Montserrat', 'Montserrat ARM', system-ui, sans-serif;
+}

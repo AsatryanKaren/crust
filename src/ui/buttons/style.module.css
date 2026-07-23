@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
+  box-sizing: border-box;
   border: 1px solid transparent;
   cursor: pointer;
   transition:
@@ -16,7 +16,9 @@
 }
 
 .small {
-  padding: 6px 12px;
+  height: 48px;
+  padding: 12px 24px;
+  gap: 8px;
   font-size: 14px;
 }
 
@@ -26,7 +28,9 @@
 }
 
 .large {
-  padding: 14px 24px;
+  height: 56px;
+  padding: 16px 32px;
+  gap: 12px;
   font-size: 18px;
 }
 

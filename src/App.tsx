@@ -1,8 +1,11 @@
+import HeroSection from './components/HeroSection'
 
 function App() {
-  const { t } = useTranslation()
+  
 
-  return <h1>{t('app.setupTitle')}</h1>
+  return (
+    <HeroSection/>
+  )
 }
 
 export default App

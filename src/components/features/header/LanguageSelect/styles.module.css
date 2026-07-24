@@ -1,0 +1,63 @@
+.root {
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+}
+
+.trigger {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--header-text);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-b-s-regular);
+  font-weight: 400;
+  gap: 4px;
+  line-height: var(--line-height-body-b-s-regular);
+  min-height: 44px;
+  padding: 0 4px;
+}
+
+.chevron {
+  font-size: 10px;
+}
+
+.menu {
+  background: var(--header-bg);
+  border: 1px solid var(--header-border);
+  box-shadow: 0 8px 24px var(--color-ink-border);
+  left: 0;
+  list-style: none;
+  margin: 0;
+  min-width: 100%;
+  padding: 4px 0;
+  position: absolute;
+  top: calc(100% + 4px);
+  z-index: 20;
+}
+
+.menuUp {
+  bottom: calc(100% + 4px);
+  top: auto;
+}
+
+.option {
+  background: transparent;
+  border: 0;
+  color: var(--header-text);
+  cursor: pointer;
+  display: block;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-b-s-regular);
+  line-height: var(--line-height-body-b-s-regular);
+  padding: 8px 16px;
+  text-align: left;
+  width: 100%;
+}
+
+.option:hover,
+.optionActive {
+  color: var(--header-accent);
+}

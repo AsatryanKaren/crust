@@ -1,9 +1,32 @@
 {
+  "brand": "Crust",
   "app": {
     "setupTitle": "Հացաբուլկեղենի նախագիծ — պատրաստ է"
   },
+  "header": {
+    "mainNav": "Հիմնական ընտրացանկ",
+    "nav": {
+      "home": "Գլխավոր",
+      "catalog": "Կատալոգ",
+      "order": "Պատվեր",
+      "reservation": "Ամրագրում",
+      "about": "Մեր մասին",
+      "locations": "Մասնաճյուղեր",
+      "contact": "Կապ"
+    },
+    "cart": "Զամբյուղ",
+    "search": "Որոնել",
+    "wishlist": "Ցանկ",
+    "openMenu": "Բացել ընտրացանկը",
+    "closeMenu": "Փակել ընտրացանկը",
+    "language": "Լեզու",
+    "languages": {
+      "en": "EN",
+      "hy": "AM",
+      "ru": "RU"
+    }
+  },
   "footer": {
-    "brand": "Crust",
     "contact": {
       "title": "Կապ",
       "city": "Երևան, Հայաստան",

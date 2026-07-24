@@ -41,5 +41,5 @@
 }
 
 .link:hover {
-  color: var(--footer-text);
+  color: var(--color-accent);
 }

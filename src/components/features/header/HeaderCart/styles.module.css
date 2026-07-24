@@ -1,0 +1,40 @@
+.root {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--header-text);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0;
+  position: relative;
+}
+
+.iconWrap {
+  display: inline-flex;
+  font-size: 20px;
+  line-height: 1;
+  position: relative;
+}
+
+.badge {
+  align-items: center;
+  background: var(--header-accent);
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: var(--color-paper);
+  display: inline-flex;
+  font-family: var(--font-family-base);
+  font-size: 10px;
+  font-weight: 600;
+  height: 16px;
+  justify-content: center;
+  line-height: 1;
+  min-width: 16px;
+  padding-inline: 5px;
+  position: absolute;
+  right: -8px;
+  top: -6px;
+}

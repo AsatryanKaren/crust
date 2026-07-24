@@ -1,0 +1,9 @@
+.root {
+  color: inherit;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-brand-regular);
+  font-weight: 400;
+  line-height: var(--line-height-brand-regular);
+  text-decoration: none;
+}
+

@@ -1,9 +1,32 @@
 {
+  "brand": "Crust",
   "app": {
     "setupTitle": "Bakery project — setup ready"
   },
+  "header": {
+    "mainNav": "Main navigation",
+    "nav": {
+      "home": "Home",
+      "catalog": "Catalog",
+      "order": "Order",
+      "reservation": "Reservation",
+      "about": "About",
+      "locations": "Locations",
+      "contact": "Contact"
+    },
+    "cart": "Cart",
+    "search": "Search",
+    "wishlist": "Wishlist",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "languages": {
+      "en": "EN",
+      "hy": "AM",
+      "ru": "RU"
+    }
+  },
   "footer": {
-    "brand": "Crust",
     "contact": {
       "title": "Contact Us",
       "city": "Yerevan, Armenia",

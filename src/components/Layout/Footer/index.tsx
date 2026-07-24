@@ -1,5 +1,5 @@
+import { BrandName } from '../../_shared/BrandName'
 import { FooterBottom } from '../../features/footer/FooterBottom'
-import { FooterBrand } from '../../features/footer/FooterBrand'
 import { FooterColumn } from '../../features/footer/FooterColumn'
 import { FooterSubscribe } from '../../features/footer/FooterSubscribe'
 import {
@@ -14,7 +14,7 @@ export const Footer: Props = () => {
     <footer className={styles.root}>
       <div className={styles.inner}>
         <div className={styles.columns}>
-          <FooterBrand />
+          <BrandName />
           <FooterColumn
             titleKey="footer.contact.title"
             items={FOOTER_CONTACT_ITEMS}

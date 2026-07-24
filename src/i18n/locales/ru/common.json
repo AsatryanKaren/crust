@@ -1,9 +1,32 @@
 {
+  "brand": "Crust",
   "app": {
     "setupTitle": "Проект пекарни — готов к работе"
   },
+  "header": {
+    "mainNav": "Основная навигация",
+    "nav": {
+      "home": "Главная",
+      "catalog": "Каталог",
+      "order": "Заказ",
+      "reservation": "Бронирование",
+      "about": "О нас",
+      "locations": "Адреса",
+      "contact": "Контакты"
+    },
+    "cart": "Корзина",
+    "search": "Поиск",
+    "wishlist": "Избранное",
+    "openMenu": "Открыть меню",
+    "closeMenu": "Закрыть меню",
+    "language": "Язык",
+    "languages": {
+      "en": "EN",
+      "hy": "AM",
+      "ru": "RU"
+    }
+  },
   "footer": {
-    "brand": "Crust",
     "contact": {
       "title": "Контакты",
       "city": "Ереван, Армения",

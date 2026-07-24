@@ -1,5 +1,33 @@
 {
   "app": {
     "setupTitle": "Проект пекарни — готов к работе"
+  },
+  "footer": {
+    "brand": "Crust",
+    "contact": {
+      "title": "Контакты",
+      "city": "Ереван, Армения",
+      "street": "улица Арами",
+      "email": "Crust@gmail.com",
+      "phone": "+374 00 000 000"
+    },
+    "about": {
+      "title": "О нас",
+      "catalog": "Каталог",
+      "order": "Заказ",
+      "reservation": "Бронирование"
+    },
+    "subscribe": {
+      "title": "Подписаться",
+      "description": "Получайте последние новости и предложения",
+      "emailPlaceholder": "Email",
+      "emailAriaLabel": "Адрес электронной почты",
+      "submit": "Подписаться"
+    },
+    "privacyPolicy": "Конфиденциальность и политика",
+    "social": {
+      "telegram": "Telegram",
+      "facebook": "Facebook"
+    }
   }
 }

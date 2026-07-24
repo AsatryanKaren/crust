@@ -42,4 +42,8 @@
 
 :root {
   --font-family-base: 'Montserrat', 'Montserrat ARM', system-ui, sans-serif;
+  --font-size-body-b-s-regular: 14px;
+  --line-height-body-b-s-regular: 22px;
+  --font-size-body-b-m-semibold: 16px;
+  --line-height-body-b-m-semibold: 24px;
 }

@@ -1,0 +1,25 @@
+.root {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  color: var(--footer-text-muted);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link:hover {
+  color: var(--footer-text);
+}
+
+@media (max-width: 600px) {
+  .root {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

@@ -1,0 +1,24 @@
+.list {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  align-items: center;
+  background: transparent;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  text-decoration: none;
+  width: 24px;
+}
+
+.icon {
+  display: block;
+  height: 24px;
+  object-fit: contain;
+  width: 24px;
+}

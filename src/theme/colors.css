@@ -1,0 +1,9 @@
+:root {
+  --footer-bg: #1d1715;
+  --footer-text: #fff;
+  --footer-text-muted: rgba(255, 255, 255, 0.65);
+  --footer-border: rgba(255, 255, 255, 0.35);
+  --footer-input-bg: transparent;
+  --footer-button-bg: #fff;
+  --footer-button-text: #1d1715;
+}

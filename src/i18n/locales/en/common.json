@@ -1,5 +1,33 @@
 {
   "app": {
     "setupTitle": "Bakery project — setup ready"
+  },
+  "footer": {
+    "brand": "Crust",
+    "contact": {
+      "title": "Contact Us",
+      "city": "Yerevan, Armenia",
+      "street": "Arami street",
+      "email": "Crust@gmail.com",
+      "phone": "+374 00 000 000"
+    },
+    "about": {
+      "title": "About Us",
+      "catalog": "Catalog",
+      "order": "Order",
+      "reservation": "Reservation"
+    },
+    "subscribe": {
+      "title": "Subscribe now",
+      "description": "Get the latest updates and offers",
+      "emailPlaceholder": "Email",
+      "emailAriaLabel": "Email address",
+      "submit": "Subscribe"
+    },
+    "privacyPolicy": "Privacy & Policy",
+    "social": {
+      "telegram": "Telegram",
+      "facebook": "Facebook"
+    }
   }
 }

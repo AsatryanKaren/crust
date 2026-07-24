@@ -1,5 +1,33 @@
 {
   "app": {
     "setupTitle": "Հացաբուլկեղենի նախագիծ — պատրաստ է"
+  },
+  "footer": {
+    "brand": "Crust",
+    "contact": {
+      "title": "Կապ",
+      "city": "Երևան, Հայաստան",
+      "street": "Արամի փողոց",
+      "email": "Crust@gmail.com",
+      "phone": "+374 00 000 000"
+    },
+    "about": {
+      "title": "Մեր մասին",
+      "catalog": "Կատալոգ",
+      "order": "Պատվեր",
+      "reservation": "Ամրագրում"
+    },
+    "subscribe": {
+      "title": "Բաժանորդագրվել",
+      "description": "Ստացեք վերջին նորություններն ու առաջարկները",
+      "emailPlaceholder": "Էլ. փոստ",
+      "emailAriaLabel": "Էլեկտրոնային փոստ",
+      "submit": "Բաժանորդագրվել"
+    },
+    "privacyPolicy": "Գաղտնիություն և քաղաքականություն",
+    "social": {
+      "telegram": "Telegram",
+      "facebook": "Facebook"
+    }
   }
 }

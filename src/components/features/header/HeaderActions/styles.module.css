@@ -1,0 +1,37 @@
+.root {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.iconButton {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--header-text);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 18px;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0;
+}
+
+.iconButton:hover {
+  color: var(--header-accent);
+}
+
+.desktopOnly {
+  display: inline-flex;
+}
+
+@media (max-width: 1200px) {
+  .desktopOnly {
+    display: none;
+  }
+
+  .root {
+    gap: 0;
+  }
+}

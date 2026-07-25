@@ -1,5 +1,56 @@
 {
+  "brand": "Crust",
   "app": {
     "setupTitle": "Հացաբուլկեղենի նախագիծ — պատրաստ է"
+  },
+  "header": {
+    "mainNav": "Հիմնական ընտրացանկ",
+    "nav": {
+      "home": "Գլխավոր",
+      "catalog": "Կատալոգ",
+      "order": "Պատվեր",
+      "reservation": "Ամրագրում",
+      "about": "Մեր մասին",
+      "locations": "Մասնաճյուղեր",
+      "contact": "Կապ"
+    },
+    "cart": "Զամբյուղ",
+    "search": "Որոնել",
+    "wishlist": "Ցանկ",
+    "openMenu": "Բացել ընտրացանկը",
+    "closeMenu": "Փակել ընտրացանկը",
+    "language": "Լեզու",
+    "languages": {
+      "en": "EN",
+      "hy": "AM",
+      "ru": "RU"
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Կապ",
+      "city": "Երևան, Հայաստան",
+      "street": "Արամի փողոց",
+      "email": "Crust@gmail.com",
+      "phone": "+374 00 000 000"
+    },
+    "about": {
+      "title": "Մեր մասին",
+      "catalog": "Կատալոգ",
+      "order": "Պատվեր",
+      "reservation": "Ամրագրում"
+    },
+    "subscribe": {
+      "title": "Բաժանորդագրվել",
+      "description": "Ստացեք վերջին նորություններն ու առաջարկները",
+      "emailPlaceholder": "Էլ. փոստ",
+      "emailAriaLabel": "Էլեկտրոնային փոստ",
+      "submit": "Բաժանորդագրվել"
+    },
+    "privacyPolicy": "Գաղտնիություն և քաղաքականություն",
+    "social": {
+      "telegram": "Telegram",
+      "facebook": "Facebook"
+    }
   }
 }

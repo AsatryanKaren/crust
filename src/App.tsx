@@ -1,10 +1,11 @@
 import HeroSection from './components/HeroSection'
+import { AppLayout } from './components/Layout/AppLayout'
 
 function App() {
-  
-
   return (
-    <HeroSection/>
+    <AppLayout>
+      <HeroSection />
+    </AppLayout>
   )
 }
 

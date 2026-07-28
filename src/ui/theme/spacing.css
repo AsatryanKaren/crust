@@ -1,0 +1,18 @@
+:root {
+  --layout-main-margin-x: 96px;
+  --layout-main-margin-y: 96px;
+  --footer-subscribe-width: 366px;
+  --footer-subscribe-height: 48px;
+}
+
+@media (max-width: 960px) {
+  :root {
+    --layout-main-margin-x: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --layout-main-margin-x: 24px;
+  }
+}

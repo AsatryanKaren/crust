@@ -10,4 +10,5 @@ module.exports = {
   },
   setupFilesAfterEnv: ['<rootDir>/src/test/setupTests.ts'],
   testPathIgnorePatterns: ['/node_modules/', '/dist/'],
+  transformIgnorePatterns: ['node_modules/(?!.*@ant-design[\\/](?:colors|fast-color)[\\/])'],
 }

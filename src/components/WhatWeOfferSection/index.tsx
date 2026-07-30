@@ -1,4 +1,4 @@
-import { ExportOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons'
+import { ArrowRightOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons'
 import { useCallback, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -60,7 +60,7 @@ const WhatWeOfferSection: Props = () => {
       <div className={styles.cta}>
         <Link className={styles.ctaLink} to={CATALOG_ROUTE}>
           {t('whatWeOffer.exploreCategories')}
-          <ExportOutlined className={styles.ctaIcon} aria-hidden />
+          <ArrowRightOutlined className={styles.ctaIcon} aria-hidden />
         </Link>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { ExportOutlined } from '@ant-design/icons'
+import { ArrowRightOutlined  } from '@ant-design/icons'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { CATALOG_ROUTE, CATEGORY_IMAGES } from '../../consts'
@@ -22,7 +22,7 @@ const CategoryCard: Props = ({ categoryId }) => {
       />
       <div className={styles.label}>
         <span>{title}</span>
-        <ExportOutlined className={styles.icon} aria-hidden />
+        <ArrowRightOutlined className={styles.icon} aria-hidden />
       </div>
     </Link>
   )

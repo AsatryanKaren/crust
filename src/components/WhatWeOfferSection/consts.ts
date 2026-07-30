@@ -1,7 +1,7 @@
-import breadsImage from '../../images/categories/breads.jpg'
-import pastriesImage from '../../images/categories/pastries.jpg'
-import cakesImage from '../../images/categories/cakes.jpg'
-import cocktailsImage from '../../images/categories/cocktails.jpg'
+import breadsImage from '../../assets/images/WhatWeOfferSection/breads.jpg'
+import pastriesImage from '../../assets/images/WhatWeOfferSection/pastries.jpg'
+import cakesImage from '../../assets/images/WhatWeOfferSection/cakes.jpg'
+import cocktailsImage from '../../assets/images/WhatWeOfferSection/cocktails.jpg'
 
 export const CATEGORY_IDS = ['breads', 'pastries', 'cakes', 'cocktails'] as const
 

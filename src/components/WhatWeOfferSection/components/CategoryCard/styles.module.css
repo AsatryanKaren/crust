@@ -33,6 +33,7 @@
   flex-shrink: 0;
   font-size: 14px;
   color: var(--color-accent);
+  transform: rotate(308deg);
 }
 
 .card:hover .label {

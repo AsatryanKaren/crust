@@ -1,6 +1,6 @@
 import styles from './style.module.css';
 import { useTranslation } from 'react-i18next'
-import heroBackground from '../../images/heroback.jpg'
+import heroBackground from '../../assets/images/heroback.jpg'
 import Button from '../../ui/buttons'
 
 

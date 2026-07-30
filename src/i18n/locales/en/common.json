@@ -3,6 +3,27 @@
   "app": {
     "setupTitle": "Bakery project — setup ready"
   },
+  "whatWeOffer": {
+    "title": "What We Offer",
+    "exploreCategories": "Explore Categories",
+    "prevCategories": "Previous categories",
+    "nextCategories": "Next categories",
+    "categoryLinkAriaLabel": "Browse {{category}}",
+    "categories": {
+      "breads": {
+        "title": "Breads"
+      },
+      "pastries": {
+        "title": "Pastries"
+      },
+      "cakes": {
+        "title": "Cakes"
+      },
+      "cocktails": {
+        "title": "Cocktails"
+      }
+    }
+  },
   "heroSection": {
     "header-1st-line": "Freshly Baked,",
     "header-2nd-line": "Daily.",

@@ -3,6 +3,27 @@
   "app": {
     "setupTitle": "Проект пекарни — готов к работе"
   },
+  "whatWeOffer": {
+    "title": "Что мы предлагаем",
+    "exploreCategories": "Смотреть категории",
+    "prevCategories": "Предыдущие категории",
+    "nextCategories": "Следующие категории",
+    "categoryLinkAriaLabel": "Смотреть {{category}}",
+    "categories": {
+      "breads": {
+        "title": "Хлеб"
+      },
+      "pastries": {
+        "title": "Выпечка"
+      },
+      "cakes": {
+        "title": "Торты"
+      },
+      "cocktails": {
+        "title": "Коктейли"
+      }
+    }
+  },
   "heroSection": {
     "header-1st-line": "Свежая выпечка,",
     "header-2nd-line": "каждый день.",

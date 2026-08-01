@@ -1,12 +1,13 @@
 import type { FooterColumnItem } from './types'
 import facebookIcon from '../../../assets/images/Facebook.png'
 import telegramIcon from '../../../assets/images/Telegram.png'
+import { paths } from '../../../routes/paths'
 
 export const FOOTER_ROUTES = {
-  catalog: '/catalog',
-  order: '/order',
-  reservation: '/reservation',
-  privacyPolicy: '/privacy-policy',
+  catalog: paths.catalog,
+  order: paths.order,
+  reservation: paths.reservation,
+  privacyPolicy: paths.privacyPolicy,
 } as const
 
 export const FOOTER_SOCIAL_LINKS = [

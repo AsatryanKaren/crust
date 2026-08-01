@@ -61,5 +61,110 @@
       "telegram": "Telegram",
       "facebook": "Facebook"
     }
+  },
+  "routes": {
+    "loading": "Загрузка…"
+  },
+  "pages": {
+    "catalog": {
+      "title": "Каталог",
+      "description": "Смотрите продукцию нашей пекарни."
+    },
+    "productDetails": {
+      "title": "Товар",
+      "description": "Здесь появятся детали товара."
+    },
+    "cart": {
+      "title": "Корзина",
+      "description": "Проверьте товары перед оформлением."
+    },
+    "order": {
+      "title": "Заказ",
+      "description": "Выберите самовывоз или доставку."
+    },
+    "checkout": {
+      "title": "Оформление",
+      "description": "Завершите заказ и оплату."
+    },
+    "reservation": {
+      "title": "Бронирование",
+      "description": "Забронируйте столик в Crust."
+    },
+    "locations": {
+      "title": "Адреса",
+      "description": "Найдите наши пекарни."
+    },
+    "about": {
+      "title": "О нас",
+      "description": "Узнайте больше о пекарне Crust."
+    },
+    "contact": {
+      "title": "Контакты",
+      "description": "Свяжитесь с нами."
+    },
+    "privacyPolicy": {
+      "title": "Конфиденциальность и политика",
+      "description": "Как мы обрабатываем ваши данные."
+    },
+    "auth": {
+      "login": {
+        "title": "Вход",
+        "description": "Войдите в аккаунт Crust."
+      },
+      "register": {
+        "title": "Регистрация",
+        "description": "Создайте клиентский аккаунт."
+      },
+      "forgotPassword": {
+        "title": "Забыли пароль",
+        "description": "Запросите ссылку для сброса пароля."
+      },
+      "resetPassword": {
+        "title": "Сброс пароля",
+        "description": "Выберите новый пароль."
+      }
+    },
+    "account": {
+      "title": "Мой аккаунт",
+      "description": "Управляйте своим клиентским аккаунтом."
+    },
+    "accountOrders": {
+      "title": "История заказов",
+      "description": "Просматривайте и управляйте заказами."
+    },
+    "admin": {
+      "products": {
+        "title": "Админ — Товары",
+        "description": "Управление товарами и ценами."
+      },
+      "categories": {
+        "title": "Админ — Категории",
+        "description": "Управление категориями товаров."
+      },
+      "availability": {
+        "title": "Админ — Доступность",
+        "description": "Управление доступностью товаров."
+      },
+      "orders": {
+        "title": "Админ — Заказы",
+        "description": "Управление заказами клиентов."
+      },
+      "reservations": {
+        "title": "Админ — Бронирования",
+        "description": "Управление бронированиями столиков."
+      },
+      "locations": {
+        "title": "Админ — Адреса",
+        "description": "Управление адресами пекарен."
+      },
+      "content": {
+        "title": "Админ — Контент",
+        "description": "Управление содержимым сайта."
+      }
+    },
+    "notFound": {
+      "title": "Страница не найдена",
+      "description": "Запрошенная страница не существует."
+    }
   }
 }

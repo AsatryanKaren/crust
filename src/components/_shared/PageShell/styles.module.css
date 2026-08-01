@@ -1,0 +1,11 @@
+.root {
+  padding-block: 48px;
+}
+
+.title {
+  margin: 0;
+}
+
+.description {
+  margin-block-start: 12px;
+}

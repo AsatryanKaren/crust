@@ -1,12 +1,9 @@
-import HeroSection from './components/HeroSection'
-import { AppLayout } from './components/Layout/AppLayout'
+import { RouterProvider } from 'react-router-dom'
+
+import { router } from './routes/router'
 
 function App() {
-  return (
-    <AppLayout>
-      <HeroSection />
-    </AppLayout>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App

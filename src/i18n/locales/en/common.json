@@ -61,5 +61,110 @@
       "telegram": "Telegram",
       "facebook": "Facebook"
     }
+  },
+  "routes": {
+    "loading": "Loading…"
+  },
+  "pages": {
+    "catalog": {
+      "title": "Catalog",
+      "description": "Browse our bakery products."
+    },
+    "productDetails": {
+      "title": "Product",
+      "description": "Product details will appear here."
+    },
+    "cart": {
+      "title": "Cart",
+      "description": "Review items before checkout."
+    },
+    "order": {
+      "title": "Order",
+      "description": "Choose pickup or delivery."
+    },
+    "checkout": {
+      "title": "Checkout",
+      "description": "Complete your order and payment."
+    },
+    "reservation": {
+      "title": "Reservation",
+      "description": "Reserve a table at Crust."
+    },
+    "locations": {
+      "title": "Locations",
+      "description": "Find our bakery locations."
+    },
+    "about": {
+      "title": "About",
+      "description": "Learn more about Crust bakery."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with us."
+    },
+    "privacyPolicy": {
+      "title": "Privacy & Policy",
+      "description": "How we handle your data."
+    },
+    "auth": {
+      "login": {
+        "title": "Sign in",
+        "description": "Sign in to your Crust account."
+      },
+      "register": {
+        "title": "Create account",
+        "description": "Register for a customer account."
+      },
+      "forgotPassword": {
+        "title": "Forgot password",
+        "description": "Request a password reset link."
+      },
+      "resetPassword": {
+        "title": "Reset password",
+        "description": "Choose a new password."
+      }
+    },
+    "account": {
+      "title": "My account",
+      "description": "Manage your customer account."
+    },
+    "accountOrders": {
+      "title": "Order history",
+      "description": "View and manage your orders."
+    },
+    "admin": {
+      "products": {
+        "title": "Admin — Products",
+        "description": "Manage products and prices."
+      },
+      "categories": {
+        "title": "Admin — Categories",
+        "description": "Manage product categories."
+      },
+      "availability": {
+        "title": "Admin — Availability",
+        "description": "Manage product availability."
+      },
+      "orders": {
+        "title": "Admin — Orders",
+        "description": "Manage customer orders."
+      },
+      "reservations": {
+        "title": "Admin — Reservations",
+        "description": "Manage table reservations."
+      },
+      "locations": {
+        "title": "Admin — Locations",
+        "description": "Manage bakery locations."
+      },
+      "content": {
+        "title": "Admin — Content",
+        "description": "Manage website content."
+      }
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you requested does not exist."
+    }
   }
 }

@@ -8,16 +8,27 @@ import './ui/theme/spacing.css'
 import './ui/colors/colors.css'
 import { ConfigProvider } from 'antd'
 
-createRoot(document.getElementById('app')!).render(
-  <StrictMode>
-    <ConfigProvider
-      theme={{
-        token: {
-          fontFamily: 'var(--font-family-base)',
-        },
-      }}
-    >
-      <App />
-    </ConfigProvider>
-  </StrictMode>,
-)
+async function enableMocking() {
+  if (!import.meta.env.DEV) {
+    return
+  }
+
+  const { worker } = await import('./mocks/browser')
+  return worker.start({ onUnhandledRequest: 'bypass' })
+}
+
+void enableMocking().then(() => {
+  createRoot(document.getElementById('app')!).render(
+    <StrictMode>
+      <ConfigProvider
+        theme={{
+          token: {
+            fontFamily: 'var(--font-family-base)',
+          },
+        }}
+      >
+        <App />
+      </ConfigProvider>
+    </StrictMode>,
+  )
+})

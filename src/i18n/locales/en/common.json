@@ -87,8 +87,23 @@
       "description": "Complete your order and payment."
     },
     "reservation": {
-      "title": "Reservation",
-      "description": "Reserve a table at Crust."
+      "title": "Reserve a table",
+      "description": "Secure your spot in our artisanal sanctuary.",
+      "location": "Location",
+      "guests": "Guests",
+      "date": "Date",
+      "time": "Time",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+      "phoneNumber": "Phone number",
+      "phonePlaceholder": "+374 (00) 000-000",
+      "specialRequests": "Special requests",
+      "specialRequestsPlaceholder": "Dietary requirements or special occasions...",
+      "yourSelection": "Your Selection",
+      "selectionSummary": "{{guests}} Guests · {{date}}, {{time}} at {{location}}",
+      "freeCancellation": "Free cancellation up to 24h before",
+      "confirmButton": "Confirm Reservation",
+      "disclaimer": "By confirming, you agree to our Terms of Service and Dining Policy."
     },
     "locations": {
       "title": "Locations",

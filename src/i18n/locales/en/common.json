@@ -103,7 +103,10 @@
       "selectionSummary": "{{guests}} Guests · {{date}}, {{time}} at {{location}}",
       "freeCancellation": "Free cancellation up to 24h before",
       "confirmButton": "Confirm Reservation",
-      "disclaimer": "By confirming, you agree to our Terms of Service and Dining Policy."
+      "disclaimer": "By confirming, you agree to our Terms of Service and Dining Policy.",
+      "atmosphereLabel": "OUR ATMOSPHERE",
+      "atmosphereLocation": "Crust Abovyan",
+      "successMessage": "Your reservation was submitted successfully!"
     },
     "locations": {
       "title": "Locations",

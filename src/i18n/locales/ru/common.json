@@ -103,7 +103,10 @@
       "selectionSummary": "{{guests}} гостей · {{date}}, {{time}} в {{location}}",
       "freeCancellation": "Бесплатная отмена за 24 часа",
       "confirmButton": "Подтвердить бронирование",
-      "disclaimer": "Подтверждая, вы соглашаетесь с нашими Условиями обслуживания и Политикой ресторана."
+      "disclaimer": "Подтверждая, вы соглашаетесь с нашими Условиями обслуживания и Политикой ресторана.",
+      "atmosphereLabel": "НАША АТМОСФЕРА",
+      "atmosphereLocation": "Crust Abovyan",
+      "successMessage": "Ваше бронирование успешно отправлено!"
     },
     "locations": {
       "title": "Адреса",

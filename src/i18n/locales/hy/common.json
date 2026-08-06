@@ -103,7 +103,10 @@
       "selectionSummary": "{{guests}} հյուր · {{date}}, {{time}}, {{location}}",
       "freeCancellation": "Անվճար չեղարկում մինչև 24 ժամ առաջ",
       "confirmButton": "Հաստատել ամրագրումը",
-      "disclaimer": "Հաստատելով՝ դուք համաձայնվում եք մեր Ծառայության պայմաններին և Սննդի քաղաքականությանը։"
+      "disclaimer": "Հաստատելով՝ դուք համաձայնվում եք մեր Ծառայության պայմաններին և Սննդի քաղաքականությանը։",
+      "atmosphereLabel": "ՄԵՐ ՄԹՆՈԼՈՐՏԸ",
+      "atmosphereLocation": "Crust Abovyan",
+      "successMessage": "Ձեր ամրագրումը հաջողությամբ ուղարկվեց!"
     },
     "locations": {
       "title": "Մասնաճյուղեր",

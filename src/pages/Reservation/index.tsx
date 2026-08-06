@@ -1,5 +1,8 @@
 // import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
+import img from '../../assets/images/reserveTable.jpg';
+import overlay from '../../assets/images/Overlay.png';
+import icon from "../../assets/images/Icon.png"
 
 import type { Props } from './types'
 import styles from './styles.module.css'
@@ -15,13 +18,16 @@ export const Reservation: Props = () => {
       <form className={styles.form}>
         <div className={styles.infoPanel}>
 
-          <h1 className={styles.heading}>{t('pages.reservation.title')}</h1>
-          <p className={styles.text}> {t('pages.reservation.description')}</p>
+          <div className={styles.titleGroup}>
+            <h1 className={styles.heading}>{t('pages.reservation.title')}</h1>
+            <p className={styles.text}>{t('pages.reservation.description')}</p>
+          </div>
 
           <div className={styles.field}>
             <label className={styles.fieldLabel} htmlFor="location">{t('pages.reservation.location')}</label>
             <select id="location" className={styles.select}>
-
+              <option value="abovyan">Abovyan St</option>
+              <option value="arami">Arami St</option>
             </select>
           </div>
 
@@ -71,12 +77,12 @@ export const Reservation: Props = () => {
 
         <div className={styles.confirmationPanel}>
 
-          <img src="" alt="" className={styles.atmosphereImage} />
+          <img src={img} alt="reservation table" className={styles.atmosphereImage} />
           <div className={styles.selectionCard}>
-            <img src="" alt="" className={styles.selectionIcon} />
+            <img src={overlay} alt="fork image" className={styles.selectionIcon} />
             <h2 className={styles.selectionTitle}>{t('pages.reservation.yourSelection')}</h2>
             <p className={styles.selectionSummary}></p>
-            <p className={styles.cancellationNote}>{t('pages.reservation.freeCancellation')}</p>
+            <p className={styles.cancellationNote}><img src={icon} alt="icon"  />{t('pages.reservation.freeCancellation')}</p>
             <button type="submit" className={styles.confirmButton}>{t('pages.reservation.confirmButton')}</button>
           </div>
           <p className={styles.disclaimer}>{t('pages.reservation.disclaimer')}</p>

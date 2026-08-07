@@ -87,8 +87,34 @@
       "description": "Ավարտեք պատվերն ու վճարումը։"
     },
     "reservation": {
-      "title": "Ամրագրում",
-      "description": "Ամրագրեք սեղան Crust-ում։"
+      "title": "Ամրագրել սեղան",
+      "description": "Ամրագրեք սեղան Crust-ում։",
+      "location": "Մասնաճյուղ",
+      "guests": "Հյուրեր",
+      "date": "Ամսաթիվ",
+      "time": "Ժամ",
+      "fullName": "Անուն Ազգանուն",
+      "fullNamePlaceholder": "Հովհաննես Պողոսյան",
+      "phoneNumber": "Հեռախոսահամար",
+      "phonePlaceholder": "+374 (00) 000-000",
+      "specialRequests": "Հատուկ պահանջներ",
+      "specialRequestsPlaceholder": "Սննդակարգային պահանջներ կամ հատուկ առիթներ...",
+      "yourSelection": "Ձեր ընտրությունը",
+      "selectionSummary": "{{guests}} հյուր · {{date}}, {{time}}, {{location}}",
+      "freeCancellation": "Անվճար չեղարկում մինչև 24 ժամ առաջ",
+      "confirmButton": "Հաստատել ամրագրումը",
+      "disclaimer": "Հաստատելով՝ դուք համաձայնվում եք մեր Ծառայության պայմաններին և Սննդի քաղաքականությանը։",
+      "atmosphereLabel": "ՄԵՐ ՄԹՆՈԼՈՐՏԸ",
+      "atmosphereLocation": "Crust Abovyan",
+      "successMessage": "Ձեր ամրագրումը հաջողությամբ ուղարկվեց!",
+      "errors": {
+        "locationRequired": "Խնդրում ենք ընտրել մասնաճյուղ",
+        "guestsRequired": "Խնդրում ենք նշել հյուրերի քանակը",
+        "dateRequired": "Խնդրում ենք ընտրել ամսաթիվ",
+        "timeRequired": "Խնդրում ենք ընտրել ժամ",
+        "fullNameRequired": "Անուն ազգանունը պարտադիր է",
+        "phoneRequired": "Հեռախոսահամարը պարտադիր է"
+      }
     },
     "locations": {
       "title": "Մասնաճյուղեր",

@@ -19,7 +19,14 @@ export const Reservation: Props = () => {
 
   const { t } = useTranslation()
 
-  const { register, handleSubmit, watch, setValue, reset } = useForm<ReservationPayload>({
+  const {
+    register,
+    handleSubmit,
+    watch,
+    setValue,
+    reset,
+    formState: { errors },
+  } = useForm<ReservationPayload>({
     defaultValues: {
       location: LOCATION_OPTIONS[0].value,
       guests: '',
@@ -78,36 +85,40 @@ export const Reservation: Props = () => {
             <select
               id="location"
               className={styles.select}
-              {...register('location')}
+              {...register('location', { required: t('pages.reservation.errors.locationRequired') })}
             >
               {LOCATION_OPTIONS.map(({ value, label }) => (
                 <option key={value} value={value}>{label}</option>
               ))}
             </select>
+            {errors.location && <p className={styles.errorMessage} role="alert">{errors.location.message}</p>}
           </div>
 
           <div className={styles.field}>
             <span id="guests-label" className={styles.fieldLabel}>{t('pages.reservation.guests')}</span>
             <div role="group" aria-labelledby="guests-label" id='guests' className={styles.guests}>
+              <input type="hidden" {...register('guests', { required: t('pages.reservation.errors.guestsRequired') })} />
               {GUEST_OPTIONS.map((value) => (
                 <button
                   type="button"
                   key={value}
-                  onClick={() => setValue('guests', value)}
+                  onClick={() => setValue('guests', value, { shouldValidate: true })}
                   className={value === guestCount ? styles.selected : undefined}
                 >
                   {value}
                 </button>
               ))}
             </div>
+            {errors.guests && <p className={styles.errorMessage} role="alert">{errors.guests.message}</p>}
           </div>
 
           <div className={styles.field}>
             <span id="date-label" className={styles.fieldLabel}>{t('pages.reservation.date')}</span>
             <div role="group" aria-labelledby="date-label" id='date' className={styles.date}>
+              <input type="hidden" {...register('date', { required: t('pages.reservation.errors.dateRequired') })} />
               {reservationDetails?.dates.map(({ day }) => (
                 <button
-                  onClick={() => setValue('date', day)}
+                  onClick={() => setValue('date', day, { shouldValidate: true })}
                   type="button"
                   key={day}
                   className={day === selectesDay ? styles.selected : undefined}
@@ -116,33 +127,38 @@ export const Reservation: Props = () => {
                 </button>
               ))}
             </div>
+            {errors.date && <p className={styles.errorMessage} role="alert">{errors.date.message}</p>}
           </div>
 
           <div className={styles.field}>
             <span id="time-label" className={styles.fieldLabel}>{t('pages.reservation.time')}</span>
             <div role="group" aria-labelledby="time-label" id='time' className={styles.time}>
+              <input type="hidden" {...register('time', { required: t('pages.reservation.errors.timeRequired') })} />
               {findSelectedDay?.times.map((time)=>(
                 <button
                   type='button'
                   key={time}
-                  onClick={() => setValue('time', time)}
+                  onClick={() => setValue('time', time, { shouldValidate: true })}
                   className={time === selectedTime ? styles.selected : undefined}
                 >
                   {time}
                 </button>
               ))}
             </div>
+            {errors.time && <p className={styles.errorMessage} role="alert">{errors.time.message}</p>}
           </div>
 
           <div className={styles.inputFields}>
             <div className={styles.field}>
               <label className={styles.fieldLabel} htmlFor="name">{t('pages.reservation.fullName')}</label>
-              <input id='name' type="text" className={styles.input} placeholder={t('pages.reservation.fullNamePlaceholder')} {...register('fullName')} />
+              <input id='name' type="text" className={styles.input} placeholder={t('pages.reservation.fullNamePlaceholder')} {...register('fullName', { required: t('pages.reservation.errors.fullNameRequired') })} />
+              {errors.fullName && <p className={styles.errorMessage} role="alert">{errors.fullName.message}</p>}
             </div>
 
             <div className={styles.field}>
               <label className={styles.fieldLabel} htmlFor="phone">{t('pages.reservation.phoneNumber')}</label>
-              <input id='phone' type="tel" className={styles.input} placeholder={t('pages.reservation.phonePlaceholder')} {...register('phone')} />
+              <input id='phone' type="tel" className={styles.input} placeholder={t('pages.reservation.phonePlaceholder')} {...register('phone', { required: t('pages.reservation.errors.phoneRequired') })} />
+              {errors.phone && <p className={styles.errorMessage} role="alert">{errors.phone.message}</p>}
             </div>
           </div>
 

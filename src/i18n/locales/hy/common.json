@@ -106,7 +106,15 @@
       "disclaimer": "Հաստատելով՝ դուք համաձայնվում եք մեր Ծառայության պայմաններին և Սննդի քաղաքականությանը։",
       "atmosphereLabel": "ՄԵՐ ՄԹՆՈԼՈՐՏԸ",
       "atmosphereLocation": "Crust Abovyan",
-      "successMessage": "Ձեր ամրագրումը հաջողությամբ ուղարկվեց!"
+      "successMessage": "Ձեր ամրագրումը հաջողությամբ ուղարկվեց!",
+      "errors": {
+        "locationRequired": "Խնդրում ենք ընտրել մասնաճյուղ",
+        "guestsRequired": "Խնդրում ենք նշել հյուրերի քանակը",
+        "dateRequired": "Խնդրում ենք ընտրել ամսաթիվ",
+        "timeRequired": "Խնդրում ենք ընտրել ժամ",
+        "fullNameRequired": "Անուն ազգանունը պարտադիր է",
+        "phoneRequired": "Հեռախոսահամարը պարտադիր է"
+      }
     },
     "locations": {
       "title": "Մասնաճյուղեր",

@@ -106,7 +106,15 @@
       "disclaimer": "Подтверждая, вы соглашаетесь с нашими Условиями обслуживания и Политикой ресторана.",
       "atmosphereLabel": "НАША АТМОСФЕРА",
       "atmosphereLocation": "Crust Abovyan",
-      "successMessage": "Ваше бронирование успешно отправлено!"
+      "successMessage": "Ваше бронирование успешно отправлено!",
+      "errors": {
+        "locationRequired": "Пожалуйста, выберите филиал",
+        "guestsRequired": "Пожалуйста, укажите количество гостей",
+        "dateRequired": "Пожалуйста, выберите дату",
+        "timeRequired": "Пожалуйста, выберите время",
+        "fullNameRequired": "Укажите полное имя",
+        "phoneRequired": "Укажите номер телефона"
+      }
     },
     "locations": {
       "title": "Адреса",

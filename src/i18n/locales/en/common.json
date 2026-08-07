@@ -106,7 +106,15 @@
       "disclaimer": "By confirming, you agree to our Terms of Service and Dining Policy.",
       "atmosphereLabel": "OUR ATMOSPHERE",
       "atmosphereLocation": "Crust Abovyan",
-      "successMessage": "Your reservation was submitted successfully!"
+      "successMessage": "Your reservation was submitted successfully!",
+      "errors": {
+        "locationRequired": "Please select a location",
+        "guestsRequired": "Please select number of guests",
+        "dateRequired": "Please select a date",
+        "timeRequired": "Please select a time",
+        "fullNameRequired": "Full name is required",
+        "phoneRequired": "Phone number is required"
+      }
     },
     "locations": {
       "title": "Locations",

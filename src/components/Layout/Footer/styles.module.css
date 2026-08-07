@@ -15,7 +15,7 @@
 .columns {
   display: grid;
   gap: 48px;
-  grid-template-columns: 1.4fr 1fr 1fr 1.6fr;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr 1.5fr;
 }
 
 .divider {
@@ -37,13 +37,7 @@
 }
 
 @media (max-width: 600px) {
-  .inner {
-    gap: 24px;
-    padding-block: 32px 20px;
-  }
-
-  .columns {
-    gap: 24px;
-    grid-template-columns: 1fr;
+  .root {
+    display: none;
   }
 }

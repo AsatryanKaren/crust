@@ -15,6 +15,7 @@ import {
   AdminOrdersPage,
   AdminProductsPage,
   AdminReservationsPage,
+  AllergensPage,
   CartPage,
   CatalogPage,
   CheckoutPage,
@@ -25,11 +26,14 @@ import {
   LoginPage,
   NotFoundPage,
   OrderPage,
+  PaymentPage,
   PrivacyPolicyPage,
   ProductDetailsPage,
+  RefundPage,
   RegisterPage,
   ReservationPage,
   ResetPasswordPage,
+  TermsAndConditionsPage,
 } from './lazyPages'
 import { paths } from './paths'
 import { RouteSuspense } from './RouteSuspense'
@@ -52,6 +56,10 @@ export const router = createBrowserRouter([
           { path: paths.about, element: <AboutPage /> },
           { path: paths.contact, element: <ContactPage /> },
           { path: paths.privacyPolicy, element: <PrivacyPolicyPage /> },
+          { path: paths.allergens, element: <AllergensPage /> },
+          { path: paths.payment, element: <PaymentPage /> },
+          { path: paths.refund, element: <RefundPage /> },
+          { path: paths.terms, element: <TermsAndConditionsPage /> },
           {
             element: <GuestGuard />,
             children: [

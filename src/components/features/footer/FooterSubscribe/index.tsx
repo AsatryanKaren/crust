@@ -2,6 +2,7 @@ import type { SubmitEventHandler } from 'react'
 import { Button, Input } from 'antd'
 import { useTranslation } from 'react-i18next'
 
+import { SocialLinks } from '../SocialLinks'
 import type { Props } from './types'
 import styles from './styles.module.css'
 
@@ -29,6 +30,7 @@ export const FooterSubscribe: Props = () => {
           {t('footer.subscribe.submit')}
         </Button>
       </form>
+      <SocialLinks />
     </section>
   )
 }

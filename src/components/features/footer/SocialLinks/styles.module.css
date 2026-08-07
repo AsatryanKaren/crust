@@ -1,5 +1,8 @@
 .list {
   display: flex;
+  justify-content: flex-end;
+  max-width: var(--footer-subscribe-width);
+  width: 100%;
   gap: 12px;
   list-style: none;
   margin: 0;

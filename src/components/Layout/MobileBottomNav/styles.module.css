@@ -2,10 +2,11 @@
   background: var(--color-bg-1);
   bottom: 0;
   display: none;
-  left: 0;
+  inset-inline: 0;
+  max-width: 100%;
   position: fixed;
-  right: 0;
-  z-index: 100;
+  width: 100%;
+  z-index: 30;
 }
 
 .list {
@@ -15,6 +16,7 @@
   list-style: none;
   margin: 0;
   padding: 8px 0 calc(8px + env(safe-area-inset-bottom, 0px));
+  width: 100%;
 }
 
 .item {
@@ -31,7 +33,9 @@
   justify-content: center;
   min-height: 44px;
   padding-block: 4px;
+  padding-inline: 4px;
   text-decoration: none;
+  width: 100%;
 }
 
 .icon {
@@ -44,6 +48,11 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 1.2;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .active {

@@ -8,3 +8,9 @@
   flex: 1;
   margin-inline: var(--layout-main-margin-x);
 }
+
+@media (max-width: 600px) {
+  .main {
+    padding-bottom: 72px;
+  }
+}

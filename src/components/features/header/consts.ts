@@ -1,13 +1,14 @@
 import type { HeaderNavItem } from './types'
+import { paths } from '../../../routes/paths'
 
 export const HEADER_ROUTES = {
-  home: '/',
-  catalog: '/catalog',
-  order: '/order',
-  reservation: '/reservation',
-  about: '/about',
-  locations: '/locations',
-  contact: '/contact',
+  home: paths.home,
+  catalog: paths.catalog,
+  order: paths.order,
+  reservation: paths.reservation,
+  about: paths.about,
+  locations: paths.locations,
+  contact: paths.contact,
 } as const
 
 export const HEADER_NAV_ITEMS: HeaderNavItem[] = [

@@ -82,5 +82,136 @@
       "telegram": "Telegram",
       "facebook": "Facebook"
     }
+  },
+  "routes": {
+    "loading": "Բեռնվում է…"
+  },
+  "pages": {
+    "catalog": {
+      "title": "Կատալոգ",
+      "description": "Դիտեք մեր հացաբուլկեղենի արտադրանքը։"
+    },
+    "productDetails": {
+      "title": "Ապրանք",
+      "description": "Ապրանքի մանրամասները կհայտնվեն այստեղ։"
+    },
+    "cart": {
+      "title": "Զամբյուղ",
+      "description": "Ստուգեք ապրանքները վճարումից առաջ։"
+    },
+    "order": {
+      "title": "Պատվեր",
+      "description": "Ընտրեք վերցնել տեղում կամ առաքում։"
+    },
+    "checkout": {
+      "title": "Վճարում",
+      "description": "Ավարտեք պատվերն ու վճարումը։"
+    },
+    "reservation": {
+      "title": "Ամրագրել սեղան",
+      "description": "Ամրագրեք սեղան Crust-ում։",
+      "location": "Մասնաճյուղ",
+      "guests": "Հյուրեր",
+      "date": "Ամսաթիվ",
+      "time": "Ժամ",
+      "fullName": "Անուն Ազգանուն",
+      "fullNamePlaceholder": "Հովհաննես Պողոսյան",
+      "phoneNumber": "Հեռախոսահամար",
+      "phonePlaceholder": "+374 (00) 000-000",
+      "specialRequests": "Հատուկ պահանջներ",
+      "specialRequestsPlaceholder": "Սննդակարգային պահանջներ կամ հատուկ առիթներ...",
+      "yourSelection": "Ձեր ընտրությունը",
+      "selectionSummary": "{{guests}} հյուր · {{date}}, {{time}}, {{location}}",
+      "freeCancellation": "Անվճար չեղարկում մինչև 24 ժամ առաջ",
+      "confirmButton": "Հաստատել ամրագրումը",
+      "disclaimer": "Հաստատելով՝ դուք համաձայնվում եք մեր Ծառայության պայմաններին և Սննդի քաղաքականությանը։",
+      "atmosphereLabel": "ՄԵՐ ՄԹՆՈԼՈՐՏԸ",
+      "atmosphereLocation": "Crust Abovyan",
+      "successMessage": "Ձեր ամրագրումը հաջողությամբ ուղարկվեց!",
+      "errors": {
+        "locationRequired": "Խնդրում ենք ընտրել մասնաճյուղ",
+        "guestsRequired": "Խնդրում ենք նշել հյուրերի քանակը",
+        "dateRequired": "Խնդրում ենք ընտրել ամսաթիվ",
+        "timeRequired": "Խնդրում ենք ընտրել ժամ",
+        "fullNameRequired": "Անուն ազգանունը պարտադիր է",
+        "phoneRequired": "Հեռախոսահամարը պարտադիր է"
+      }
+    },
+    "locations": {
+      "title": "Մասնաճյուղեր",
+      "description": "Գտեք մեր հացաբուլկեղենի հասցեները։"
+    },
+    "about": {
+      "title": "Մեր մասին",
+      "description": "Իմացեք ավելին Crust հացաբուլկեղենի մասին։"
+    },
+    "contact": {
+      "title": "Կապ",
+      "description": "Կապվեք մեզ հետ։"
+    },
+    "privacyPolicy": {
+      "title": "Գաղտնիություն և քաղաքականություն",
+      "description": "Ինչպես ենք մշակում ձեր տվյալները։"
+    },
+    "auth": {
+      "login": {
+        "title": "Մուտք",
+        "description": "Մուտք գործեք ձեր Crust հաշիվ։"
+      },
+      "register": {
+        "title": "Գրանցում",
+        "description": "Ստեղծեք հաճախորդի հաշիվ։"
+      },
+      "forgotPassword": {
+        "title": "Մոռացել եմ գաղտնաբառը",
+        "description": "Խնդրեք գաղտնաբառի վերակայման հղում։"
+      },
+      "resetPassword": {
+        "title": "Վերակայել գաղտնաբառը",
+        "description": "Ընտրեք նոր գաղտնաբառ։"
+      }
+    },
+    "account": {
+      "title": "Իմ հաշիվը",
+      "description": "Կառավարեք ձեր հաճախորդի հաշիվը։"
+    },
+    "accountOrders": {
+      "title": "Պատվերների պատմություն",
+      "description": "Դիտեք և կառավարեք ձեր պատվերները։"
+    },
+    "admin": {
+      "products": {
+        "title": "Ադմին — Ապրանքներ",
+        "description": "Կառավարեք ապրանքներն ու գները։"
+      },
+      "categories": {
+        "title": "Ադմին — Կատեգորիաներ",
+        "description": "Կառավարեք ապրանքների կատեգորիաները։"
+      },
+      "availability": {
+        "title": "Ադմին — Հասանելիություն",
+        "description": "Կառավարեք ապրանքների հասանելիությունը։"
+      },
+      "orders": {
+        "title": "Ադմին — Պատվերներ",
+        "description": "Կառավարեք հաճախորդների պատվերները։"
+      },
+      "reservations": {
+        "title": "Ադմին — Ամրագրումներ",
+        "description": "Կառավարեք սեղանների ամրագրումները։"
+      },
+      "locations": {
+        "title": "Ադմին — Մասնաճյուղեր",
+        "description": "Կառավարեք հասցեները։"
+      },
+      "content": {
+        "title": "Ադմին — Բովանդակություն",
+        "description": "Կառավարեք կայքի բովանդակությունը։"
+      }
+    },
+    "notFound": {
+      "title": "Էջը չի գտնվել",
+      "description": "Ձեր խնդրած էջը գոյություն չունի։"
+    }
   }
 }

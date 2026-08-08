@@ -26,14 +26,14 @@
   color: var(--color-ink);
   font-size: var(--font-size-body-b-m-semibold);
   line-height: var(--line-height-body-b-m-semibold);
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .icon {
   flex-shrink: 0;
-  font-size: 14px;
-  color: var(--color-accent);
-  transform: rotate(308deg);
+  font-size: 32px;
+  transform: rotate(315deg);
 }
 
 .card:hover .label {
@@ -43,4 +43,10 @@
 .card:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .card:hover .label {
+    border-color: var(--color-accent);
+  }
 }

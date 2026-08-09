@@ -1,7 +1,7 @@
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { Input, message } from 'antd';
+import { Button, Input, message } from 'antd';
 import img from '@/assets/images/reserveTable.jpg';
 import overlay from '@/assets/images/Overlay.png';
 import icon from "@/assets/images/Icon.png"
@@ -210,7 +210,7 @@ export const Reservation: Props = () => {
                 : null}
             </p>
             <p className={styles.cancellationNote}><img src={icon} alt="icon" />{t('pages.reservation.freeCancellation')}</p>
-            <button type="submit" className={styles.confirmButton}>{t('pages.reservation.confirmButton')}</button>
+            <Button htmlType="submit" className={styles.confirmButton}>{t('pages.reservation.confirmButton')}</Button>
           </div>
           <p className={styles.disclaimer}>{t('pages.reservation.disclaimer')}</p>
         </div>

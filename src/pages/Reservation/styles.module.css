@@ -270,21 +270,27 @@
 
 
 
-.confirmButton {
+.confirmButton:global(.ant-btn) {
     width: 100%;
+    height: auto;
     margin-top: 16px;
     padding: 12px 24px;
-    border: none;
-    background-color: var(--color-accent);
-    color: var(--color-text-white);
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background-color: var(--color-accent) !important;
+    color: var(--color-text-white) !important;
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
 }
 
-.confirmButton:hover {
-    background-color: var(--color-primary-hover);
+.confirmButton:global(.ant-btn):hover,
+.confirmButton:global(.ant-btn):focus {
+    background-color: var(--color-primary-hover) !important;
+    border: none !important;
+    color: var(--color-text-white) !important;
 }
 
 .disclaimer {

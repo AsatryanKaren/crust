@@ -52,6 +52,30 @@ export const PrivacyPolicyPage = lazy(() =>
   })),
 )
 
+export const AllergensPage = lazy(() =>
+  import('../pages/Allergens').then((module) => ({
+    default: module.Allergens,
+  })),
+)
+
+export const PaymentPage = lazy(() =>
+  import('../pages/Payment').then((module) => ({
+    default: module.Payment,
+  })),
+)
+
+export const RefundPage = lazy(() =>
+  import('../pages/Refund').then((module) => ({
+    default: module.Refund,
+  })),
+)
+
+export const TermsAndConditionsPage = lazy(() =>
+  import('../pages/TermsAndConditions').then((module) => ({
+    default: module.TermsAndConditions,
+  })),
+)
+
 export const LoginPage = lazy(() =>
   import('../pages/Auth/Login').then((module) => ({ default: module.Login })),
 )

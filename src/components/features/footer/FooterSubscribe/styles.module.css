@@ -28,6 +28,7 @@
   align-items: stretch;
   border: 1px solid var(--footer-text);
   display: flex;
+  /* flex-direction: column; */
   height: var(--footer-subscribe-height);
   max-width: var(--footer-subscribe-width);
   overflow: hidden;

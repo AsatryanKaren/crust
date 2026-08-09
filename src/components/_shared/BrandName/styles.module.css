@@ -1,9 +1,13 @@
 .root {
-  color: inherit;
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-brand-regular);
-  font-weight: 400;
-  line-height: var(--line-height-brand-regular);
+  align-items: center;
+  align-self: start;
+  display: inline-flex;
   text-decoration: none;
 }
 
+.logo {
+  display: block;
+  height: var(--line-height-brand-regular);
+  object-fit: contain;
+  width: auto;
+}

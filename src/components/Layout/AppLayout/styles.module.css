@@ -1,10 +1,16 @@
 .root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .main {
   flex: 1;
   background-color: var(--color-white);
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  }
 }

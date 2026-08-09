@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom'
 
 import { Footer } from '../Footer'
 import { Header } from '../Header'
+import { MobileBottomNav } from '../MobileBottomNav'
 import type { Props } from './types'
 import styles from './styles.module.css'
 
@@ -13,6 +14,7 @@ export const AppLayout: Props = () => {
         <Outlet />
       </main>
       <Footer />
+      <MobileBottomNav />
     </div>
   )
 }

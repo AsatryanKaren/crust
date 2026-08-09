@@ -2,6 +2,7 @@ import { CloseOutlined, MenuOutlined } from '@ant-design/icons'
 import { useEffect, useId, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import { BrandName } from '../../../_shared/BrandName'
 import { HeaderNav } from '../HeaderNav'
 import { LanguageSelect } from '../LanguageSelect'
 import type { Props } from './types'
@@ -67,7 +68,7 @@ export const MobileMenu: Props = () => {
         aria-label={t('header.mainNav')}
       >
         <div className={styles.panelHeader}>
-          <span>{t('brand')}</span>
+          <BrandName />
           <button
             type="button"
             className={styles.close}

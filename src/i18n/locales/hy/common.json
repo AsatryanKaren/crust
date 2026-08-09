@@ -3,6 +3,27 @@
   "app": {
     "setupTitle": "Հացաբուլկեղենի նախագիծ — պատրաստ է"
   },
+  "whatWeOffer": {
+    "title": "Ինչ ենք առաջարկում",
+    "exploreCategories": "Դիտել կատեգորիաները",
+    "prevCategories": "Նախորդ կատեգորիաներ",
+    "nextCategories": "Հաջորդ կատեգորիաներ",
+    "categoryLinkAriaLabel": "Դիտել {{category}}",
+    "categories": {
+      "breads": {
+        "title": "Հացեր"
+      },
+      "pastries": {
+        "title": "Թխվածքներ"
+      },
+      "cakes": {
+        "title": "Տորթեր"
+      },
+      "cocktails": {
+        "title": "Կոկտեյլներ"
+      }
+    }
+  },
   "heroSection": {
     "header-1st-line": "Թարմ թխած,",
     "header-2nd-line": "Ամեն օր։",
@@ -39,15 +60,22 @@
     "contact": {
       "title": "Կապ",
       "city": "Երևան, Հայաստան",
-      "street": "Արամի փողոց",
+      "street": "Աբովյան փողոց",
       "email": "Crust@gmail.com",
       "phone": "+374 00 000 000"
     },
-    "about": {
-      "title": "Մեր մասին",
+    "offer": {
+      "title": "Ինչ ենք առաջարկում",
       "catalog": "Կատալոգ",
       "order": "Պատվեր",
-      "reservation": "Ամրագրում"
+      "reservation": "Ամրագրում",
+      "delivery": "Առաքում"
+    },
+    "links": {
+      "title": "Հղումներ",
+      "allergens": "Ալերգեններ",
+      "payment": "Վճարում",
+      "refund": "Վերադարձ"
     },
     "subscribe": {
       "title": "Բաժանորդագրվել",
@@ -57,10 +85,18 @@
       "submit": "Բաժանորդագրվել"
     },
     "privacyPolicy": "Գաղտնիություն և քաղաքականություն",
+    "termsAndConditions": "Պայմաններ և դրույթներ",
     "social": {
       "telegram": "Telegram",
       "facebook": "Facebook"
     }
+  },
+  "mobileBottomNav": {
+    "label": "Հիմնական նավիգացիա",
+    "home": "Գլխավոր",
+    "catalog": "Կատալոգ",
+    "cart": "Զամբյուղ",
+    "profile": "Պրոֆիլ"
   },
   "routes": {
     "loading": "Բեռնվում է…"
@@ -131,6 +167,22 @@
     "privacyPolicy": {
       "title": "Գաղտնիություն և քաղաքականություն",
       "description": "Ինչպես ենք մշակում ձեր տվյալները։"
+    },
+    "allergens": {
+      "title": "Ալերգեններ",
+      "description": "Ալերգենների մասին տեղեկություն մեր ապրանքների համար։"
+    },
+    "payment": {
+      "title": "Վճարում",
+      "description": "Ընդունվող վճարման եղանակներ և մանրամասներ։"
+    },
+    "refund": {
+      "title": "Վերադարձ",
+      "description": "Վերադարձի քաղաքականություն։"
+    },
+    "terms": {
+      "title": "Պայմաններ և դրույթներ",
+      "description": "Crust-ի օգտագործման պայմանները։"
     },
     "auth": {
       "login": {

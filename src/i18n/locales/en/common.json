@@ -3,6 +3,27 @@
   "app": {
     "setupTitle": "Bakery project — setup ready"
   },
+  "whatWeOffer": {
+    "title": "What We Offer",
+    "exploreCategories": "Explore Categories",
+    "prevCategories": "Previous categories",
+    "nextCategories": "Next categories",
+    "categoryLinkAriaLabel": "Browse {{category}}",
+    "categories": {
+      "breads": {
+        "title": "Breads"
+      },
+      "pastries": {
+        "title": "Pastries"
+      },
+      "cakes": {
+        "title": "Cakes"
+      },
+      "cocktails": {
+        "title": "Cocktails"
+      }
+    }
+  },
   "heroSection": {
     "header-1st-line": "Freshly Baked,",
     "header-2nd-line": "Daily.",
@@ -39,15 +60,22 @@
     "contact": {
       "title": "Contact Us",
       "city": "Yerevan, Armenia",
-      "street": "Arami street",
+      "street": "Abovyan street",
       "email": "Crust@gmail.com",
       "phone": "+374 00 000 000"
     },
-    "about": {
-      "title": "About Us",
+    "offer": {
+      "title": "What We Offer",
       "catalog": "Catalog",
       "order": "Order",
-      "reservation": "Reservation"
+      "reservation": "Reservation",
+      "delivery": "Delivery"
+    },
+    "links": {
+      "title": "Links",
+      "allergens": "Allergens",
+      "payment": "Payment",
+      "refund": "Refund"
     },
     "subscribe": {
       "title": "Subscribe now",
@@ -57,10 +85,18 @@
       "submit": "Subscribe"
     },
     "privacyPolicy": "Privacy & Policy",
+    "termsAndConditions": "Terms and Conditions",
     "social": {
       "telegram": "Telegram",
       "facebook": "Facebook"
     }
+  },
+  "mobileBottomNav": {
+    "label": "Primary navigation",
+    "home": "Home",
+    "catalog": "Catalog",
+    "cart": "Cart",
+    "profile": "Profile"
   },
   "routes": {
     "loading": "Loading…"
@@ -131,6 +167,22 @@
     "privacyPolicy": {
       "title": "Privacy & Policy",
       "description": "How we handle your data."
+    },
+    "allergens": {
+      "title": "Allergens",
+      "description": "Allergen information for our products."
+    },
+    "payment": {
+      "title": "Payment",
+      "description": "Accepted payment methods and details."
+    },
+    "refund": {
+      "title": "Refund",
+      "description": "Our refund policy."
+    },
+    "terms": {
+      "title": "Terms and Conditions",
+      "description": "Terms that apply when using Crust."
     },
     "auth": {
       "login": {

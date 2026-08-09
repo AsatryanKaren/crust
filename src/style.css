@@ -2,7 +2,13 @@
   color-scheme: light dark;
 }
 
+html,
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
   font-family: var(--font-family-base);
 }

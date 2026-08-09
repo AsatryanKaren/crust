@@ -58,8 +58,8 @@
 }
 
 .select,
-.input,
-.textarea {
+.input:global(.ant-input),
+.textarea:global(.ant-input) {
     box-sizing: border-box;
     width: 100%;
     padding: 12px 16px;
@@ -69,6 +69,15 @@
     font-family: inherit;
     color: var(--color-ink);
     background-color: var(--color-white);
+    box-shadow: none;
+}
+
+.input:global(.ant-input-focused),
+.textarea:global(.ant-input-focused),
+.input:global(.ant-input):hover,
+.textarea:global(.ant-input):hover {
+    border-color: var(--color-ant-neutral);
+    box-shadow: none;
 }
 
 .select {
@@ -95,14 +104,14 @@
     background-color: var(--color-bg-1);
 }
 
-.textarea {
+.textarea:global(.ant-input) {
     min-height: 96px;
     resize: vertical;
 }
 
 .select:focus-visible,
-.input:focus-visible,
-.textarea:focus-visible {
+.input:global(.ant-input):focus-visible,
+.textarea:global(.ant-input):focus-visible {
     outline: none;
     border-color: var(--color-accent);
     box-shadow: 0 0 0 2px rgba(193, 122, 46, 0.2);

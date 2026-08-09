@@ -1,7 +1,7 @@
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { message } from 'antd';
+import { Input, message } from 'antd';
 import img from '@/assets/images/reserveTable.jpg';
 import overlay from '@/assets/images/Overlay.png';
 import icon from "@/assets/images/Icon.png"
@@ -25,6 +25,7 @@ export const Reservation: Props = () => {
     watch,
     setValue,
     reset,
+    control,
     formState: { errors },
   } = useForm<ReservationPayload>({
     defaultValues: {
@@ -151,20 +152,40 @@ export const Reservation: Props = () => {
           <div className={styles.inputFields}>
             <div className={styles.field}>
               <label className={styles.fieldLabel} htmlFor="name">{t('pages.reservation.fullName')}</label>
-              <input id='name' type="text" className={styles.input} placeholder={t('pages.reservation.fullNamePlaceholder')} {...register('fullName', { required: t('pages.reservation.errors.fullNameRequired') })} />
+              <Controller
+                name="fullName"
+                control={control}
+                rules={{ required: t('pages.reservation.errors.fullNameRequired') }}
+                render={({ field }) => (
+                  <Input {...field} id='name' type="text" className={styles.input} placeholder={t('pages.reservation.fullNamePlaceholder')} />
+                )}
+              />
               {errors.fullName && <p className={styles.errorMessage} role="alert">{errors.fullName.message}</p>}
             </div>
 
             <div className={styles.field}>
               <label className={styles.fieldLabel} htmlFor="phone">{t('pages.reservation.phoneNumber')}</label>
-              <input id='phone' type="tel" className={styles.input} placeholder={t('pages.reservation.phonePlaceholder')} {...register('phone', { required: t('pages.reservation.errors.phoneRequired') })} />
+              <Controller
+                name="phone"
+                control={control}
+                rules={{ required: t('pages.reservation.errors.phoneRequired') }}
+                render={({ field }) => (
+                  <Input {...field} id='phone' type="tel" className={styles.input} placeholder={t('pages.reservation.phonePlaceholder')} />
+                )}
+              />
               {errors.phone && <p className={styles.errorMessage} role="alert">{errors.phone.message}</p>}
             </div>
           </div>
 
           <div className={styles.field}>
             <label className={styles.fieldLabel} htmlFor="comment">{t('pages.reservation.specialRequests')}</label>
-            <textarea placeholder={t('pages.reservation.specialRequestsPlaceholder')} id="comment" className={styles.textarea} {...register('comment')}></textarea>
+            <Controller
+              name="comment"
+              control={control}
+              render={({ field }) => (
+                <Input.TextArea {...field} placeholder={t('pages.reservation.specialRequestsPlaceholder')} id="comment" className={styles.textarea} />
+              )}
+            />
           </div>
         </div>
 

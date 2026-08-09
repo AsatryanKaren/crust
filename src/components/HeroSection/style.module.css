@@ -28,6 +28,7 @@
 
 .heading {
     margin: 0 auto;
+    padding-inline: 24px;
     font-size: 96px;
     font-weight: 400;
     line-height: 100px;
@@ -38,6 +39,7 @@
 
 .description {
     max-width: 700px;
+    padding-inline: 24px;
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
@@ -47,5 +49,53 @@
 
 .btnContainer {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
+}
+
+@media (max-width: 960px) {
+    .container {
+        min-height: 560px;
+        gap: 20px;
+    }
+
+    .heading {
+        font-size: 64px;
+        line-height: 68px;
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        min-height: 480px;
+        gap: 16px;
+    }
+
+    .heading {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .btnContainer {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 320px;
+        margin-inline: auto;
+    }
+
+    .btnContainer button {
+        width: 100%;
+    }
 }

@@ -3,6 +3,27 @@
   "app": {
     "setupTitle": "Հացաբուլկեղենի նախագիծ — պատրաստ է"
   },
+  "whatWeOffer": {
+    "title": "Ինչ ենք առաջարկում",
+    "exploreCategories": "Դիտել կատեգորիաները",
+    "prevCategories": "Նախորդ կատեգորիաներ",
+    "nextCategories": "Հաջորդ կատեգորիաներ",
+    "categoryLinkAriaLabel": "Դիտել {{category}}",
+    "categories": {
+      "breads": {
+        "title": "Հացեր"
+      },
+      "pastries": {
+        "title": "Թխվածքներ"
+      },
+      "cakes": {
+        "title": "Տորթեր"
+      },
+      "cocktails": {
+        "title": "Կոկտեյլներ"
+      }
+    }
+  },
   "heroSection": {
     "header-1st-line": "Թարմ թխած,",
     "header-2nd-line": "Ամեն օր։",

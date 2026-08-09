@@ -1,7 +1,7 @@
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { Button, Input, message } from 'antd';
+import { Button, Input, message, Select } from 'antd';
 import img from '@/assets/images/reserveTable.jpg';
 import overlay from '@/assets/images/Overlay.png';
 import icon from "@/assets/images/Icon.png"
@@ -83,15 +83,20 @@ export const Reservation: Props = () => {
 
           <div className={styles.field}>
             <label className={styles.fieldLabel} htmlFor="location">{t('pages.reservation.location')}</label>
-            <select
-              id="location"
-              className={styles.select}
-              {...register('location', { required: t('pages.reservation.errors.locationRequired') })}
-            >
-              {LOCATION_OPTIONS.map(({ value, label }) => (
-                <option key={value} value={value}>{label}</option>
-              ))}
-            </select>
+            <Controller
+              name="location"
+              control={control}
+              rules={{ required: t('pages.reservation.errors.locationRequired') }}
+              render={({ field }) => (
+                <Select
+                  {...field}
+                  id="location"
+                  className={styles.select}
+                  classNames={{ popup: { root: styles.selectDropdown } }}
+                  options={LOCATION_OPTIONS.map(({ value, label }) => ({ value, label }))}
+                />
+              )}
+            />
             {errors.location && <p className={styles.errorMessage} role="alert">{errors.location.message}</p>}
           </div>
 

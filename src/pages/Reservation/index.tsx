@@ -1,7 +1,7 @@
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { Button, Input, message, Select } from 'antd';
+import { Button, Input, message, Radio, Select } from 'antd';
 import img from '@/assets/images/reserveTable.jpg';
 import overlay from '@/assets/images/Overlay.png';
 import icon from "@/assets/images/Icon.png"
@@ -20,10 +20,8 @@ export const Reservation: Props = () => {
   const { t } = useTranslation()
 
   const {
-    register,
     handleSubmit,
     watch,
-    setValue,
     reset,
     control,
     formState: { errors },
@@ -102,55 +100,61 @@ export const Reservation: Props = () => {
 
           <div className={styles.field}>
             <span id="guests-label" className={styles.fieldLabel}>{t('pages.reservation.guests')}</span>
-            <div role="group" aria-labelledby="guests-label" id='guests' className={styles.guests}>
-              <input type="hidden" {...register('guests', { required: t('pages.reservation.errors.guestsRequired') })} />
-              {GUEST_OPTIONS.map((value) => (
-                <button
-                  type="button"
-                  key={value}
-                  onClick={() => setValue('guests', value, { shouldValidate: true })}
-                  className={value === guestCount ? styles.selected : undefined}
-                >
-                  {value}
-                </button>
-              ))}
-            </div>
+            <Controller
+              name="guests"
+              control={control}
+              rules={{ required: t('pages.reservation.errors.guestsRequired') }}
+              render={({ field }) => (
+                <Radio.Group
+                  {...field}
+                  optionType="button"
+                  aria-labelledby="guests-label"
+                  id='guests'
+                  className={styles.guests}
+                  options={GUEST_OPTIONS.map((value) => ({ label: value, value }))}
+                />
+              )}
+            />
             {errors.guests && <p className={styles.errorMessage} role="alert">{errors.guests.message}</p>}
           </div>
 
           <div className={styles.field}>
             <span id="date-label" className={styles.fieldLabel}>{t('pages.reservation.date')}</span>
-            <div role="group" aria-labelledby="date-label" id='date' className={styles.date}>
-              <input type="hidden" {...register('date', { required: t('pages.reservation.errors.dateRequired') })} />
-              {reservationDetails?.dates.map(({ day }) => (
-                <button
-                  onClick={() => setValue('date', day, { shouldValidate: true })}
-                  type="button"
-                  key={day}
-                  className={day === selectesDay ? styles.selected : undefined}
-                >
-                  {day}
-                </button>
-              ))}
-            </div>
+            <Controller
+              name="date"
+              control={control}
+              rules={{ required: t('pages.reservation.errors.dateRequired') }}
+              render={({ field }) => (
+                <Radio.Group
+                  {...field}
+                  optionType="button"
+                  aria-labelledby="date-label"
+                  id='date'
+                  className={styles.date}
+                  options={reservationDetails?.dates.map(({ day }) => ({ label: day, value: day })) ?? []}
+                />
+              )}
+            />
             {errors.date && <p className={styles.errorMessage} role="alert">{errors.date.message}</p>}
           </div>
 
           <div className={styles.field}>
             <span id="time-label" className={styles.fieldLabel}>{t('pages.reservation.time')}</span>
-            <div role="group" aria-labelledby="time-label" id='time' className={styles.time}>
-              <input type="hidden" {...register('time', { required: t('pages.reservation.errors.timeRequired') })} />
-              {findSelectedDay?.times.map((time)=>(
-                <button
-                  type='button'
-                  key={time}
-                  onClick={() => setValue('time', time, { shouldValidate: true })}
-                  className={time === selectedTime ? styles.selected : undefined}
-                >
-                  {time}
-                </button>
-              ))}
-            </div>
+            <Controller
+              name="time"
+              control={control}
+              rules={{ required: t('pages.reservation.errors.timeRequired') }}
+              render={({ field }) => (
+                <Radio.Group
+                  {...field}
+                  optionType="button"
+                  aria-labelledby="time-label"
+                  id='time'
+                  className={styles.time}
+                  options={findSelectedDay?.times.map((time) => ({ label: time, value: time })) ?? []}
+                />
+              )}
+            />
             {errors.time && <p className={styles.errorMessage} role="alert">{errors.time.message}</p>}
           </div>
 

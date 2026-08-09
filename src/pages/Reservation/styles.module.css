@@ -1,11 +1,11 @@
 .container {
-    /* padding: 48px var(--layout-main-margin-x); */
-    padding: 50px 0;
+    padding-block: 50px;
+    margin-inline: var(--layout-main-margin-x);
 }
 
 @media (max-width: 600px) {
     .container {
-        padding: 32px 0;
+        padding-block: 32px;
     }
 }
 

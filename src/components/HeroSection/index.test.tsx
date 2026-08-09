@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import HeroSection from './index'
+import { HeroSection } from './index'
 import '../../i18n'
 
 describe('HeroSection', () => {

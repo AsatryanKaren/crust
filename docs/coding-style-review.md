@@ -10,35 +10,35 @@ People are aiming at **one shared architecture**. The folder shape, TypeScript t
 
 Day-to-day writing still split into **two habits**: a strict house style for layout and stubs, and a looser Figma-driven style on Home, Hero, and Reservation.
 
-| | |
-| --- | --- |
-| Intended architecture | 1 |
-| Visible coding habits | 2 |
-| Named git authors | 4 |
+|                       |     |
+| --------------------- | --- |
+| Intended architecture | 1   |
+| Visible coding habits | 2   |
+| Named git authors     | 4   |
 
 ## Who owns which files
 
 Last-commit author on files under `src/` (not original authorship — later refactors reassign files). Source: `git log`.
 
-| Last-commit author | Files | Typical area |
-| --- | ---: | --- |
-| sona2711 | 167 | Scaffold, layout, stubs |
-| Շուշանիկ | 48 | Home, Hero, Reservation |
-| shoghdev | 23 | Both areas |
+| Last-commit author | Files | Typical area            |
+| ------------------ | ----: | ----------------------- |
+| sona2711           |   167 | Scaffold, layout, stubs |
+| Շուշանիկ           |    48 | Home, Hero, Reservation |
+| shoghdev           |    23 | Both areas              |
 
 ## Shared architecture
 
 Almost every screen follows the same skeleton. That is the house pattern, written down in `.cursor/rules/`.
 
-| Layer | How it is done |
-| --- | --- |
-| Component shape | Folder + `index.tsx` + `types.ts` + `styles.module.css` |
-| Props typing | `OwnProps` in `types.ts`, export `Props = FC<OwnProps>` |
-| Pages | `src/pages/*` as route screens, lazy-loaded in `routes/` |
-| Copy | i18next JSON under `hy` / `ru` / `en`, `useTranslation` in UI |
-| Styles | CSS modules, Ant Design, tokens in `src/ui/theme/` |
-| Routing | React Router 7, Auth/Guest/Admin guards, path consts |
-| Data | TanStack Query + MSW mocks (only Reservation used it yet) |
+| Layer           | How it is done                                                |
+| --------------- | ------------------------------------------------------------- |
+| Component shape | Folder + `index.tsx` + `types.ts` + `styles.module.css`       |
+| Props typing    | `OwnProps` in `types.ts`, export `Props = FC<OwnProps>`       |
+| Pages           | `src/pages/*` as route screens, lazy-loaded in `routes/`      |
+| Copy            | i18next JSON under `hy` / `ru` / `en`, `useTranslation` in UI |
+| Styles          | CSS modules, Ant Design, tokens in `src/ui/theme/`            |
+| Routing         | React Router 7, Auth/Guest/Admin guards, path consts          |
+| Data            | TanStack Query + MSW mocks (only Reservation used it yet)     |
 
 ## The two coding habits
 
@@ -60,30 +60,30 @@ Examples: HeroSection, `ui/buttons`, Reservation form, What We Offer.
 
 ## Concrete style diffs
 
-| Topic | House style | Feature style |
-| --- | --- | --- |
-| Export | `export const Header` | `export default Button` / `WhatWeOfferSection` |
-| CSS file | `styles.module.css` | `style.module.css` (Hero, buttons) |
-| Imports | `../../features/header/...` | `@/components/HeroSection` |
-| Folders | `Layout` (PascalCase), `features/header` (lowercase) | `HeroSection`, `ui/buttons` |
-| UI kit | Ant Design + CSS modules | Custom Button + Ant Design mixed |
-| Constants | `consts.ts` + `paths.ts` | `GUEST_OPTIONS` inline in Reservation |
-| i18n keys | `header.nav.home` | `heroSection.header-1st-line` |
-| CSS values | `var(--font-size-body-b-s-regular)` | `font-size: 96px` / `48px` |
-| Forms | not built yet | react-hook-form + `fetch`, not axios/Zod |
+| Topic      | House style                                          | Feature style                                  |
+| ---------- | ---------------------------------------------------- | ---------------------------------------------- |
+| Export     | `export const Header`                                | `export default Button` / `WhatWeOfferSection` |
+| CSS file   | `styles.module.css`                                  | `style.module.css` (Hero, buttons)             |
+| Imports    | `../../features/header/...`                          | `@/components/HeroSection`                     |
+| Folders    | `Layout` (PascalCase), `features/header` (lowercase) | `HeroSection`, `ui/buttons`                    |
+| UI kit     | Ant Design + CSS modules                             | Custom Button + Ant Design mixed               |
+| Constants  | `consts.ts` + `paths.ts`                             | `GUEST_OPTIONS` inline in Reservation          |
+| i18n keys  | `header.nav.home`                                    | `heroSection.header-1st-line`                  |
+| CSS values | `var(--font-size-body-b-s-regular)`                  | `font-size: 96px` / `48px`                     |
+| Forms      | not built yet                                        | react-hook-form + `fetch`, not axios/Zod       |
 
 ## README vs the code
 
 The README describes a fuller stack than what is wired. The intended architecture is written; several pieces are not in the repo yet.
 
-| Claimed in README | In the code (at review time) |
-| --- | --- |
-| Zustand client store | No `src/store/`, no Zustand |
-| Zod + react-hook-form | RHF only on Reservation; no Zod package |
-| axios API client in `src/api/` | `api/index.ts` is only a QueryClient |
-| Leaflet maps | Types in `package.json`; unused |
-| `src/theme/` and `src/types/` | Tokens live in `src/ui/theme/`; no `src/types/` |
-| ESLint + typescript-eslint | Packages installed; no eslint config file |
+| Claimed in README              | In the code (at review time)                    |
+| ------------------------------ | ----------------------------------------------- |
+| Zustand client store           | No `src/store/`, no Zustand                     |
+| Zod + react-hook-form          | RHF only on Reservation; no Zod package         |
+| axios API client in `src/api/` | `api/index.ts` is only a QueryClient            |
+| Leaflet maps                   | Types in `package.json`; unused                 |
+| `src/theme/` and `src/types/`  | Tokens live in `src/ui/theme/`; no `src/types/` |
+| ESLint + typescript-eslint     | Packages installed; no eslint config file       |
 
 ## What to copy when adding a new screen
 

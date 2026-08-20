@@ -9,6 +9,8 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "house-style": "node scripts/check-house-style.mjs",
+    "check": "tsc --noEmit && vitest run && prettier --check src docs README.md AGENTS.md .cursor/skills && node scripts/check-house-style.mjs",
     "test": "vitest run",
     "test:watch": "vitest"
   },

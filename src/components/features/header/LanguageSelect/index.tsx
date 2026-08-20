@@ -74,9 +74,7 @@ export const LanguageSelect: Props = ({ placement = 'down' }) => {
       {open ? (
         <ul
           className={
-            placement === 'up'
-              ? `${styles.menu} ${styles.menuUp}`
-              : styles.menu
+            placement === 'up' ? `${styles.menu} ${styles.menuUp}` : styles.menu
           }
           id={menuId}
           role="listbox"

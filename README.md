@@ -52,7 +52,7 @@ Note: PWA install prompts and offline behavior only work in the production build
 
 Available Scripts
 
-CommandDescriptionpnpm devStart the development serverpnpm buildType-check and build for productionpnpm previewPreview the production build locallypnpm eslint .Run linting
+CommandDescriptionpnpm devStart the development serverpnpm buildType-check and build for productionpnpm previewPreview the production build locallypnpm checkTypecheck, tests, Prettier, house-style (required before merge)
 
 Project Structure
 
@@ -76,13 +76,29 @@ Code conventions (Cursor rules)
 
 Project coding conventions for agents and contributors live in `.cursor/rules/`:
 
-- `file-structure.mdc` — component folders, consts/types/utils/hooks, OwnProps → Props
-- `typescript.mdc` — `type` only, avoid `any` / `!`
-- `styles.mdc` — CSS modules, theme tokens, no inline styles
-- `i18n.mdc` — no hardcoded UI strings; use locale JSON
-- `code-quality.mdc` — English comments, tests, `ailocal/`, README setup docs
+- `file-structure.mdc` — PascalCase folders, OwnProps → Props, named exports, relative imports, `consts.ts` / `paths.ts`
+- `typescript.mdc` — `type` only, no `any`, no `!`
+- `styles.mdc` — no inline styles, `styles.module.css`, theme tokens
+- `i18n.mdc` — no hardcoded UI strings; camelCase keys in `hy` / `ru` / `en`
+- `code-quality.mdc` — Prettier, reuse, tests, `ailocal/`, README setup docs
+- `review-required.mdc` — must self-review and run `pnpm check` before finishing
 
 Follow these when adding or changing code under `src/`. Agent scratch files go in `ailocal/` (gitignored).
+
+Reviews: use the project skill `.cursor/skills/code-review/` (it reads the rules above). Ask for a “code review” or “house-style review” in Cursor.
+
+Required for the team (not optional):
+
+1. Cursor — `.cursor/rules/` are `alwaysApply`. Agents must self-review and run `pnpm check` before finishing (see `AGENTS.md`).
+2. Every PR — GitHub fills `.github/pull_request_template.md`. All house-style boxes must be checked.
+3. CI — `.github/workflows/check.yml` runs `pnpm check` (typecheck, tests, Prettier, house-style) on every PR and push to `trunk`.
+4. Make CI blocking on GitHub: **Settings → Branches → Add branch protection rule** for `trunk` → enable **Require status checks to pass** → select the `check` job. Without this last step, CI reports failures but does not block merge.
+
+Local gate:
+
+```bash
+pnpm check
+```
 
 How the team actually writes code (review + follow-up):
 

@@ -17,7 +17,11 @@ export const FOOTER_ROUTES = {
 
 export const FOOTER_SOCIAL_LINKS = [
   { id: 'telegram', href: 'https://t.me/crustbakery', icon: telegramIcon },
-  { id: 'facebook', href: 'https://facebook.com/crustbakery', icon: facebookIcon },
+  {
+    id: 'facebook',
+    href: 'https://facebook.com/crustbakery',
+    icon: facebookIcon,
+  },
 ] as const
 
 export const FOOTER_CONTACT_ITEMS: FooterColumnItem[] = [

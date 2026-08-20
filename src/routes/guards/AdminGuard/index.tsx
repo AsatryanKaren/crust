@@ -8,9 +8,7 @@ export const AdminGuard: Props = () => {
   const { isAuthenticated, role } = getAuthStub()
 
   if (!isAuthenticated) {
-    return (
-      <Navigate replace to={loginWithRedirect(paths.adminProducts)} />
-    )
+    return <Navigate replace to={loginWithRedirect(paths.adminProducts)} />
   }
 
   if (role !== 'admin') {

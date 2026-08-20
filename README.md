@@ -84,6 +84,11 @@ Project coding conventions for agents and contributors live in `.cursor/rules/`:
 
 Follow these when adding or changing code under `src/`. Agent scratch files go in `ailocal/` (gitignored).
 
+How the team actually writes code (review + follow-up):
+
+- [Coding style review](docs/coding-style-review.md) — shared architecture vs the two habits found in `src/`
+- [Style alignment report](docs/style-alignment-report.md) — what was changed to match house style
+
 Localization
 
 The app supports Armenian, Russian, and English. Translation strings are stored as JSON files under src/i18n/locales/.

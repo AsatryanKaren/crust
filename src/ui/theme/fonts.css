@@ -48,4 +48,18 @@
   --line-height-body-b-m-semibold: 24px;
   --font-size-brand-regular: 24px;
   --line-height-brand-regular: 32px;
+  --font-size-heading-display: 96px;
+  --line-height-heading-display: 100px;
+  --font-size-heading-xl: 64px;
+  --line-height-heading-xl: 68px;
+  --font-size-heading-l: 48px;
+  --line-height-heading-l: 56px;
+  --font-size-heading-m: 40px;
+  --line-height-heading-m: 48px;
+  --font-size-heading-s: 32px;
+  --line-height-heading-s: 40px;
+  --font-size-heading-xs: 20px;
+  --line-height-heading-xs: 28px;
+  --font-size-body-l-regular: 18px;
+  --line-height-body-l-regular: 26px;
 }

@@ -1,3 +1,5 @@
 import type { FC } from 'react'
 
-export type Props = FC
+type OwnProps = Record<string, never>
+
+export type Props = FC<OwnProps>

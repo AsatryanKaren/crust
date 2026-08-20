@@ -1,13 +1,19 @@
-import { ArrowRightOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons'
+import {
+  ArrowRightOutlined,
+  LeftOutlined,
+  RightOutlined,
+} from '@ant-design/icons'
 import { useCallback, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import CategoryCard from './components/CategoryCard'
-import { CATALOG_ROUTE, CATEGORY_IDS } from './consts'
+
+import { paths } from '../../../routes/paths'
+import { CategoryCard } from './components/CategoryCard'
+import { CARD_GAP_PX, CATEGORY_IDS } from './consts'
 import type { Props } from './types'
 import styles from './styles.module.css'
 
-const WhatWeOfferSection: Props = () => {
+export const WhatWeOfferSection: Props = () => {
   const { t } = useTranslation()
   const trackRef = useRef<HTMLDivElement>(null)
 
@@ -18,15 +24,18 @@ const WhatWeOfferSection: Props = () => {
     }
 
     const firstCard = track.firstElementChild
-    const cardWidth = firstCard?.getBoundingClientRect().width ?? track.clientWidth
-    const gap = 24
-    const offset = direction === 'next' ? cardWidth + gap : -(cardWidth + gap)
+    const cardWidth =
+      firstCard?.getBoundingClientRect().width ?? track.clientWidth
+    const offset =
+      direction === 'next'
+        ? cardWidth + CARD_GAP_PX
+        : -(cardWidth + CARD_GAP_PX)
 
     track.scrollBy({ left: offset, behavior: 'smooth' })
   }, [])
 
   return (
-    <section className={styles.section} aria-labelledby="what-we-offer-title">
+    <section className={styles.root} aria-labelledby="what-we-offer-title">
       <div className={styles.header}>
         <h2 className={styles.title} id="what-we-offer-title">
           {t('whatWeOffer.title')}
@@ -58,7 +67,7 @@ const WhatWeOfferSection: Props = () => {
       </div>
 
       <div className={styles.cta}>
-        <Link className={styles.ctaLink} to={CATALOG_ROUTE}>
+        <Link className={styles.ctaLink} to={paths.catalog}>
           {t('whatWeOffer.exploreCategories')}
           <ArrowRightOutlined className={styles.ctaIcon} aria-hidden />
         </Link>
@@ -66,5 +75,3 @@ const WhatWeOfferSection: Props = () => {
     </section>
   )
 }
-
-export default WhatWeOfferSection

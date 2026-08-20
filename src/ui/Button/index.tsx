@@ -1,7 +1,7 @@
-import styles from './style.module.css';
-import type { Props } from './types';
+import type { Props } from './types'
+import styles from './styles.module.css'
 
-const Button: Props = ({
+export const Button: Props = ({
   variant = 'primary',
   size = 'medium',
   children,
@@ -18,7 +18,5 @@ const Button: Props = ({
     >
       {children}
     </button>
-  );
-};
-
-export default Button;
+  )
+}

@@ -1,26 +1,42 @@
-import styles from './style.module.css';
 import { useTranslation } from 'react-i18next'
-import heroBackground from '@/assets/images/heroback.jpg'
-import Button from '@/ui/buttons'
 
+import heroBackground from '../../../assets/images/heroback.jpg'
+import { Button } from '../../../ui/Button'
 import type { Props } from './types'
+import styles from './styles.module.css'
 
 export const HeroSection: Props = () => {
+  const { t } = useTranslation()
 
-    const { t } = useTranslation();
-
-    return (
-        <div className={styles.container}>
-            <img src={heroBackground} alt="background-image" className={styles.heroImage} />
-            <div className={styles.overlay} />
-            <h1 className={styles.heading}>{t('heroSection.header-1st-line')} <br />{t('heroSection.header-2nd-line')}</h1>
-            <p className={styles.description}>{t('heroSection.p-1st-line')} <br />
-                {t('heroSection.p-2nd-line')}</p>
-            <div className={styles.btnContainer}>
-                <Button variant="whiteFilled" size="large">{t('heroSection.btn-order-pickup')}</Button>
-                <Button variant="whiteMinimal" size="large">{t('heroSection.btn-delivery')}</Button>
-                <Button variant="whiteMinimal" size="large">{t('heroSection.btn-reservation')}</Button>
-            </div>
-        </div>
-    )
+  return (
+    <div className={styles.root}>
+      <img
+        src={heroBackground}
+        alt={t('heroSection.imageAlt')}
+        className={styles.heroImage}
+      />
+      <div className={styles.overlay} />
+      <h1 className={styles.heading}>
+        {t('heroSection.titleLine1')}
+        <br />
+        {t('heroSection.titleLine2')}
+      </h1>
+      <p className={styles.description}>
+        {t('heroSection.descriptionLine1')}
+        <br />
+        {t('heroSection.descriptionLine2')}
+      </p>
+      <div className={styles.actions}>
+        <Button variant="whiteFilled" size="large">
+          {t('heroSection.orderPickup')}
+        </Button>
+        <Button variant="whiteMinimal" size="large">
+          {t('heroSection.delivery')}
+        </Button>
+        <Button variant="whiteMinimal" size="large">
+          {t('heroSection.reservation')}
+        </Button>
+      </div>
+    </div>
+  )
 }

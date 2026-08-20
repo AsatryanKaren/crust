@@ -25,13 +25,14 @@
     }
   },
   "heroSection": {
-    "header-1st-line": "Freshly Baked,",
-    "header-2nd-line": "Daily.",
-    "p-1st-line": "Experience the soul of French artisanal baking. Handcrafted",
-    "p-2nd-line": "with organic heritage grains and a century of tradition.",
-    "btn-order-pickup": "Order pickup",
-    "btn-delivery": "Delivery",
-    "btn-reservation": "Reserve table"
+    "titleLine1": "Freshly Baked,",
+    "titleLine2": "Daily.",
+    "descriptionLine1": "Experience the soul of French artisanal baking. Handcrafted",
+    "descriptionLine2": "with organic heritage grains and a century of tradition.",
+    "orderPickup": "Order pickup",
+    "delivery": "Delivery",
+    "reservation": "Reserve table",
+    "imageAlt": "Bakery interior"
   },
   "header": {
     "mainNav": "Main navigation",
@@ -150,7 +151,14 @@
         "timeRequired": "Please select a time",
         "fullNameRequired": "Full name is required",
         "phoneRequired": "Phone number is required"
-      }
+      },
+      "locations": {
+        "abovyan": "Abovyan St",
+        "arami": "Arami St"
+      },
+      "imageAlt": "Reserved table",
+      "overlayAlt": "Decorative overlay",
+      "iconAlt": "Free cancellation"
     },
     "locations": {
       "title": "Locations",

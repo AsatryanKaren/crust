@@ -1,6 +1,5 @@
-import { HeroSection } from '@/components/HeroSection'
-import WhatWeOfferSection from './WhatWeOfferSection'
-
+import { HeroSection } from './HeroSection'
+import { WhatWeOfferSection } from './WhatWeOfferSection'
 import type { Props } from './types'
 import styles from './styles.module.css'
 

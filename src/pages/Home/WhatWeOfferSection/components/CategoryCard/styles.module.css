@@ -24,10 +24,9 @@
   border-top: 0;
   background: var(--color-paper);
   color: var(--color-ink);
-  font-size: var(--font-size-body-b-m-semibold);
-  line-height: var(--line-height-body-b-m-semibold);
-  font-size: 20px;
+  font-size: var(--font-size-heading-xs);
   font-weight: 500;
+  line-height: var(--line-height-heading-xs);
 }
 
 .icon {

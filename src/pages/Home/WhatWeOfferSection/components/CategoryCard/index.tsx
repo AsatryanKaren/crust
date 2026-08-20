@@ -1,18 +1,20 @@
-import { ArrowRightOutlined  } from '@ant-design/icons'
+import { ArrowRightOutlined } from '@ant-design/icons'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { CATALOG_ROUTE, CATEGORY_IMAGES } from '../../consts'
+
+import { paths } from '../../../../../routes/paths'
+import { CATEGORY_IMAGES } from '../../consts'
 import type { Props } from './types'
 import styles from './styles.module.css'
 
-const CategoryCard: Props = ({ categoryId }) => {
+export const CategoryCard: Props = ({ categoryId }) => {
   const { t } = useTranslation()
   const title = t(`whatWeOffer.categories.${categoryId}.title`)
 
   return (
     <Link
       className={styles.card}
-      to={CATALOG_ROUTE}
+      to={paths.catalog}
       aria-label={t('whatWeOffer.categoryLinkAriaLabel', { category: title })}
     >
       <img
@@ -27,5 +29,3 @@ const CategoryCard: Props = ({ categoryId }) => {
     </Link>
   )
 }
-
-export default CategoryCard

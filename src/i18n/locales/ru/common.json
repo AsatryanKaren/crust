@@ -68,7 +68,46 @@
   "pages": {
     "catalog": {
       "title": "Каталог",
-      "description": "Смотрите продукцию нашей пекарни."
+      "description": "Смотрите продукцию нашей пекарни.",
+      "heading": "Свежая выпечка",
+      "categoriesTitle": "Категории",
+      "searchPlaceholder": "Поиск выпечки...",
+      "searchAriaLabel": "Поиск товаров",
+      "sortAriaLabel": "Сортировка товаров",
+      "sortLabel": "Сортировать",
+      "empty": "Товары не найдены.",
+      "priceAmount": "{{price}}",
+      "priceUnit": "{{currency}} / {{unit}}",
+      "status": {
+        "available": "доступно",
+        "unavailable": "недоступно"
+      },
+      "badges": {
+        "bestseller": "хит продаж"
+      },
+      "actions": {
+        "favorite": "Добавить в избранное",
+        "addToCart": "Добавить в корзину"
+      },
+      "sort": {
+        "recommended": "Рекомендуемые",
+        "priceAsc": "Цена: по возрастанию",
+        "priceDesc": "Цена: по убыванию",
+        "name": "Название"
+      },
+      "categories": {
+        "pastries": "Круассаны и выпечка",
+        "breads": "Хлеб",
+        "cakes": "Торты и десерты",
+        "sandwiches": "Сэндвичи",
+        "drinks": "Кофе и напитки",
+        "breakfast": "Завтраки",
+        "seasonal": "Сезонное"
+      },
+      "errors": {
+        "categories": "Не удалось загрузить категории.",
+        "products": "Не удалось загрузить товары."
+      }
     },
     "productDetails": {
       "title": "Товар",

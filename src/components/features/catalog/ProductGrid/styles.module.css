@@ -1,0 +1,20 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 24px;
+  row-gap: 32px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .root {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .root {
+    column-gap: 12px;
+    row-gap: 16px;
+  }
+}

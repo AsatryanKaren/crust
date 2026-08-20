@@ -68,7 +68,46 @@
   "pages": {
     "catalog": {
       "title": "Կատալոգ",
-      "description": "Դիտեք մեր հացաբուլկեղենի արտադրանքը։"
+      "description": "Դիտեք մեր հացաբուլկեղենի արտադրանքը։",
+      "heading": "Թարմ թխված",
+      "categoriesTitle": "Կատեգորիաներ",
+      "searchPlaceholder": "Փնտրել խմորեղեն...",
+      "searchAriaLabel": "Փնտրել ապրանքներ",
+      "sortAriaLabel": "Դասավորել ապրանքները",
+      "sortLabel": "Դասավորել",
+      "empty": "Ապրանքներ չեն գտնվել։",
+      "priceAmount": "{{price}}",
+      "priceUnit": "{{currency}} / {{unit}}",
+      "status": {
+        "available": "հասանելի",
+        "unavailable": "անհասանելի"
+      },
+      "badges": {
+        "bestseller": "լավագույն վաճառք"
+      },
+      "actions": {
+        "favorite": "Ավելացնել նախընտրելիներ",
+        "addToCart": "Ավելացնել զամբյուղ"
+      },
+      "sort": {
+        "recommended": "Խորհուրդ տրվող",
+        "priceAsc": "Գին՝ ցածրից բարձր",
+        "priceDesc": "Գին՝ բարձրից ցածր",
+        "name": "Անուն"
+      },
+      "categories": {
+        "pastries": "Կրուասան և խմորեղեն",
+        "breads": "Հացեր",
+        "cakes": "Տորթեր և աղանդեր",
+        "sandwiches": "Սենդվիչներ",
+        "drinks": "Սուրճ և ըմպելիքներ",
+        "breakfast": "Նախաճաշի հավաքածուներ",
+        "seasonal": "Սեզոնային"
+      },
+      "errors": {
+        "categories": "Չհաջողվեց բեռնել կատեգորիաները։",
+        "products": "Չհաջողվեց բեռնել ապրանքները։"
+      }
     },
     "productDetails": {
       "title": "Ապրանք",

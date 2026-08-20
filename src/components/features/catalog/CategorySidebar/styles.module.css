@@ -1,0 +1,154 @@
+.root {
+  min-width: 0;
+}
+
+/* Match Catalog `.headingRow` height + `.main` gap so first link lines up with first card */
+.title {
+  display: flex;
+  align-items: center;
+  min-height: calc(clamp(28px, 4vw, 48px) * 1);
+  margin: 0 0 24px;
+  font-weight: 400;
+  font-size: var(--font-size-brand-regular);
+  line-height: var(--line-height-body-b-m-semibold);
+  color: var(--color-ink);
+}
+
+.menu {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-inline-end: none !important;
+  background: transparent;
+}
+
+.menu :global(.ant-menu-item) {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  height: 40px;
+  margin-inline: 0 !important;
+  margin-block: 0 !important;
+  padding-inline: 0 !important;
+  padding-block: 0 !important;
+  color: var(--color-ink);
+  font-weight: 500;
+  font-size: var(--font-size-body-b-m-semibold);
+  line-height: var(--line-height-body-b-m-semibold);
+}
+
+.menu :global(.ant-menu-item + .ant-menu-item) {
+  margin-block-start: 4px !important;
+}
+
+.menu :global(.ant-menu-item::after) {
+  display: none !important;
+}
+
+.menu :global(.ant-menu-item-icon) {
+  display: inline-flex !important;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  width: 24px !important;
+  min-width: 24px !important;
+  height: 24px;
+  margin-inline-end: 0 !important;
+  font-size: 22px !important;
+  line-height: 0;
+}
+
+.menu :global(.ant-menu-title-content) {
+  margin-inline-start: 0 !important;
+  flex: 1;
+  min-width: 0;
+}
+
+.menu :global(.ant-menu-item .anticon),
+.menu :global(.ant-menu-item svg) {
+  display: block;
+  color: inherit;
+  fill: currentColor;
+  font-size: 22px;
+  width: 22px;
+  height: 22px;
+}
+
+.menu :global(.ant-menu-item-selected) {
+  color: var(--color-accent) !important;
+  background: transparent !important;
+  font-weight: 600;
+}
+
+.menu :global(.ant-menu-item-selected .anticon),
+.menu :global(.ant-menu-item-selected svg) {
+  color: var(--color-accent) !important;
+  fill: currentColor;
+}
+
+.menu :global(.ant-menu-item:hover) {
+  color: var(--color-accent) !important;
+}
+
+.menu :global(.ant-menu-item:hover .anticon),
+.menu :global(.ant-menu-item:hover svg) {
+  color: var(--color-accent) !important;
+}
+
+.menuCompact {
+  width: 100%;
+  flex-wrap: nowrap !important;
+  overflow-x: auto;
+}
+
+.menuCompact :global(.ant-menu-overflow) {
+  flex-wrap: nowrap !important;
+}
+
+.menuCompact :global(.ant-menu-item) {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding-inline: 4px !important;
+  white-space: nowrap;
+}
+
+.menuCompact :global(.ant-menu-title-content) {
+  flex: none;
+}
+
+.menuCompact :global(.ant-menu-item + .ant-menu-item) {
+  margin-block-start: 0 !important;
+  margin-inline-start: 16px !important;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    min-height: 0;
+    margin-block-end: 8px;
+  }
+
+  .menu {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu :global(.ant-menu-item) {
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding-inline: 4px !important;
+    white-space: nowrap;
+  }
+
+  .menu :global(.ant-menu-title-content) {
+    flex: none;
+  }
+
+  .menu :global(.ant-menu-item + .ant-menu-item) {
+    margin-block-start: 0 !important;
+    margin-inline-start: 16px !important;
+  }
+}

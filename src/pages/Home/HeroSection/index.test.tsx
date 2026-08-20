@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 
-import HeroSection from './index'
-import '../../i18n'
+import '../../../i18n'
+import { HeroSection } from './index'
 
 describe('HeroSection', () => {
   it('renders the hero heading', () => {

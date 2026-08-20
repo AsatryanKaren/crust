@@ -1,5 +1,5 @@
 ---
-description: File layout — components, consts, types, utils, hooks
+description: File layout — folders, OwnProps, named exports, relative imports
 globs: src/**/*.{ts,tsx,css}
 alwaysApply: true
 ---
@@ -11,6 +11,8 @@ alwaysApply: true
 - Each component lives in its own PascalCase folder; implementation is `index.tsx`.
 - Next to it when needed: `types.ts`, `styles.module.css`, `hooks/`, `components/` (nested).
 - Never create a component as a lone `.ts` / `.tsx` file in the parent folder.
+- UI primitives: `src/ui/Button/` (PascalCase). Feature namespaces may use lowercase folders (`features/header/`).
+- Page-only sections live under `src/pages/PageName/` (e.g. `pages/Home/HeroSection`), not `src/components/`.
 
 ```
 src/components/CroppedText/
@@ -21,37 +23,36 @@ src/components/CroppedText/
 
 ## Split by content type
 
-- Constants → `consts/` (or `consts.ts` / `consts/index.ts` inside a feature).
-- Types → `types/` (or local `types.ts` if used only by that component).
-- Utilities → `utils/`.
-- Hooks → `hooks/`.
-- Do not mix: no constants in component files, no types inside utils, etc.
+- Constants → `consts.ts` (or `consts/`) inside the feature. No magic lists or URLs in `index.tsx`.
+- Routes → `src/routes/paths.ts`. Do not hardcode `'/catalog'` (or similar) in components.
+- Types → local `types.ts` if used only here; shared types in `src/types/`.
+- Utilities → `utils/`. Hooks → `hooks/`.
+- Do not mix: no constants in component files, no types inside utils.
 
 ## Component props — OwnProps → Props
 
 - Define local `OwnProps` in `types.ts`; export `Props = FC<OwnProps>`.
-- Component: `const Foo: Props = (...) => { ... }`.
-- Do not export `OwnProps`. Reuse via `ComponentProps<typeof Foo>`, `Parameters<Props>[0]`, or a shared type in `types/`.
-- Do not type as `React.FC<...>` inline in `index.tsx` or `function Foo(props: SomeProps)`.
+- Component: `export const Foo: Props = (...) => { ... }`.
+- Do not export `OwnProps`. Do not type as `React.FC<...>` inline in `index.tsx`.
 
 ```ts
-import type { FC } from 'react';
+import type { FC } from 'react'
 
 type OwnProps = {
-  text: string | undefined;
-  length?: number;
-};
+  text: string | undefined
+  length?: number
+}
 
-export type Props = FC<OwnProps>;
+export type Props = FC<OwnProps>
 ```
+
+## Exports and imports
+
+- Named exports for components (`export const Foo`). Not `export default`.
+- Exceptions: `App.tsx`, `src/i18n/index.ts`, Vite config.
+- Relative imports inside `src/` (e.g. `../../ui/Button`). Do not use the `@/` alias in new or touched code.
+- No barrel `index.ts` whose only job is re-exporting siblings. Import the concrete file.
 
 ## Extensions
 
-- React components — always `.tsx`.
-- Pure TS (no JSX) — `.ts`.
-- Styles — `.module.css` (CSS modules).
-
-## No barrel re-exports
-
-- Do not add `index.ts` whose only job is re-exporting siblings.
-- Import the concrete `index.tsx` / `utils.ts` / `consts.ts` directly.
+- React components — always `.tsx`. Pure TS — `.ts`. Styles — `styles.module.css`.

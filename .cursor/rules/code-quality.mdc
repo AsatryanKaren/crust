@@ -1,33 +1,37 @@
 ---
-description: Comments, cleanliness, reuse, tests, agent artifacts, README
+description: Comments, cleanliness, reuse, tests, Prettier, agent artifacts
 globs: src/**/*.{ts,tsx,css}
 alwaysApply: true
 ---
 
 # Code quality
 
+## Formatting
+
+- Follow Prettier: 2-space indent, single quotes, no semicolons, trailing commas.
+- Do not mix 4-space indent or optional semicolons in touched files.
+
 ## Comments (English only)
 
-- Comments in English, only where code is not self-explanatory (non-trivial logic, business rule, API constraint).
-- No obvious comments (`// import`, `// call function`).
-- Do not leave “changed here” notes in code — that belongs in the PR/commit.
-- TODOs only with a ticket: `// TODO [ISSUE-ID]: short description`. No ticket → fix now or open a ticket first.
+- Comments only where code is not self-explanatory (non-trivial logic, business rule, API constraint).
+- No obvious comments. No “changed here” notes — that belongs in the PR/commit.
+- TODOs only with a ticket: `// TODO [ISSUE-ID]: short description`.
 
 ## Cleanliness
 
 - Do not commit `console.log`, debug leftovers, commented-out “for later” code, unused imports/variables.
-- Do not duplicate logic: before adding a hook / util / component, check `src/hooks/`, `src/utils/`, `src/components/` and reuse.
+- Do not duplicate logic: check `src/hooks/`, `src/utils/`, `src/components/`, `src/ui/` and reuse.
+- Prefer existing UI: Ant Design, or `src/ui/Button` for the custom variants. Do not add a second button kit.
 
 ## Tests
 
-- When adding tests, match neighboring style (matchers, mocks, `describe`/`it`).
-- Place `*.test.ts` / `*.test.tsx` next to the code under test. Do not introduce `__tests__/` folders unless that area already uses them.
+- Match neighboring style (`describe` / `it`, matchers, mocks).
+- Place `*.test.ts` / `*.test.tsx` next to the code under test. No `__tests__/` unless that area already uses them.
 
 ## AI agent artifacts
 
-- Agent scratch files only under `ailocal/` at the repo root (drafts, logs, dumps, plans, notes, experimental scripts).
-- Do not scatter temp files under `src/` or other working dirs. `ailocal/` is gitignored and must not be committed.
+- Scratch files only under `ailocal/` (gitignored). Do not scatter temp files under `src/`.
 
 ## README
 
-- When a feature needs setup (secret, cert, env var, external tool, MCP server, etc.), document it in `README.md`. Project setup lives only there.
+- Feature setup (secret, env, tool, MCP) goes in `README.md` only.

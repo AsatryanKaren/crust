@@ -3,14 +3,36 @@
   "app": {
     "setupTitle": "Հացաբուլկեղենի նախագիծ — պատրաստ է"
   },
+  "whatWeOffer": {
+    "title": "Ինչ ենք առաջարկում",
+    "exploreCategories": "Դիտել կատեգորիաները",
+    "prevCategories": "Նախորդ կատեգորիաներ",
+    "nextCategories": "Հաջորդ կատեգորիաներ",
+    "categoryLinkAriaLabel": "Դիտել {{category}}",
+    "categories": {
+      "breads": {
+        "title": "Հացեր"
+      },
+      "pastries": {
+        "title": "Թխվածքներ"
+      },
+      "cakes": {
+        "title": "Տորթեր"
+      },
+      "cocktails": {
+        "title": "Կոկտեյլներ"
+      }
+    }
+  },
   "heroSection": {
-    "header-1st-line": "Թարմ թխած,",
-    "header-2nd-line": "Ամեն օր։",
-    "p-1st-line": "Զգացեք ֆրանսիական արհեստավորական հացաբուլկեղենի հոգին։",
-    "p-2nd-line": "Պատրաստված ձեռքով՝ օրգանական ավանդական հացահատիկից և դարավոր ավանդույթներով։",
-    "btn-order-pickup": "Պատվիրել վերցնելու համար",
-    "btn-delivery": "Առաքում",
-    "btn-reservation": "Ամրագրել սեղան"
+    "titleLine1": "Թարմ թխած,",
+    "titleLine2": "Ամեն օր։",
+    "descriptionLine1": "Զգացեք ֆրանսիական արհեստավորական հացաբուլկեղենի հոգին։",
+    "descriptionLine2": "Պատրաստված ձեռքով՝ օրգանական ավանդական հացահատիկից և դարավոր ավանդույթներով։",
+    "orderPickup": "Պատվիրել վերցնելու համար",
+    "delivery": "Առաքում",
+    "reservation": "Ամրագրել սեղան",
+    "imageAlt": "Հացաբուլկեղենի ինտերիեր"
   },
   "header": {
     "mainNav": "Հիմնական ընտրացանկ",
@@ -39,15 +61,22 @@
     "contact": {
       "title": "Կապ",
       "city": "Երևան, Հայաստան",
-      "street": "Արամի փողոց",
+      "street": "Աբովյան փողոց",
       "email": "Crust@gmail.com",
       "phone": "+374 00 000 000"
     },
-    "about": {
-      "title": "Մեր մասին",
+    "offer": {
+      "title": "Ինչ ենք առաջարկում",
       "catalog": "Կատալոգ",
       "order": "Պատվեր",
-      "reservation": "Ամրագրում"
+      "reservation": "Ամրագրում",
+      "delivery": "Առաքում"
+    },
+    "links": {
+      "title": "Հղումներ",
+      "allergens": "Ալերգեններ",
+      "payment": "Վճարում",
+      "refund": "Վերադարձ"
     },
     "subscribe": {
       "title": "Բաժանորդագրվել",
@@ -57,10 +86,18 @@
       "submit": "Բաժանորդագրվել"
     },
     "privacyPolicy": "Գաղտնիություն և քաղաքականություն",
+    "termsAndConditions": "Պայմաններ և դրույթներ",
     "social": {
       "telegram": "Telegram",
       "facebook": "Facebook"
     }
+  },
+  "mobileBottomNav": {
+    "label": "Հիմնական նավիգացիա",
+    "home": "Գլխավոր",
+    "catalog": "Կատալոգ",
+    "cart": "Զամբյուղ",
+    "profile": "Պրոֆիլ"
   },
   "routes": {
     "loading": "Բեռնվում է…"
@@ -153,7 +190,14 @@
         "timeRequired": "Խնդրում ենք ընտրել ժամ",
         "fullNameRequired": "Անուն ազգանունը պարտադիր է",
         "phoneRequired": "Հեռախոսահամարը պարտադիր է"
-      }
+      },
+      "locations": {
+        "abovyan": "Աբովյան փող.",
+        "arami": "Արամի փող."
+      },
+      "imageAlt": "Ամրագրված սեղան",
+      "overlayAlt": "Դեկորատիվ շերտ",
+      "iconAlt": "Անվճար չեղարկում"
     },
     "locations": {
       "title": "Մասնաճյուղեր",
@@ -170,6 +214,22 @@
     "privacyPolicy": {
       "title": "Գաղտնիություն և քաղաքականություն",
       "description": "Ինչպես ենք մշակում ձեր տվյալները։"
+    },
+    "allergens": {
+      "title": "Ալերգեններ",
+      "description": "Ալերգենների մասին տեղեկություն մեր ապրանքների համար։"
+    },
+    "payment": {
+      "title": "Վճարում",
+      "description": "Ընդունվող վճարման եղանակներ և մանրամասներ։"
+    },
+    "refund": {
+      "title": "Վերադարձ",
+      "description": "Վերադարձի քաղաքականություն։"
+    },
+    "terms": {
+      "title": "Պայմաններ և դրույթներ",
+      "description": "Crust-ի օգտագործման պայմանները։"
     },
     "auth": {
       "login": {

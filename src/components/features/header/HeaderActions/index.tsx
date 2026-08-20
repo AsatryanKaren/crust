@@ -12,7 +12,7 @@ export const HeaderActions: Props = ({ cartCount = 0 }) => {
     <div className={styles.root}>
       <button
         type="button"
-        className={`${styles.iconButton} ${styles.desktopOnly}`}
+        className={styles.iconButton}
         aria-label={t('header.search')}
       >
         <SearchOutlined aria-hidden />
@@ -24,7 +24,9 @@ export const HeaderActions: Props = ({ cartCount = 0 }) => {
       >
         <HeartOutlined aria-hidden />
       </button>
-      <HeaderCart count={cartCount} />
+      <div className={styles.desktopOnly}>
+        <HeaderCart count={cartCount} />
+      </div>
     </div>
   )
 }

@@ -18,12 +18,7 @@ export const SocialLinks: Props = () => {
             rel="noopener noreferrer"
             aria-label={t(`footer.social.${id}`)}
           >
-            <img
-              className={styles.icon}
-              src={icon}
-              alt=""
-              aria-hidden="true"
-            />
+            <img className={styles.icon} src={icon} alt="" aria-hidden="true" />
           </a>
         </li>
       ))}

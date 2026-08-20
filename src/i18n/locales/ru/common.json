@@ -3,14 +3,36 @@
   "app": {
     "setupTitle": "Проект пекарни — готов к работе"
   },
+  "whatWeOffer": {
+    "title": "Что мы предлагаем",
+    "exploreCategories": "Смотреть категории",
+    "prevCategories": "Предыдущие категории",
+    "nextCategories": "Следующие категории",
+    "categoryLinkAriaLabel": "Смотреть {{category}}",
+    "categories": {
+      "breads": {
+        "title": "Хлеб"
+      },
+      "pastries": {
+        "title": "Выпечка"
+      },
+      "cakes": {
+        "title": "Торты"
+      },
+      "cocktails": {
+        "title": "Коктейли"
+      }
+    }
+  },
   "heroSection": {
-    "header-1st-line": "Свежая выпечка,",
-    "header-2nd-line": "каждый день.",
-    "p-1st-line": "Почувствуйте душу французской ремесленной выпечки.",
-    "p-2nd-line": "Изготовлено вручную из органического зерна по вековым традициям.",
-    "btn-order-pickup": "Заказать самовывоз",
-    "btn-delivery": "Доставка",
-    "btn-reservation": "Забронировать столик"
+    "titleLine1": "Свежая выпечка,",
+    "titleLine2": "каждый день.",
+    "descriptionLine1": "Почувствуйте душу французской ремесленной выпечки.",
+    "descriptionLine2": "Изготовлено вручную из органического зерна по вековым традициям.",
+    "orderPickup": "Заказать самовывоз",
+    "delivery": "Доставка",
+    "reservation": "Забронировать столик",
+    "imageAlt": "Интерьер пекарни"
   },
   "header": {
     "mainNav": "Основная навигация",
@@ -39,15 +61,22 @@
     "contact": {
       "title": "Контакты",
       "city": "Ереван, Армения",
-      "street": "улица Арами",
+      "street": "улица Абовяна",
       "email": "Crust@gmail.com",
       "phone": "+374 00 000 000"
     },
-    "about": {
-      "title": "О нас",
+    "offer": {
+      "title": "Что мы предлагаем",
       "catalog": "Каталог",
       "order": "Заказ",
-      "reservation": "Бронирование"
+      "reservation": "Бронирование",
+      "delivery": "Доставка"
+    },
+    "links": {
+      "title": "Ссылки",
+      "allergens": "Аллергены",
+      "payment": "Оплата",
+      "refund": "Возврат"
     },
     "subscribe": {
       "title": "Подписаться",
@@ -57,10 +86,18 @@
       "submit": "Подписаться"
     },
     "privacyPolicy": "Конфиденциальность и политика",
+    "termsAndConditions": "Условия использования",
     "social": {
       "telegram": "Telegram",
       "facebook": "Facebook"
     }
+  },
+  "mobileBottomNav": {
+    "label": "Основная навигация",
+    "home": "Главная",
+    "catalog": "Каталог",
+    "cart": "Корзина",
+    "profile": "Профиль"
   },
   "routes": {
     "loading": "Загрузка…"
@@ -153,7 +190,14 @@
         "timeRequired": "Пожалуйста, выберите время",
         "fullNameRequired": "Укажите полное имя",
         "phoneRequired": "Укажите номер телефона"
-      }
+      },
+      "locations": {
+        "abovyan": "ул. Абовяна",
+        "arami": "ул. Арами"
+      },
+      "imageAlt": "Забронированный стол",
+      "overlayAlt": "Декоративный слой",
+      "iconAlt": "Бесплатная отмена"
     },
     "locations": {
       "title": "Адреса",
@@ -170,6 +214,22 @@
     "privacyPolicy": {
       "title": "Конфиденциальность и политика",
       "description": "Как мы обрабатываем ваши данные."
+    },
+    "allergens": {
+      "title": "Аллергены",
+      "description": "Информация об аллергенах в наших продуктах."
+    },
+    "payment": {
+      "title": "Оплата",
+      "description": "Способы оплаты и детали."
+    },
+    "refund": {
+      "title": "Возврат",
+      "description": "Политика возврата средств."
+    },
+    "terms": {
+      "title": "Условия использования",
+      "description": "Условия использования сервисов Crust."
     },
     "auth": {
       "login": {

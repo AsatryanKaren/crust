@@ -1,0 +1,14 @@
+---
+description: Required house-style review before finishing work
+alwaysApply: true
+---
+
+# Required review
+
+House style is mandatory. Do not treat it as optional.
+
+Before you finish a task, PR, or say work is done:
+
+1. Read `.cursor/rules/` and self-review with `.cursor/skills/code-review/`.
+2. Run `pnpm check`. Fix failures. Do not skip.
+3. Do not merge or hand off with Must-fix rule violations (`any`, `!`, inline styles, hardcoded copy, default exports, `@/` imports).

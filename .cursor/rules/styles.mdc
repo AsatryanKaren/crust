@@ -6,8 +6,11 @@ alwaysApply: true
 
 # Styles
 
-- No inline `style={...}` in JSX. Styles go through `.module.css` only. Rare exceptions must match existing project patterns.
-- Do not invent arbitrary HEX in styles when an Ant Design token or a variable from `src/theme/` already covers it. HEX only when no token fits.
-- Do not restate default typography. Base font-size / line-height come from the theme and inherit through the app tree.
-- In `.module.css`, set `font-size` / `line-height` only when the value differs from the default — then use theme tokens / modifiers, not hard-coded pixels.
-- If design changes the base size, update the theme token once; do not patch dozens of CSS files.
+- No inline `style={...}` in JSX. Styles go through CSS modules only.
+- CSS file name is `styles.module.css` (plural). Never `style.module.css`.
+- Prefer `.root` as the outer wrapper class (match Header / PageShell).
+- 2-space indent in CSS, same as TS.
+- Do not invent HEX when an Ant Design token or a variable from `src/ui/theme/` / `src/ui/colors/` already covers it. HEX only when no token fits.
+- Do not restate default typography. Base font-size / line-height inherit from the theme.
+- Set `font-size` / `line-height` in `.module.css` only when the value differs from the default — then use theme tokens (`--font-size-*`, `--line-height-*`), not hard-coded pixels.
+- If design changes a base size, update the token once in `src/ui/theme/fonts.css`; do not patch dozens of CSS files.

@@ -99,7 +99,8 @@
 
 .root :global(.ant-pagination-disabled .ant-pagination-item-link),
 .root :global(.ant-pagination-disabled:hover .ant-pagination-item-link),
-.root :global(.ant-pagination-disabled:focus-visible .ant-pagination-item-link) {
+.root
+  :global(.ant-pagination-disabled:focus-visible .ant-pagination-item-link) {
   color: var(--color-accent);
   background: transparent;
   cursor: not-allowed;

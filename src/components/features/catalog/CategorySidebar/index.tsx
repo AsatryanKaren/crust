@@ -34,7 +34,10 @@ export const CategorySidebar: Props = ({
   const isCompact = useIsCompact()
 
   return (
-    <nav className={styles.root} aria-label={t('pages.catalog.categoriesTitle')}>
+    <nav
+      className={styles.root}
+      aria-label={t('pages.catalog.categoriesTitle')}
+    >
       <h2 className={styles.title}>{t('pages.catalog.categoriesTitle')}</h2>
       <Menu
         className={`${styles.menu}${isCompact ? ` ${styles.menuCompact}` : ''}`}
@@ -47,9 +50,7 @@ export const CategorySidebar: Props = ({
           icon: categoryIconMap[category.icon],
           label: (
             <span
-              aria-current={
-                category.slug === activeSlug ? 'page' : undefined
-              }
+              aria-current={category.slug === activeSlug ? 'page' : undefined}
             >
               {t(category.nameKey)}
             </span>

@@ -10,7 +10,11 @@ export const Breadcrumbs: Props = ({ items }) => {
       className={styles.root}
       items={items.map((item) => ({
         key: item.key,
-        title: item.href ? <Link to={item.href}>{item.label}</Link> : item.label,
+        title: item.href ? (
+          <Link to={item.href}>{item.label}</Link>
+        ) : (
+          item.label
+        ),
       }))}
     />
   )

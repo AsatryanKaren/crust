@@ -22,9 +22,7 @@ export const CatalogToolbar: Props = ({
   const sortRef = useRef<HTMLDivElement>(null)
   const menuId = useId()
   const rootClassName =
-    showSort && !showSearch
-      ? `${styles.root} ${styles.sortOnly}`
-      : styles.root
+    showSort && !showSearch ? `${styles.root} ${styles.sortOnly}` : styles.root
 
   useEffect(() => {
     if (!open) {

@@ -15,29 +15,15 @@ import { useCategories } from '../../hooks/useCategories'
 import { useToggleFavorite } from '../../hooks/useFavorites'
 import { useProducts } from '../../hooks/useProducts'
 import { paths } from '../../routes/paths'
-import type { ProductSort } from '../../types/product'
+import { parseProductSort } from '../../utils/parseProductSort'
+import {
+  DEFAULT_CATEGORY,
+  DEFAULT_SORT,
+  PAGE_SIZE,
+  SEARCH_DEBOUNCE_MS,
+} from './consts'
 import type { Props } from './types'
 import styles from './styles.module.css'
-
-const DEFAULT_CATEGORY = 'pastries'
-const DEFAULT_SORT: ProductSort = 'recommended'
-const PAGE_SIZE = 6
-const SEARCH_DEBOUNCE_MS = 350
-
-const SORT_VALUES: ProductSort[] = [
-  'recommended',
-  'priceAsc',
-  'priceDesc',
-  'name',
-]
-
-const parseSort = (value: string | null): ProductSort => {
-  if (value && SORT_VALUES.includes(value as ProductSort)) {
-    return value as ProductSort
-  }
-
-  return DEFAULT_SORT
-}
 
 const parsePage = (value: string | null): number => {
   const parsed = Number.parseInt(value ?? '1', 10)
@@ -53,7 +39,7 @@ export const Catalog: Props = () => {
   const [searchParams, setSearchParams] = useSearchParams()
 
   const category = searchParams.get('category') ?? DEFAULT_CATEGORY
-  const sort = parseSort(searchParams.get('sort'))
+  const sort = parseProductSort(searchParams.get('sort'), DEFAULT_SORT)
   const page = parsePage(searchParams.get('page'))
   const qParam = searchParams.get('q') ?? ''
 

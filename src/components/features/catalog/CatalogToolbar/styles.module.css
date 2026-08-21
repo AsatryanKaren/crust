@@ -45,7 +45,7 @@
 
 .searchIcon {
   color: var(--color-ink-muted);
-  font-size: 18px !important;
+  font-size: var(--font-size-body-l-regular) !important;
   width: 18px;
   height: 18px;
 }

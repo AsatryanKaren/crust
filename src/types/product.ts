@@ -14,7 +14,14 @@ export type Product = {
   isFavorite: boolean
 }
 
-export type ProductSort = 'recommended' | 'priceAsc' | 'priceDesc' | 'name'
+export const PRODUCT_SORT_OPTIONS = [
+  'recommended',
+  'priceAsc',
+  'priceDesc',
+  'name',
+] as const
+
+export type ProductSort = (typeof PRODUCT_SORT_OPTIONS)[number]
 
 export type FavoritesResponse = {
   items: Product[]

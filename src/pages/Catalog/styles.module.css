@@ -26,8 +26,8 @@
 .heading {
   margin: 0;
   font-weight: 700;
-  font-size: clamp(28px, 4vw, 48px);
-  line-height: 1.2;
+  font-size: clamp(var(--font-size-heading-s), 4vw, var(--font-size-heading-l));
+  line-height: var(--line-height-heading-l);
   color: var(--color-ink);
 }
 

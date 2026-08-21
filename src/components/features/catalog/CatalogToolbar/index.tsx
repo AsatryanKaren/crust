@@ -30,7 +30,10 @@ export const CatalogToolbar: Props = ({
     }
 
     const onPointerDown = (event: MouseEvent) => {
-      if (!sortRef.current?.contains(event.target as Node)) {
+      if (
+        !(event.target instanceof Node) ||
+        !sortRef.current?.contains(event.target)
+      ) {
         setOpen(false)
       }
     }

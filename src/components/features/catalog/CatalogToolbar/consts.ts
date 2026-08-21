@@ -1,8 +1,1 @@
-import type { ProductSort } from '../../../../types/product'
-
-export const SORT_OPTIONS: ProductSort[] = [
-  'recommended',
-  'priceAsc',
-  'priceDesc',
-  'name',
-]
+export { PRODUCT_SORT_OPTIONS as SORT_OPTIONS } from '../../../../types/product'

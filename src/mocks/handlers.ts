@@ -3,6 +3,7 @@ import type { HttpHandler } from 'msw'
 
 import type { PaginatedResponse } from '../types/pagination'
 import type { Product, ProductSort } from '../types/product'
+import { parseProductSort } from '../utils/parseProductSort'
 import { categories } from './data/categories'
 import {
   getFavoriteProducts,
@@ -65,7 +66,7 @@ export const handlers: HttpHandler[] = [
     const url = new URL(request.url)
     const categorySlug = url.searchParams.get('category') ?? 'pastries'
     const q = (url.searchParams.get('q') ?? '').trim().toLowerCase()
-    const sort = (url.searchParams.get('sort') ?? 'recommended') as ProductSort
+    const sort = parseProductSort(url.searchParams.get('sort'))
     const page = parsePositiveInt(url.searchParams.get('page'), 1)
     const pageSize = parsePositiveInt(
       url.searchParams.get('pageSize'),
@@ -117,8 +118,16 @@ export const handlers: HttpHandler[] = [
   }),
 
   http.post('/api/cart/items', async ({ request }) => {
-    const body = (await request.json()) as { productId?: string }
-    return HttpResponse.json({ ok: true, productId: body.productId ?? null })
+    const body = await request.json()
+    const productId =
+      typeof body === 'object' &&
+      body !== null &&
+      'productId' in body &&
+      typeof body.productId === 'string'
+        ? body.productId
+        : null
+
+    return HttpResponse.json({ ok: true, productId })
   }),
 
   http.get('/api/favorites', () => {

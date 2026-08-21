@@ -3,10 +3,9 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { categoryIconMap } from '../consts'
+import { COMPACT_MQ } from './consts'
 import type { Props } from './types'
 import styles from './styles.module.css'
-
-const COMPACT_MQ = '(max-width: 1024px)'
 
 const useIsCompact = () => {
   const [isCompact, setIsCompact] = useState(

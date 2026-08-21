@@ -147,6 +147,10 @@
         "breakfast": "Breakfast Sets",
         "seasonal": "Seasonal"
       },
+      "pagination": {
+        "prev": "Previous page",
+        "next": "Next page"
+      },
       "errors": {
         "categories": "Could not load categories.",
         "products": "Could not load products."

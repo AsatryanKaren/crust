@@ -1,19 +1,13 @@
-import { DownOutlined } from '@ant-design/icons'
+import { DownOutlined, SortAscendingOutlined } from '@ant-design/icons'
 import SearchOutlined from '@mui/icons-material/SearchOutlined'
 import { Input } from 'antd'
 import { useEffect, useId, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { ProductSort } from '../../../../types/product'
+import { SORT_OPTIONS } from './consts'
 import type { Props } from './types'
 import styles from './styles.module.css'
-
-const SORT_OPTIONS: ProductSort[] = [
-  'recommended',
-  'priceAsc',
-  'priceDesc',
-  'name',
-]
 
 export const CatalogToolbar: Props = ({
   search,
@@ -27,6 +21,10 @@ export const CatalogToolbar: Props = ({
   const [open, setOpen] = useState(false)
   const sortRef = useRef<HTMLDivElement>(null)
   const menuId = useId()
+  const rootClassName =
+    showSort && !showSearch
+      ? `${styles.root} ${styles.sortOnly}`
+      : styles.root
 
   useEffect(() => {
     if (!open) {
@@ -60,7 +58,7 @@ export const CatalogToolbar: Props = ({
   }
 
   return (
-    <div className={styles.root}>
+    <div className={rootClassName}>
       {showSearch ? (
         <Input
           className={styles.search}
@@ -76,7 +74,9 @@ export const CatalogToolbar: Props = ({
       ) : null}
       {showSort ? (
         <div className={styles.sort} ref={sortRef}>
-          <span className={styles.sortLabel}>{t('pages.catalog.sortLabel')}:</span>
+          <span className={styles.sortLabel}>
+            {t('pages.catalog.sortLabel')}:
+          </span>
           <div className={styles.sortSelect}>
             <button
               type="button"
@@ -87,7 +87,12 @@ export const CatalogToolbar: Props = ({
               aria-label={t('pages.catalog.sortAriaLabel')}
               onClick={() => setOpen((value) => !value)}
             >
-              <span>{t(`pages.catalog.sort.${sort}`)}</span>
+              <span className={styles.sortIcon} aria-hidden>
+                <SortAscendingOutlined />
+              </span>
+              <span className={styles.sortValue}>
+                {t(`pages.catalog.sort.${sort}`)}
+              </span>
               <DownOutlined className={styles.sortChevron} aria-hidden />
             </button>
             {open ? (

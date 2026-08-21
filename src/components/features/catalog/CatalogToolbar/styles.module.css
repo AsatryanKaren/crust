@@ -88,6 +88,12 @@
   line-height: var(--line-height-body-b-m-semibold);
 }
 
+.sortIcon {
+  display: none;
+  font-size: var(--font-size-heading-xs);
+  line-height: 0;
+}
+
 .sortChevron {
   font-size: 10px;
 }
@@ -133,13 +139,40 @@
     margin-inline-start: 0;
   }
 
-  .search,
-  .sort {
+  .sortOnly {
+    width: auto;
+    flex: 0 0 auto;
+    margin-inline-start: auto;
+  }
+
+  .search {
     flex: 1 1 100%;
     max-width: none;
   }
 
   .sort {
+    flex: 0 0 auto;
     justify-content: flex-end;
+  }
+
+  .sortLabel,
+  .sortValue,
+  .sortChevron {
+    display: none;
+  }
+
+  .sortIcon {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .sortTrigger {
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  .sortMenu {
+    min-width: 180px;
   }
 }

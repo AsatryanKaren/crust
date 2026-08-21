@@ -37,16 +37,18 @@
   padding-block: 48px;
 }
 
-@media (max-width: 1024px) {
-  .heading {
-    flex: 1 1 100%;
-    min-width: 0;
-  }
-}
-
 @media (max-width: 600px) {
-  .topBar,
-  .headingRow {
+  .topBar {
     align-items: stretch;
+  }
+
+  .headingRow {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .heading {
+    flex: 1 1 auto;
+    min-width: 0;
   }
 }

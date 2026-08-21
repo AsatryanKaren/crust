@@ -1,0 +1,51 @@
+.root :global(.ant-drawer-section),
+.root :global(.ant-drawer-header) {
+  background: var(--header-bg);
+}
+
+.root :global(.ant-drawer-header) {
+  border-color: var(--header-border);
+}
+
+.root :global(.ant-drawer-title) {
+  color: var(--header-text);
+  font-size: var(--font-size-heading-xs);
+  font-weight: 600;
+  line-height: var(--line-height-heading-xs);
+}
+
+.root :global(.ant-drawer-close) {
+  color: var(--header-text);
+}
+
+.root :global(.ant-list-item-meta-title) {
+  margin: 0;
+}
+
+.link {
+  color: var(--header-text);
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--header-accent);
+}
+
+.price {
+  color: var(--header-text-muted);
+}
+
+.priceAmount {
+  color: var(--header-text);
+  font-weight: 600;
+}
+
+.remove {
+  color: var(--header-accent);
+}
+
+.remove:hover,
+.remove:focus {
+  color: var(--header-accent) !important;
+}

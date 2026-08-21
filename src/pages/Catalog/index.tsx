@@ -4,7 +4,7 @@ import { useMutation } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router-dom'
 
-import { addCartItem, toggleProductFavorite } from '../../api/products'
+import { addCartItem } from '../../api/products'
 import { Breadcrumbs } from '../../components/_shared/Breadcrumbs'
 import { Pagination } from '../../components/_shared/Pagination'
 import { CatalogLayout } from '../../components/features/catalog/CatalogLayout'
@@ -12,6 +12,7 @@ import { CatalogToolbar } from '../../components/features/catalog/CatalogToolbar
 import { CategorySidebar } from '../../components/features/catalog/CategorySidebar'
 import { ProductGrid } from '../../components/features/catalog/ProductGrid'
 import { useCategories } from '../../hooks/useCategories'
+import { useToggleFavorite } from '../../hooks/useFavorites'
 import { useProducts } from '../../hooks/useProducts'
 import { paths } from '../../routes/paths'
 import type { ProductSort } from '../../types/product'
@@ -118,9 +119,7 @@ export const Catalog: Props = () => {
     sort,
   })
 
-  const favoriteMutation = useMutation({
-    mutationFn: toggleProductFavorite,
-  })
+  const favoriteMutation = useToggleFavorite()
   const cartMutation = useMutation({
     mutationFn: addCartItem,
   })
@@ -168,9 +167,7 @@ export const Catalog: Props = () => {
               sort={sort}
               showSearch={false}
               onSearchChange={setSearchInput}
-              onSortChange={(value) =>
-                updateParams({ sort: value, page: '1' })
-              }
+              onSortChange={(value) => updateParams({ sort: value, page: '1' })}
             />
           </div>
         }
@@ -183,9 +180,7 @@ export const Catalog: Props = () => {
             <CategorySidebar
               categories={categoriesQuery.data ?? []}
               activeSlug={category}
-              onSelect={(slug) =>
-                updateParams({ category: slug, page: '1' })
-              }
+              onSelect={(slug) => updateParams({ category: slug, page: '1' })}
             />
           )
         }
@@ -215,9 +210,7 @@ export const Catalog: Props = () => {
               current={productsQuery.data.page}
               totalItems={productsQuery.data.total}
               pageSize={productsQuery.data.pageSize}
-              onChange={(nextPage) =>
-                updateParams({ page: String(nextPage) })
-              }
+              onChange={(nextPage) => updateParams({ page: String(nextPage) })}
             />
           </>
         ) : null}

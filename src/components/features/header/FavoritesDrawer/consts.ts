@@ -1,0 +1,2 @@
+export const FAVORITES_DRAWER_SIZE = 360
+export const FAVORITES_ITEM_IMAGE_SIZE = 64

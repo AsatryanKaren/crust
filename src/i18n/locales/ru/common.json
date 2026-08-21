@@ -48,6 +48,11 @@
     "cart": "Корзина",
     "search": "Поиск",
     "wishlist": "Избранное",
+    "wishlistTitle": "Избранное",
+    "closeWishlist": "Закрыть избранное",
+    "wishlistEmpty": "Пока нет избранных товаров.",
+    "wishlistError": "Не удалось загрузить избранное.",
+    "removeFromWishlist": "Убрать из избранного",
     "openMenu": "Открыть меню",
     "closeMenu": "Закрыть меню",
     "language": "Язык",
@@ -124,6 +129,7 @@
       },
       "actions": {
         "favorite": "Добавить в избранное",
+        "unfavorite": "Убрать из избранного",
         "addToCart": "Добавить в корзину"
       },
       "sort": {

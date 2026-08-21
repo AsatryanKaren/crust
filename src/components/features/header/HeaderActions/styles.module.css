@@ -22,6 +22,32 @@
   color: var(--header-accent);
 }
 
+.iconWrap {
+  display: inline-flex;
+  line-height: 1;
+  position: relative;
+}
+
+.badge {
+  align-items: center;
+  background: var(--header-accent);
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: var(--color-paper);
+  display: inline-flex;
+  font-family: var(--font-family-base);
+  font-size: 10px;
+  font-weight: 600;
+  height: 16px;
+  justify-content: center;
+  line-height: 1;
+  min-width: 16px;
+  padding-inline: 5px;
+  position: absolute;
+  right: -8px;
+  top: -6px;
+}
+
 .desktopOnly {
   display: inline-flex;
 }

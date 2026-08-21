@@ -36,7 +36,11 @@ export const ProductCard: Props = ({ product, onFavorite, onAddToCart }) => {
           <div className={styles.topLeft}>
             <IconButton
               className={`${styles.favoriteButton}${product.isFavorite ? ` ${styles.favoriteActive}` : ''}`}
-              ariaLabel={t('pages.catalog.actions.favorite')}
+              ariaLabel={
+                product.isFavorite
+                  ? t('pages.catalog.actions.unfavorite')
+                  : t('pages.catalog.actions.favorite')
+              }
               onClick={() => onFavorite?.(product.id)}
             >
               <span className={styles.heart}>

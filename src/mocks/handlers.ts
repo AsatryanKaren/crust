@@ -4,6 +4,11 @@ import type { HttpHandler } from 'msw'
 import type { PaginatedResponse } from '../types/pagination'
 import type { Product, ProductSort } from '../types/product'
 import { categories } from './data/categories'
+import {
+  getFavoriteProducts,
+  toggleFavoriteId,
+  withFavoriteFlag,
+} from './data/favorites'
 import { products } from './data/products'
 
 type ReservationRequest = {
@@ -45,7 +50,9 @@ const sortProducts = (items: Product[], sort: ProductSort): Product[] => {
       return next.sort((a, b) => a.name.localeCompare(b.name))
     case 'recommended':
     default:
-      return next.sort((a, b) => Number(b.isBestseller) - Number(a.isBestseller))
+      return next.sort(
+        (a, b) => Number(b.isBestseller) - Number(a.isBestseller),
+      )
   }
 }
 
@@ -83,7 +90,7 @@ export const handlers: HttpHandler[] = [
     const totalPages = Math.max(1, Math.ceil(total / pageSize))
     const safePage = Math.min(page, totalPages)
     const start = (safePage - 1) * pageSize
-    const items = sorted.slice(start, start + pageSize)
+    const items = sorted.slice(start, start + pageSize).map(withFavoriteFlag)
 
     const response: PaginatedResponse<Product> = {
       items,
@@ -100,10 +107,13 @@ export const handlers: HttpHandler[] = [
     const product = products.find((item) => item.id === params.id)
 
     if (!product) {
-      return HttpResponse.json({ message: 'Product not found' }, { status: 404 })
+      return HttpResponse.json(
+        { message: 'Product not found' },
+        { status: 404 },
+      )
     }
 
-    return HttpResponse.json(product)
+    return HttpResponse.json(withFavoriteFlag(product))
   }),
 
   http.post('/api/cart/items', async ({ request }) => {
@@ -111,8 +121,28 @@ export const handlers: HttpHandler[] = [
     return HttpResponse.json({ ok: true, productId: body.productId ?? null })
   }),
 
+  http.get('/api/favorites', () => {
+    return HttpResponse.json({ items: getFavoriteProducts() })
+  }),
+
   http.post('/api/products/:id/favorite', ({ params }) => {
-    return HttpResponse.json({ ok: true, productId: params.id })
+    const productId = typeof params.id === 'string' ? params.id : undefined
+    if (!productId) {
+      return HttpResponse.json(
+        { message: 'Product not found' },
+        { status: 404 },
+      )
+    }
+
+    const result = toggleFavoriteId(productId)
+    if (!result) {
+      return HttpResponse.json(
+        { message: 'Product not found' },
+        { status: 404 },
+      )
+    }
+
+    return HttpResponse.json(result)
   }),
 
   http.get('/api/reservation', () => {

@@ -16,6 +16,15 @@ export type Product = {
 
 export type ProductSort = 'recommended' | 'priceAsc' | 'priceDesc' | 'name'
 
+export type FavoritesResponse = {
+  items: Product[]
+}
+
+export type ToggleFavoriteResponse = {
+  productId: string
+  isFavorite: boolean
+}
+
 export type ProductsQueryParams = {
   category?: string
   page?: number

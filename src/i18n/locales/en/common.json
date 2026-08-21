@@ -48,6 +48,11 @@
     "cart": "Cart",
     "search": "Search",
     "wishlist": "Wishlist",
+    "wishlistTitle": "Favorites",
+    "closeWishlist": "Close favorites",
+    "wishlistEmpty": "No favorite items yet.",
+    "wishlistError": "Could not load favorites.",
+    "removeFromWishlist": "Remove from favorites",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "language": "Language",
@@ -124,6 +129,7 @@
       },
       "actions": {
         "favorite": "Add to favorites",
+        "unfavorite": "Remove from favorites",
         "addToCart": "Add to cart"
       },
       "sort": {

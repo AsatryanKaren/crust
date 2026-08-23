@@ -1,0 +1,18 @@
+.root {
+  color: var(--color-ink);
+}
+
+.root :global(.ant-breadcrumb-link),
+.root :global(.ant-breadcrumb-separator),
+.root :global(li),
+.root :global(span) {
+  color: var(--color-ink);
+}
+
+.root :global(a) {
+  color: var(--color-ink);
+}
+
+.root :global(a:hover) {
+  color: var(--color-accent);
+}

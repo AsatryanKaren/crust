@@ -1,0 +1,23 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px !important;
+  min-width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 50%;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  box-shadow: 0 1px 4px var(--color-ink-border);
+}
+
+.root :global(.anticon) {
+  font-size: var(--font-size-body-b-m-semibold);
+}
+
+.root:disabled {
+  color: var(--color-text-disabled);
+  background: var(--color-primary-disabled-bg);
+}

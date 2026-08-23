@@ -1,8 +1,10 @@
 import { readdir, readFile } from 'node:fs/promises'
-import { extname, join, relative } from 'node:path'
+import { extname, join, relative, sep } from 'node:path'
 
 const SRC = 'src'
 const DEFAULT_EXPORT_ALLOWLIST = new Set(['src/App.tsx', 'src/i18n/index.ts'])
+
+const toPosixPath = (path) => path.split(sep).join('/')
 
 const failures = []
 
@@ -68,7 +70,7 @@ const checkLine = (path, lineNumber, line) => {
 const files = await walk(SRC)
 
 for (const file of files) {
-  const path = relative(process.cwd(), file)
+  const path = toPosixPath(relative(process.cwd(), file))
 
   if (file.endsWith('style.module.css')) {
     addFailure(path, 0, 'rename to styles.module.css')

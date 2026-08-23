@@ -48,6 +48,11 @@
     "cart": "Cart",
     "search": "Search",
     "wishlist": "Wishlist",
+    "wishlistTitle": "Favorites",
+    "closeWishlist": "Close favorites",
+    "wishlistEmpty": "No favorite items yet.",
+    "wishlistError": "Could not load favorites.",
+    "removeFromWishlist": "Remove from favorites",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "language": "Language",
@@ -105,7 +110,51 @@
   "pages": {
     "catalog": {
       "title": "Catalog",
-      "description": "Browse our bakery products."
+      "description": "Browse our bakery products.",
+      "heading": "Freshly Baked",
+      "categoriesTitle": "Categories",
+      "searchPlaceholder": "Search pastries...",
+      "searchAriaLabel": "Search products",
+      "sortAriaLabel": "Sort products",
+      "sortLabel": "Sort by",
+      "empty": "No products found.",
+      "priceAmount": "{{price}}",
+      "priceUnit": "{{currency}} / {{unit}}",
+      "status": {
+        "available": "available",
+        "unavailable": "unavailable"
+      },
+      "badges": {
+        "bestseller": "bestseller"
+      },
+      "actions": {
+        "favorite": "Add to favorites",
+        "unfavorite": "Remove from favorites",
+        "addToCart": "Add to cart"
+      },
+      "sort": {
+        "recommended": "Recommended",
+        "priceAsc": "Price: low to high",
+        "priceDesc": "Price: high to low",
+        "name": "Name"
+      },
+      "categories": {
+        "pastries": "Croissants & Pastries",
+        "breads": "Breads",
+        "cakes": "Cakes & Desserts",
+        "sandwiches": "Sandwiches",
+        "drinks": "Coffee & Drinks",
+        "breakfast": "Breakfast Sets",
+        "seasonal": "Seasonal"
+      },
+      "pagination": {
+        "prev": "Previous page",
+        "next": "Next page"
+      },
+      "errors": {
+        "categories": "Could not load categories.",
+        "products": "Could not load products."
+      }
     },
     "productDetails": {
       "title": "Product",

@@ -1,0 +1,45 @@
+.root {
+  display: grid;
+  grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
+  grid-template-areas:
+    'sidebar heading'
+    'sidebar main';
+  gap: 32px;
+  align-items: start;
+  width: 100%;
+}
+
+.headingArea {
+  grid-area: heading;
+  min-width: 0;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  position: sticky;
+  inset-block-start: 24px;
+}
+
+.main {
+  grid-area: main;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .root {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'heading'
+      'sidebar'
+      'main';
+    gap: 24px;
+  }
+
+  .sidebar {
+    position: static;
+    min-width: 0;
+  }
+}

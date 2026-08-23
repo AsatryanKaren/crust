@@ -1,3 +1,54 @@
-/* Page shell styles live on PageShell; keep module for structure. */
 .root {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-block: 24px 48px;
+  margin-inline: var(--layout-main-margin-x);
+  color: var(--color-ink);
+}
+
+.topBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.headingRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.heading {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(var(--font-size-heading-s), 4vw, var(--font-size-heading-l));
+  line-height: var(--line-height-heading-l);
+  color: var(--color-ink);
+}
+
+.state {
+  display: flex;
+  justify-content: center;
+  padding-block: 48px;
+}
+
+@media (max-width: 600px) {
+  .topBar {
+    align-items: stretch;
+  }
+
+  .headingRow {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .heading {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
 }

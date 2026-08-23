@@ -31,6 +31,7 @@ void enableMocking().then(() => {
         theme={{
           token: {
             fontFamily: 'var(--font-family-base)',
+            colorPrimary: 'var(--color-accent)',
           },
         }}
       >

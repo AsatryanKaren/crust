@@ -102,9 +102,33 @@ export const AccountPage = lazy(() =>
   import('../pages/Account').then((module) => ({ default: module.Account })),
 )
 
+export const AccountOverviewPage = lazy(() =>
+  import('../pages/Account/Overview').then((module) => ({
+    default: module.Overview,
+  })),
+)
+
 export const AccountOrdersPage = lazy(() =>
   import('../pages/Account/Orders').then((module) => ({
     default: module.Orders,
+  })),
+)
+
+export const AccountFavoritesPage = lazy(() =>
+  import('../pages/Account/Favorites').then((module) => ({
+    default: module.Favorites,
+  })),
+)
+
+export const AccountReservationsPage = lazy(() =>
+  import('../pages/Account/Reservations').then((module) => ({
+    default: module.Reservations,
+  })),
+)
+
+export const AccountAddressesPage = lazy(() =>
+  import('../pages/Account/Addresses').then((module) => ({
+    default: module.Addresses,
   })),
 )
 

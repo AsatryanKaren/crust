@@ -1,0 +1,60 @@
+.root {
+  position: relative;
+  overflow: hidden;
+  min-height: 180px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--color-ink-overlay);
+}
+
+.copy {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 24px;
+  color: var(--color-text-white);
+}
+
+.badge {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--color-success-2);
+  font-size: var(--font-size-body-b-s-regular);
+  line-height: var(--line-height-body-b-s-regular);
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: var(--font-size-heading-xs);
+  line-height: var(--line-height-heading-xs);
+}
+
+.body {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .image {
+    height: 160px;
+  }
+
+  .copy {
+    padding: 16px;
+  }
+}

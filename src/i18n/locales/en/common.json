@@ -260,12 +260,24 @@
       }
     },
     "account": {
-      "title": "My account",
-      "description": "Manage your customer account."
+      "title": "Account Overview",
+      "description": "Welcome back. Manage your orders and table bookings."
     },
     "accountOrders": {
       "title": "Order history",
       "description": "View and manage your orders."
+    },
+    "accountFavorites": {
+      "title": "Favorite products",
+      "description": "Products you have saved for later."
+    },
+    "accountReservations": {
+      "title": "Table reservations",
+      "description": "View and manage your table bookings."
+    },
+    "accountAddresses": {
+      "title": "Saved addresses",
+      "description": "Delivery and pickup addresses you have saved."
     },
     "admin": {
       "products": {
@@ -300,6 +312,60 @@
     "notFound": {
       "title": "Page not found",
       "description": "The page you requested does not exist."
+    }
+  },
+  "account": {
+    "sidebar": {
+      "navLabel": "Account navigation",
+      "personalInfo": "Personal Info",
+      "previousOrders": "Previous Orders",
+      "favoriteProducts": "Favorite Products",
+      "tableReservations": "Table Reservations",
+      "savedAddresses": "Saved Addresses",
+      "signOut": "Sign Out",
+      "memberSince": "Member since {{date}}",
+      "editAvatar": "Edit profile photo"
+    },
+    "overview": {
+      "title": "Account Overview",
+      "welcome": "Welcome back, {{name}}. Manage your orders and table bookings below."
+    },
+    "reservations": {
+      "title": "Current Reservations",
+      "tableFor": "Table for {{count}} Guests",
+      "manage": "Manage Booking",
+      "empty": "You have no current reservations.",
+      "status": {
+        "confirmed": "Confirmed"
+      }
+    },
+    "orders": {
+      "title": "Previous Orders",
+      "viewAll": "View All History",
+      "empty": "You have no previous orders.",
+      "orderNumber": "Order number",
+      "date": "Date",
+      "statusLabel": "Status",
+      "total": "Total",
+      "totalValue": "{{amount}}",
+      "viewDetails": "View Details",
+      "orderAgain": "Order Again",
+      "status": {
+        "outForDelivery": "Out for delivery",
+        "completed": "Completed"
+      }
+    },
+    "promo": {
+      "featured": "Featured",
+      "winterTitle": "The Winter Collection",
+      "winterBody": "Discover our new seasonal treats.",
+      "imageAlt": "Flour-dusted baguette on a wooden board"
+    },
+    "locations": {
+      "abovyan": "Abovyan St. Branch"
+    },
+    "errors": {
+      "load": "Could not load your account."
     }
   }
 }

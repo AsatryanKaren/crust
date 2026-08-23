@@ -7,6 +7,6 @@ export type AuthStubState = {
 
 /** Temporary auth stand-in until a real session layer exists. */
 export const getAuthStub = (): AuthStubState => ({
-  isAuthenticated: false,
-  role: 'guest',
+  isAuthenticated: true,
+  role: 'customer',
 })

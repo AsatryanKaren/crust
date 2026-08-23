@@ -6,8 +6,12 @@ import { AuthGuard } from './guards/AuthGuard'
 import { GuestGuard } from './guards/GuestGuard'
 import {
   AboutPage,
+  AccountAddressesPage,
+  AccountFavoritesPage,
   AccountOrdersPage,
+  AccountOverviewPage,
   AccountPage,
+  AccountReservationsPage,
   AdminAvailabilityPage,
   AdminCategoriesPage,
   AdminContentPage,
@@ -78,10 +82,25 @@ export const router = createBrowserRouter([
           {
             element: <AuthGuard />,
             children: [
-              { path: paths.account, element: <AccountPage /> },
               {
-                path: paths.accountOrders,
-                element: <AccountOrdersPage />,
+                path: paths.account,
+                element: <AccountPage />,
+                children: [
+                  { index: true, element: <AccountOverviewPage /> },
+                  { path: 'orders', element: <AccountOrdersPage /> },
+                  {
+                    path: 'favorites',
+                    element: <AccountFavoritesPage />,
+                  },
+                  {
+                    path: 'reservations',
+                    element: <AccountReservationsPage />,
+                  },
+                  {
+                    path: 'addresses',
+                    element: <AccountAddressesPage />,
+                  },
+                ],
               },
             ],
           },

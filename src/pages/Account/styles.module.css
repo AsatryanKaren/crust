@@ -1,3 +1,32 @@
-/* Page shell styles live on PageShell; keep module for structure. */
 .root {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  min-height: 100%;
+  padding-block: 24px 48px;
+  padding-inline: var(--layout-main-margin-x);
+  background: var(--color-bg-1);
+  color: var(--color-ink);
+}
+
+.sidebar {
+  position: sticky;
+  inset-block-start: 24px;
+  min-width: 0;
+}
+
+.main {
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .root {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sidebar {
+    position: static;
+  }
 }

@@ -4,6 +4,11 @@ import type { HttpHandler } from 'msw'
 import type { PaginatedResponse } from '../types/pagination'
 import type { Product, ProductSort } from '../types/product'
 import { parseProductSort } from '../utils/parseProductSort'
+import {
+  accountOrders,
+  accountProfile,
+  currentReservations,
+} from './data/account'
 import { categories } from './data/categories'
 import {
   getFavoriteProducts,
@@ -175,5 +180,17 @@ export const handlers: HttpHandler[] = [
 
   http.get('/api/reservations', () => {
     return HttpResponse.json(submittedReservations)
+  }),
+
+  http.get('/api/account/me', () => {
+    return HttpResponse.json(accountProfile)
+  }),
+
+  http.get('/api/account/orders', () => {
+    return HttpResponse.json(accountOrders)
+  }),
+
+  http.get('/api/account/reservations/current', () => {
+    return HttpResponse.json(currentReservations)
   }),
 ]

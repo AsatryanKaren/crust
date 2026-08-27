@@ -1,5 +1,12 @@
 export type ProductStatus = 'available' | 'unavailable'
 
+export type ProductVariant = {
+  id: string
+  labelKey: string
+  price: number
+  unit: string
+}
+
 export type Product = {
   id: string
   categoryId: string
@@ -9,9 +16,32 @@ export type Product = {
   currency: string
   unit: string
   imageUrl: string
+  images: string[]
+  ingredients: string[]
+  allergens: string[]
+  variants: ProductVariant[]
   isBestseller: boolean
   status: ProductStatus
   isFavorite: boolean
+}
+
+export type AddCartItemPayload = {
+  productId: string
+  variantId: string
+  quantity: number
+}
+
+export type CartItem = {
+  id: string
+  productId: string
+  variantId: string
+  quantity: number
+  product: Product
+  variant: ProductVariant
+}
+
+export type CartResponse = {
+  items: CartItem[]
 }
 
 export const PRODUCT_SORT_OPTIONS = [

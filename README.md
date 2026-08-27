@@ -19,7 +19,7 @@ Installable PWA with offline fallback
 
 Tech Stack
 
-CategoryTechnologyFrameworkReact 19 + TypeScriptBuild ToolViteUI LibraryAnt Design 6RoutingReact Router 7Server StateTanStack QueryClient StateZustandForms & ValidationReact Hook Form + ZodLocalizationi18nextMapsLeaflet / React LeafletPWAvite-plugin-pwaLintingESLint + typescript-eslint
+CategoryTechnologyFrameworkReact 19 + TypeScriptBuild ToolViteUI LibraryAnt Design 6RoutingReact Router 7Server StateTanStack QueryForms & ValidationReact Hook Form + ZodLocalizationi18nextMapsLeaflet / React LeafletPWAvite-plugin-pwaLintingESLint + typescript-eslint
 
 Prerequisites
 
@@ -63,7 +63,7 @@ src/
 ├── pages/ # Route-level screens
 ├── components/ # Reusable UI components
 ├── api/ # API client and requests
-├── store/ # Global state (Zustand)
+├── hooks/ # TanStack Query hooks (favorites, cart, products, …)
 ├── i18n/
 │ └── locales/
 │ ├── hy/

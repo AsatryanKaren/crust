@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, ScrollRestoration } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import type { Props } from './types'
@@ -19,6 +19,7 @@ export const RouteSuspense: Props = () => {
   return (
     <Suspense fallback={<RouteFallback />}>
       <Outlet />
+      <ScrollRestoration />
     </Suspense>
   )
 }

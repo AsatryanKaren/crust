@@ -1,18 +1,29 @@
 .root {
-  color: var(--color-ink);
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-body-b-s-regular);
+  line-height: var(--line-height-body-b-s-regular);
+}
+
+.root :global(ol) {
+  flex-wrap: wrap;
 }
 
 .root :global(.ant-breadcrumb-link),
 .root :global(.ant-breadcrumb-separator),
 .root :global(li),
 .root :global(span) {
-  color: var(--color-ink);
+  color: var(--color-ink-muted);
 }
 
 .root :global(a) {
-  color: var(--color-ink);
+  color: var(--color-ink-muted);
 }
 
 .root :global(a:hover) {
   color: var(--color-accent);
+}
+
+.root :global(li:last-child),
+.root :global(li:last-child span) {
+  color: var(--color-ink);
 }

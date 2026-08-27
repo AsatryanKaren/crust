@@ -2,18 +2,24 @@ import { HeartFilled, HeartOutlined, SearchOutlined } from '@ant-design/icons'
 import { useId, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import { getCartQuantityCount, useCart } from '../../../../hooks/useCart'
 import { useFavorites } from '../../../../hooks/useFavorites'
+import { CartDrawer } from '../CartDrawer'
 import { FavoritesDrawer } from '../FavoritesDrawer'
 import { HeaderCart } from '../HeaderCart'
 import type { Props } from './types'
 import styles from './styles.module.css'
 
-export const HeaderActions: Props = ({ cartCount = 0 }) => {
+export const HeaderActions: Props = () => {
   const { t } = useTranslation()
   const [wishlistOpen, setWishlistOpen] = useState(false)
-  const panelId = useId()
+  const [cartOpen, setCartOpen] = useState(false)
+  const wishlistPanelId = useId()
+  const cartPanelId = useId()
   const favoritesQuery = useFavorites()
+  const cartQuery = useCart()
   const count = favoritesQuery.data?.items.length ?? 0
+  const cartCount = getCartQuantityCount(cartQuery.data?.items ?? [])
   const wishlistLabel =
     count > 0 ? `${t('header.wishlist')} (${count})` : t('header.wishlist')
 
@@ -32,7 +38,7 @@ export const HeaderActions: Props = ({ cartCount = 0 }) => {
           className={styles.iconButton}
           aria-label={wishlistLabel}
           aria-expanded={wishlistOpen}
-          aria-controls={panelId}
+          aria-controls={wishlistPanelId}
           onClick={() => setWishlistOpen(true)}
         >
           <span className={styles.iconWrap}>
@@ -49,13 +55,23 @@ export const HeaderActions: Props = ({ cartCount = 0 }) => {
           </span>
         </button>
         <div className={styles.desktopOnly}>
-          <HeaderCart count={cartCount} />
+          <HeaderCart
+            count={cartCount}
+            open={cartOpen}
+            panelId={cartPanelId}
+            onOpen={() => setCartOpen(true)}
+          />
         </div>
       </div>
       <FavoritesDrawer
         open={wishlistOpen}
-        panelId={panelId}
+        panelId={wishlistPanelId}
         onClose={() => setWishlistOpen(false)}
+      />
+      <CartDrawer
+        open={cartOpen}
+        panelId={cartPanelId}
+        onClose={() => setCartOpen(false)}
       />
     </>
   )

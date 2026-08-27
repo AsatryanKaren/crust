@@ -1,10 +1,9 @@
 import type { FC } from 'react'
 
 type OwnProps = {
-  count?: number
-  open?: boolean
+  open: boolean
   panelId: string
-  onOpen: () => void
+  onClose: () => void
 }
 
 export type Props = FC<OwnProps>

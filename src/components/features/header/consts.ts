@@ -28,6 +28,3 @@ export const HEADER_NAV_ITEMS: HeaderNavItem[] = [
   },
   { id: 'contact', to: HEADER_ROUTES.contact, labelKey: 'header.nav.contact' },
 ]
-
-/** Stub until cart state exists */
-export const HEADER_CART_COUNT_STUB = 2

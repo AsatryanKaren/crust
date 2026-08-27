@@ -1,3 +1,4 @@
+import { useId } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { Props } from './types'
@@ -10,11 +11,14 @@ export const ProductSelection: Props = ({
   disabled,
 }) => {
   const { t } = useTranslation()
+  const labelId = useId()
 
   return (
     <div className={styles.root}>
-      <p className={styles.label}>{t('pages.productDetails.selectionLabel')}</p>
-      <div className={styles.group} role="radiogroup">
+      <p id={labelId} className={styles.label}>
+        {t('pages.productDetails.selectionLabel')}
+      </p>
+      <div className={styles.group} role="radiogroup" aria-labelledby={labelId}>
         {variants.map((variant) => {
           const isSelected = variant.id === value
 

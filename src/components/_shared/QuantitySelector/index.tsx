@@ -32,7 +32,7 @@ export const QuantitySelector: Props = ({
       <button
         type="button"
         className={styles.step}
-        aria-label={t('pages.productDetails.quantity.decrease')}
+        aria-label={t('quantitySelector.decrease')}
         disabled={disabled || value <= min}
         onClick={() => commit(value - 1)}
       >
@@ -53,7 +53,7 @@ export const QuantitySelector: Props = ({
       <button
         type="button"
         className={styles.step}
-        aria-label={t('pages.productDetails.quantity.increase')}
+        aria-label={t('quantitySelector.increase')}
         disabled={disabled || value >= max}
         onClick={() => commit(value + 1)}
       >

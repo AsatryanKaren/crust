@@ -48,9 +48,7 @@ export const ProductDetails: Props = () => {
     (item) => item.id === product?.categoryId,
   )
   const categoryLabel = category
-    ? t(`pages.productDetails.categoryCrumbs.${category.slug}`, {
-        defaultValue: t(category.nameKey),
-      })
+    ? t(category.nameKey)
     : t('pages.catalog.categories.pastries')
 
   const isNotFound =
@@ -102,7 +100,11 @@ export const ProductDetails: Props = () => {
 
       {product && selectedVariant ? (
         <div className={styles.layout}>
-          <ProductGallery images={galleryImages} productName={product.name} />
+          <ProductGallery
+            key={product.id}
+            images={galleryImages}
+            productName={product.name}
+          />
           <ProductInfo
             product={product}
             selectedVariant={selectedVariant}

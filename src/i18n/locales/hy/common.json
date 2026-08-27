@@ -1,5 +1,9 @@
 {
   "brand": "Crust",
+  "quantitySelector": {
+    "decrease": "Նվազեցնել քանակը",
+    "increase": "Ավելացնել քանակը"
+  },
   "cartFeedback": {
     "added": "Ավելացվել է զամբյուղում։",
     "viewCart": "Դիտել զամբյուղը"
@@ -180,19 +184,12 @@
         "mainAlt": "{{name}}",
         "thumbAlt": "{{name}} լուսանկար {{index}}"
       },
-      "quantity": {
-        "decrease": "Նվազեցնել քանակը",
-        "increase": "Ավելացնել քանակը"
-      },
       "variants": {
         "single": "Մեկ հատ",
         "box6": "6 հատանոց տուփ"
       },
       "errors": {
         "load": "Չհաջողվեց բեռնել այս ապրանքը։"
-      },
-      "categoryCrumbs": {
-        "pastries": "Խմորեղեն"
       }
     },
     "cart": {

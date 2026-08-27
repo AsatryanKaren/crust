@@ -1,5 +1,9 @@
 {
   "brand": "Crust",
+  "quantitySelector": {
+    "decrease": "Уменьшить количество",
+    "increase": "Увеличить количество"
+  },
   "cartFeedback": {
     "added": "Товар добавлен в корзину.",
     "viewCart": "Перейти в корзину"
@@ -180,19 +184,12 @@
         "mainAlt": "{{name}}",
         "thumbAlt": "{{name}} фото {{index}}"
       },
-      "quantity": {
-        "decrease": "Уменьшить количество",
-        "increase": "Увеличить количество"
-      },
       "variants": {
         "single": "Один",
         "box6": "Коробка из 6"
       },
       "errors": {
         "load": "Не удалось загрузить этот товар."
-      },
-      "categoryCrumbs": {
-        "pastries": "Выпечка"
       }
     },
     "cart": {

@@ -1,5 +1,9 @@
 {
   "brand": "Crust",
+  "quantitySelector": {
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity"
+  },
   "cartFeedback": {
     "added": "Added to cart.",
     "viewCart": "View cart"
@@ -180,19 +184,12 @@
         "mainAlt": "{{name}}",
         "thumbAlt": "{{name}} photo {{index}}"
       },
-      "quantity": {
-        "decrease": "Decrease quantity",
-        "increase": "Increase quantity"
-      },
       "variants": {
         "single": "Single",
         "box6": "Box of 6"
       },
       "errors": {
         "load": "Could not load this product."
-      },
-      "categoryCrumbs": {
-        "pastries": "Pastries"
       }
     },
     "cart": {

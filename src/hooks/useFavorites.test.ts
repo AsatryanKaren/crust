@@ -7,6 +7,7 @@ import { toggleProductFavorite } from '../api/products'
 import type { PaginatedResponse } from '../types/pagination'
 import type { Product } from '../types/product'
 import { favoritesQueryKey, useToggleFavorite } from './useFavorites'
+import { productDetailQueryKey } from './useProduct'
 import { productsQueryKey } from './useProducts'
 
 vi.mock('../api/favorites', () => ({
@@ -26,6 +27,17 @@ const product: Product = {
   currency: 'AMD',
   unit: 'pc',
   imageUrl: '/croissant.jpg',
+  images: ['/croissant.jpg'],
+  ingredients: ['Wheat flour', 'Butter'],
+  allergens: ['Gluten', 'Milk'],
+  variants: [
+    {
+      id: 'single',
+      labelKey: 'pages.productDetails.variants.single',
+      price: 8,
+      unit: 'pc',
+    },
+  ],
   isBestseller: false,
   status: 'available',
   isFavorite: false,
@@ -129,5 +141,27 @@ describe('useToggleFavorite', () => {
     })
 
     expect(queryClient.getQueryData(favoritesQueryKey)).toEqual({ items: [] })
+  })
+
+  it('patches a product-detail cache entry', async () => {
+    const queryClient = createQueryClient()
+    queryClient.setQueryData(productDetailQueryKey(product.id), product)
+    queryClient.setQueryData(favoritesQueryKey, { items: [] })
+
+    vi.mocked(toggleProductFavorite).mockReturnValue(
+      new Promise(() => undefined),
+    )
+
+    const { result } = renderHook(() => useToggleFavorite(), {
+      wrapper: createWrapper(queryClient),
+    })
+
+    result.current.mutate(product.id)
+
+    await waitFor(() => {
+      expect(
+        queryClient.getQueryData(productDetailQueryKey(product.id)),
+      ).toEqual({ ...product, isFavorite: true })
+    })
   })
 })

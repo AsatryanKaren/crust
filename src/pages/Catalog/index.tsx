@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react'
 import { Alert, Empty, Spin } from 'antd'
-import { useMutation } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router-dom'
 
-import { addCartItem } from '../../api/products'
 import { Breadcrumbs } from '../../components/_shared/Breadcrumbs'
 import { Pagination } from '../../components/_shared/Pagination'
 import { CatalogLayout } from '../../components/features/catalog/CatalogLayout'
 import { CatalogToolbar } from '../../components/features/catalog/CatalogToolbar'
 import { CategorySidebar } from '../../components/features/catalog/CategorySidebar'
 import { ProductGrid } from '../../components/features/catalog/ProductGrid'
+import { useAddCartItem } from '../../hooks/useCart'
 import { useCategories } from '../../hooks/useCategories'
 import { useToggleFavorite } from '../../hooks/useFavorites'
 import { useProducts } from '../../hooks/useProducts'
@@ -106,9 +105,7 @@ export const Catalog: Props = () => {
   })
 
   const favoriteMutation = useToggleFavorite()
-  const cartMutation = useMutation({
-    mutationFn: addCartItem,
-  })
+  const cartMutation = useAddCartItem()
 
   const activeCategory = categoriesQuery.data?.find(
     (item) => item.slug === category,
@@ -190,7 +187,21 @@ export const Catalog: Props = () => {
             <ProductGrid
               products={productsQuery.data.items}
               onFavorite={(productId) => favoriteMutation.mutate(productId)}
-              onAddToCart={(productId) => cartMutation.mutate(productId)}
+              onAddToCart={(productId) => {
+                const item = productsQuery.data.items.find(
+                  (product) => product.id === productId,
+                )
+                const variantId = item?.variants[0]?.id
+                if (!variantId) {
+                  return
+                }
+
+                cartMutation.mutate({
+                  productId,
+                  variantId,
+                  quantity: 1,
+                })
+              }}
             />
             <Pagination
               current={productsQuery.data.page}

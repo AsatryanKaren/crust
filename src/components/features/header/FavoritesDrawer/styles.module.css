@@ -18,8 +18,30 @@
   color: var(--header-text);
 }
 
-.root :global(.ant-list-item-meta-title) {
+.list {
   margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-block: 12px;
+  border-bottom: 1px solid var(--header-border);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.itemBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
 }
 
 .link {
@@ -48,4 +70,8 @@
 .remove:hover,
 .remove:focus {
   color: var(--header-accent) !important;
+}
+
+.emptyAction {
+  margin-top: 16px;
 }

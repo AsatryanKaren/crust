@@ -48,55 +48,6 @@
   inset-inline-start: 12px;
 }
 
-.favoriteButton {
-  color: var(--color-accent);
-  background: var(--color-paper) !important;
-  box-shadow: 0 1px 4px var(--color-ink-border);
-}
-
-.favoriteButton:hover,
-.favoriteButton:focus {
-  color: var(--color-accent) !important;
-  background: var(--color-paper) !important;
-}
-
-.favoriteActive {
-  color: var(--color-accent);
-}
-
-.heart {
-  position: relative;
-  display: inline-flex;
-  width: 1em;
-  height: 1em;
-  font-size: var(--font-size-body-b-m-semibold);
-  line-height: 0;
-}
-
-.heartOutline,
-.heartFill {
-  display: block;
-}
-
-.heartFill {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-}
-
-.favoriteButton:hover .heartOutline,
-.favoriteButton:focus .heartOutline,
-.favoriteActive .heartOutline {
-  opacity: 0;
-}
-
-.favoriteButton:hover .heartFill,
-.favoriteButton:focus .heartFill,
-.favoriteActive .heartFill {
-  opacity: 1;
-  color: var(--color-accent);
-}
-
 .bestseller {
   position: absolute;
   inset-block-start: 12px;

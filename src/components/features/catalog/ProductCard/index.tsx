@@ -1,12 +1,9 @@
-import {
-  HeartFilled,
-  HeartOutlined,
-  ShoppingCartOutlined,
-} from '@ant-design/icons'
+import { ShoppingCartOutlined } from '@ant-design/icons'
 import { Card, Tag, Typography } from 'antd'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
+import { FavoriteButton } from '../../../_shared/FavoriteButton'
 import { IconButton } from '../../../_shared/IconButton'
 import { StatusBadge } from '../../../_shared/StatusBadge'
 import { productDetailsPath } from '../../../../routes/paths'
@@ -34,20 +31,10 @@ export const ProductCard: Props = ({ product, onFavorite, onAddToCart }) => {
           </Link>
 
           <div className={styles.topLeft}>
-            <IconButton
-              className={`${styles.favoriteButton}${product.isFavorite ? ` ${styles.favoriteActive}` : ''}`}
-              ariaLabel={
-                product.isFavorite
-                  ? t('pages.catalog.actions.unfavorite')
-                  : t('pages.catalog.actions.favorite')
-              }
+            <FavoriteButton
+              isFavorite={product.isFavorite}
               onClick={() => onFavorite?.(product.id)}
-            >
-              <span className={styles.heart}>
-                <HeartOutlined className={styles.heartOutline} />
-                <HeartFilled className={styles.heartFill} />
-              </span>
-            </IconButton>
+            />
           </div>
 
           {product.isBestseller ? (

@@ -1,5 +1,9 @@
 {
   "brand": "Crust",
+  "cartFeedback": {
+    "added": "Ավելացվել է զամբյուղում։",
+    "viewCart": "Դիտել զամբյուղը"
+  },
   "app": {
     "setupTitle": "Հացաբուլկեղենի նախագիծ — պատրաստ է"
   },
@@ -46,6 +50,14 @@
       "contact": "Կապ"
     },
     "cart": "Զամբյուղ",
+    "cartTitle": "Զամբյուղ",
+    "closeCart": "Փակել զամբյուղը",
+    "cartEmpty": "Ձեր զամբյուղը դատարկ է։",
+    "cartError": "Չհաջողվեց բեռնել զամբյուղը։",
+    "removeFromCart": "Հեռացնել զամբյուղից",
+    "cartQuantity": "Քանակ {{count}}",
+    "completeOrder": "Ավարտել պատվերը",
+    "browseCatalog": "Դիտել կատալոգը",
     "search": "Որոնել",
     "wishlist": "Ցանկ",
     "wishlistTitle": "Նախընտրելիներ",
@@ -157,8 +169,31 @@
       }
     },
     "productDetails": {
-      "title": "Ապրանք",
-      "description": "Ապրանքի մանրամասները կհայտնվեն այստեղ։"
+      "addToCart": "Ավելացնել զամբյուղ",
+      "selectionLabel": "Ընտրություն",
+      "quantityLabel": "Քանակ",
+      "ingredients": "Բաղադրիչներ",
+      "allergens": "Ալերգեններ",
+      "noneListed": "Նշված չէ։",
+      "empty": "Ապրանքը չի գտնվել։",
+      "gallery": {
+        "mainAlt": "{{name}}",
+        "thumbAlt": "{{name}} լուսանկար {{index}}"
+      },
+      "quantity": {
+        "decrease": "Նվազեցնել քանակը",
+        "increase": "Ավելացնել քանակը"
+      },
+      "variants": {
+        "single": "Մեկ հատ",
+        "box6": "6 հատանոց տուփ"
+      },
+      "errors": {
+        "load": "Չհաջողվեց բեռնել այս ապրանքը։"
+      },
+      "categoryCrumbs": {
+        "pastries": "Խմորեղեն"
+      }
     },
     "cart": {
       "title": "Զամբյուղ",

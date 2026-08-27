@@ -1,0 +1,27 @@
+.root {
+  align-items: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.viewCart {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.viewCart:hover,
+.viewCart:focus {
+  opacity: 0.85;
+}
+
+.viewCart:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

@@ -1,5 +1,9 @@
 {
   "brand": "Crust",
+  "cartFeedback": {
+    "added": "Added to cart.",
+    "viewCart": "View cart"
+  },
   "app": {
     "setupTitle": "Bakery project — setup ready"
   },
@@ -46,6 +50,14 @@
       "contact": "Contact"
     },
     "cart": "Cart",
+    "cartTitle": "Cart",
+    "closeCart": "Close cart",
+    "cartEmpty": "Your cart is empty.",
+    "cartError": "Could not load cart.",
+    "removeFromCart": "Remove from cart",
+    "cartQuantity": "Qty {{count}}",
+    "completeOrder": "Complete order",
+    "browseCatalog": "Browse catalog",
     "search": "Search",
     "wishlist": "Wishlist",
     "wishlistTitle": "Favorites",
@@ -157,8 +169,31 @@
       }
     },
     "productDetails": {
-      "title": "Product",
-      "description": "Product details will appear here."
+      "addToCart": "Add to Cart",
+      "selectionLabel": "Selection",
+      "quantityLabel": "Quantity",
+      "ingredients": "Ingredients",
+      "allergens": "Allergens",
+      "noneListed": "None listed.",
+      "empty": "Product not found.",
+      "gallery": {
+        "mainAlt": "{{name}}",
+        "thumbAlt": "{{name}} photo {{index}}"
+      },
+      "quantity": {
+        "decrease": "Decrease quantity",
+        "increase": "Increase quantity"
+      },
+      "variants": {
+        "single": "Single",
+        "box6": "Box of 6"
+      },
+      "errors": {
+        "load": "Could not load this product."
+      },
+      "categoryCrumbs": {
+        "pastries": "Pastries"
+      }
     },
     "cart": {
       "title": "Cart",

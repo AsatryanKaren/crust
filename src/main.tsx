@@ -8,7 +8,7 @@ import './style.css'
 import './ui/theme/fonts.css'
 import './ui/theme/spacing.css'
 import './ui/colors/colors.css'
-import { ConfigProvider } from 'antd'
+import { App as AntdApp, ConfigProvider } from 'antd'
 
 async function enableMocking() {
   if (!import.meta.env.DEV) {
@@ -32,12 +32,17 @@ void enableMocking().then(() => {
           token: {
             fontFamily: 'var(--font-family-base)',
             colorPrimary: 'var(--color-accent)',
+            colorLink: 'var(--color-accent)',
+            colorLinkHover: 'var(--color-accent)',
+            colorLinkActive: 'var(--color-primary-pressed)',
           },
         }}
       >
-        <QueryClientProvider client={queryClient}>
-          <App />
-        </QueryClientProvider>
+        <AntdApp>
+          <QueryClientProvider client={queryClient}>
+            <App />
+          </QueryClientProvider>
+        </AntdApp>
       </ConfigProvider>
     </StrictMode>,
   )

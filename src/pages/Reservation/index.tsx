@@ -1,7 +1,7 @@
 import { Controller, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { useMutation, useQuery } from '@tanstack/react-query'
-import { Button, Input, Radio, Select, message } from 'antd'
+import { App, Button, Input, Radio, Select } from 'antd'
 
 import overlayImage from '../../assets/images/Overlay.png'
 import iconImage from '../../assets/images/Icon.png'
@@ -17,6 +17,7 @@ import styles from './styles.module.css'
 
 export const Reservation: Props = () => {
   const { t } = useTranslation()
+  const { message } = App.useApp()
 
   const {
     handleSubmit,

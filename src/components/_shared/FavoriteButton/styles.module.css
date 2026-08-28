@@ -1,0 +1,76 @@
+.root {
+  color: var(--color-accent);
+}
+
+.badge {
+  background: var(--color-paper) !important;
+  box-shadow: 0 1px 4px var(--color-ink-border);
+}
+
+.badge:hover,
+.badge:focus {
+  color: var(--color-accent) !important;
+  background: var(--color-paper) !important;
+}
+
+.plain {
+  width: 40px !important;
+  min-width: 40px !important;
+  height: 40px !important;
+  color: var(--color-ink);
+  background: transparent !important;
+  box-shadow: none;
+}
+
+.plain:hover,
+.plain:focus {
+  color: var(--color-accent) !important;
+  background: transparent !important;
+}
+
+.active {
+  color: var(--color-accent);
+}
+
+.heart {
+  position: relative;
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  font-size: var(--font-size-body-b-m-semibold);
+  line-height: 0;
+}
+
+.heartOutline,
+.heartFill {
+  display: block;
+}
+
+.heartFill {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.root:hover .heartOutline,
+.root:focus .heartOutline,
+.active .heartOutline {
+  opacity: 0;
+}
+
+.root:hover .heartFill,
+.root:focus .heartFill,
+.active .heartFill {
+  opacity: 1;
+  color: var(--color-accent);
+}
+
+@media (hover: hover) {
+  .root:hover .heartOutline {
+    opacity: 0;
+  }
+
+  .root:hover .heartFill {
+    opacity: 1;
+  }
+}

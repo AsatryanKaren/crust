@@ -29,10 +29,6 @@ export const fetchProductById = async (id: string): Promise<Product> => {
   return data
 }
 
-export const addCartItem = async (productId: string): Promise<void> => {
-  await apiClient.post('/cart/items', { productId })
-}
-
 export const toggleProductFavorite = async (
   productId: string,
 ): Promise<ToggleFavoriteResponse> => {

@@ -28,6 +28,18 @@ const isProductsPage = (data: unknown): data is PaginatedResponse<Product> => {
   return Array.isArray(data.items)
 }
 
+const isProduct = (data: unknown): data is Product => {
+  if (typeof data !== 'object' || data === null) {
+    return false
+  }
+
+  if (!('id' in data) || !('name' in data) || !('imageUrl' in data)) {
+    return false
+  }
+
+  return typeof data.id === 'string'
+}
+
 const findProductInCache = (
   queryClient: QueryClient,
   productId: string,
@@ -44,13 +56,15 @@ const findProductInCache = (
   })
 
   for (const [, data] of productQueries) {
-    if (!isProductsPage(data)) {
-      continue
+    if (isProductsPage(data)) {
+      const found = data.items.find((item) => item.id === productId)
+      if (found) {
+        return found
+      }
     }
 
-    const found = data.items.find((item) => item.id === productId)
-    if (found) {
-      return found
+    if (isProduct(data) && data.id === productId) {
+      return data
     }
   }
 
@@ -65,16 +79,20 @@ const patchProductFavorite = (
   queryClient.setQueriesData(
     { queryKey: productsQueryRootKey },
     (data: unknown) => {
-      if (!isProductsPage(data)) {
-        return data
+      if (isProductsPage(data)) {
+        return {
+          ...data,
+          items: data.items.map((item) =>
+            item.id === productId ? { ...item, isFavorite } : item,
+          ),
+        }
       }
 
-      return {
-        ...data,
-        items: data.items.map((item) =>
-          item.id === productId ? { ...item, isFavorite } : item,
-        ),
+      if (isProduct(data) && data.id === productId) {
+        return { ...data, isFavorite }
       }
+
+      return data
     },
   )
 }

@@ -5,6 +5,7 @@ import type { PaginatedResponse } from '../types/pagination'
 import type { Product, ProductSort } from '../types/product'
 import { parseProductSort } from '../utils/parseProductSort'
 import { categories } from './data/categories'
+import { addToCart, getCartItems, removeFromCart } from './data/cart'
 import {
   getFavoriteProducts,
   toggleFavoriteId,
@@ -117,17 +118,61 @@ export const handlers: HttpHandler[] = [
     return HttpResponse.json(withFavoriteFlag(product))
   }),
 
+  http.get('/api/cart', () => {
+    return HttpResponse.json({ items: getCartItems() })
+  }),
+
   http.post('/api/cart/items', async ({ request }) => {
     const body = await request.json()
+    const isPayload =
+      typeof body === 'object' && body !== null && 'productId' in body
     const productId =
-      typeof body === 'object' &&
-      body !== null &&
-      'productId' in body &&
-      typeof body.productId === 'string'
-        ? body.productId
+      isPayload && typeof body.productId === 'string' ? body.productId : null
+    const variantId =
+      isPayload && 'variantId' in body && typeof body.variantId === 'string'
+        ? body.variantId
         : null
+    const quantity =
+      isPayload && 'quantity' in body && typeof body.quantity === 'number'
+        ? body.quantity
+        : 1
 
-    return HttpResponse.json({ ok: true, productId })
+    if (!productId || !variantId) {
+      return HttpResponse.json(
+        { message: 'Invalid cart payload' },
+        { status: 400 },
+      )
+    }
+
+    const item = addToCart({ productId, variantId, quantity })
+    if (!item) {
+      return HttpResponse.json(
+        { message: 'Product or variant not found' },
+        { status: 404 },
+      )
+    }
+
+    return HttpResponse.json(item)
+  }),
+
+  http.delete('/api/cart/items/:itemId', ({ params }) => {
+    const itemId = typeof params.itemId === 'string' ? params.itemId : undefined
+    if (!itemId) {
+      return HttpResponse.json(
+        { message: 'Cart item not found' },
+        { status: 404 },
+      )
+    }
+
+    const removed = removeFromCart(itemId)
+    if (!removed) {
+      return HttpResponse.json(
+        { message: 'Cart item not found' },
+        { status: 404 },
+      )
+    }
+
+    return new HttpResponse(null, { status: 204 })
   }),
 
   http.get('/api/favorites', () => {

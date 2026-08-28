@@ -1,5 +1,13 @@
 {
   "brand": "Crust",
+  "quantitySelector": {
+    "decrease": "Уменьшить количество",
+    "increase": "Увеличить количество"
+  },
+  "cartFeedback": {
+    "added": "Товар добавлен в корзину.",
+    "viewCart": "Перейти в корзину"
+  },
   "app": {
     "setupTitle": "Проект пекарни — готов к работе"
   },
@@ -46,6 +54,14 @@
       "contact": "Контакты"
     },
     "cart": "Корзина",
+    "cartTitle": "Корзина",
+    "closeCart": "Закрыть корзину",
+    "cartEmpty": "Ваша корзина пуста.",
+    "cartError": "Не удалось загрузить корзину.",
+    "removeFromCart": "Удалить из корзины",
+    "cartQuantity": "Кол-во {{count}}",
+    "completeOrder": "Оформить заказ",
+    "browseCatalog": "Перейти в каталог",
     "search": "Поиск",
     "wishlist": "Избранное",
     "wishlistTitle": "Избранное",
@@ -157,8 +173,24 @@
       }
     },
     "productDetails": {
-      "title": "Товар",
-      "description": "Здесь появятся детали товара."
+      "addToCart": "Добавить в корзину",
+      "selectionLabel": "Выбор",
+      "quantityLabel": "Количество",
+      "ingredients": "Ингредиенты",
+      "allergens": "Аллергены",
+      "noneListed": "Не указано.",
+      "empty": "Товар не найден.",
+      "gallery": {
+        "mainAlt": "{{name}}",
+        "thumbAlt": "{{name}} фото {{index}}"
+      },
+      "variants": {
+        "single": "Один",
+        "box6": "Коробка из 6"
+      },
+      "errors": {
+        "load": "Не удалось загрузить этот товар."
+      }
     },
     "cart": {
       "title": "Корзина",

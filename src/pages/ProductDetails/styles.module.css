@@ -1,3 +1,39 @@
-/* Page shell styles live on PageShell; keep module for structure. */
 .root {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-block: 24px 48px;
+  margin-inline: var(--layout-main-margin-x);
+  color: var(--color-ink);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.state {
+  display: flex;
+  justify-content: center;
+  padding-block: 48px;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .root {
+    gap: 16px;
+    padding-block: 16px 24px;
+  }
+
+  .layout {
+    gap: 16px;
+  }
 }

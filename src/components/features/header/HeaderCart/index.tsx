@@ -1,21 +1,27 @@
 import { ShoppingCartOutlined } from '@ant-design/icons'
-import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-import { paths } from '../../../../routes/paths'
 import type { Props } from './types'
 import styles from './styles.module.css'
 
-export const HeaderCart: Props = ({ count = 0 }) => {
+export const HeaderCart: Props = ({
+  count = 0,
+  open = false,
+  panelId,
+  onOpen,
+}) => {
   const { t } = useTranslation()
+  const cartLabel =
+    count > 0 ? `${t('header.cart')} (${count})` : t('header.cart')
 
   return (
-    <Link
+    <button
+      type="button"
       className={styles.root}
-      to={paths.cart}
-      aria-label={
-        count > 0 ? `${t('header.cart')} (${count})` : t('header.cart')
-      }
+      aria-label={cartLabel}
+      aria-expanded={open}
+      aria-controls={panelId}
+      onClick={onOpen}
     >
       <span className={styles.iconWrap}>
         <ShoppingCartOutlined aria-hidden />
@@ -25,6 +31,6 @@ export const HeaderCart: Props = ({ count = 0 }) => {
           </span>
         ) : null}
       </span>
-    </Link>
+    </button>
   )
 }

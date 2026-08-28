@@ -1,4 +1,4 @@
-import type { Product } from '../../types/product'
+import type { Product, ProductVariant } from '../../types/product'
 
 const description =
   'Here will be your Description, Here will be your Description, Here will be your Description'
@@ -45,30 +45,100 @@ const pastryNames = [
   'Blueberry Danish',
 ]
 
+const defaultIngredients = ['Wheat flour', 'Butter', 'Sugar', 'Eggs']
+const defaultAllergens = ['Gluten', 'Milk', 'Eggs']
+
+const makeSingleVariant = (price: number, unit: string): ProductVariant[] => [
+  {
+    id: 'single',
+    labelKey: 'pages.productDetails.variants.single',
+    price,
+    unit,
+  },
+]
+
+const withCatalogDetails = (
+  product: Omit<Product, 'images' | 'ingredients' | 'allergens' | 'variants'> &
+    Partial<Pick<Product, 'images' | 'ingredients' | 'allergens' | 'variants'>>,
+): Product => {
+  const imageUrl = product.imageUrl
+
+  return {
+    ...product,
+    images: product.images ?? [imageUrl],
+    ingredients: product.ingredients ?? defaultIngredients,
+    allergens: product.allergens ?? defaultAllergens,
+    variants:
+      product.variants ?? makeSingleVariant(product.price, product.unit),
+  }
+}
+
 const makePastry = (
   index: number,
   overrides: Partial<Product> = {},
 ): Product => {
   const n = index + 1
-  return {
+  const imageUrl = pastryImages[index % pastryImages.length] ?? pastryImages[0]
+  const price = 800 + (index % 7) * 100
+
+  return withCatalogDetails({
     id: `prod-pastry-${n}`,
     categoryId: 'cat-pastries',
     name: pastryNames[index] ?? `Pastry ${n}`,
     description,
-    price: 800 + (index % 7) * 100,
+    price,
     currency: 'AMD',
     unit: 'kg',
-    imageUrl: pastryImages[index % pastryImages.length] ?? pastryImages[0],
+    imageUrl,
     isBestseller: index % 4 === 0,
     status: index === 4 ? 'unavailable' : 'available',
     isFavorite: false,
     ...overrides,
-  }
+  })
 }
 
+const almondGallery = [
+  pastryImages[1] ?? pastryImages[0],
+  pastryImages[2] ?? pastryImages[0],
+  pastryImages[0],
+]
+
 export const products: Product[] = [
-  ...Array.from({ length: 24 }, (_, index) => makePastry(index)),
-  {
+  ...Array.from({ length: 24 }, (_, index) =>
+    index === 1
+      ? makePastry(index, {
+          description:
+            'Twice-baked with premium almond frangipane, topped with toasted flaked almonds and a light dusting of powdered sugar. A signature Crust classic.',
+          price: 1200,
+          unit: '120g',
+          images: almondGallery,
+          ingredients: [
+            'Wheat flour',
+            'Butter',
+            'Almond frangipane',
+            'Flaked almonds',
+            'Powdered sugar',
+            'Eggs',
+          ],
+          allergens: ['Gluten', 'Tree nuts', 'Milk', 'Eggs'],
+          variants: [
+            {
+              id: 'single',
+              labelKey: 'pages.productDetails.variants.single',
+              price: 1200,
+              unit: '120g',
+            },
+            {
+              id: 'box6',
+              labelKey: 'pages.productDetails.variants.box6',
+              price: 6600,
+              unit: '720g',
+            },
+          ],
+        })
+      : makePastry(index),
+  ),
+  withCatalogDetails({
     id: 'prod-bread-1',
     categoryId: 'cat-breads',
     name: 'Sourdough Baguette',
@@ -80,8 +150,8 @@ export const products: Product[] = [
     isBestseller: true,
     status: 'available',
     isFavorite: false,
-  },
-  {
+  }),
+  withCatalogDetails({
     id: 'prod-cake-1',
     categoryId: 'cat-cakes',
     name: 'Opera Cake',
@@ -93,8 +163,8 @@ export const products: Product[] = [
     isBestseller: true,
     status: 'available',
     isFavorite: false,
-  },
-  {
+  }),
+  withCatalogDetails({
     id: 'prod-sandwich-1',
     categoryId: 'cat-sandwiches',
     name: 'Ham & Butter',
@@ -106,8 +176,8 @@ export const products: Product[] = [
     isBestseller: false,
     status: 'available',
     isFavorite: false,
-  },
-  {
+  }),
+  withCatalogDetails({
     id: 'prod-drink-1',
     categoryId: 'cat-drinks',
     name: 'Flat White',
@@ -119,8 +189,8 @@ export const products: Product[] = [
     isBestseller: false,
     status: 'available',
     isFavorite: false,
-  },
-  {
+  }),
+  withCatalogDetails({
     id: 'prod-breakfast-1',
     categoryId: 'cat-breakfast',
     name: 'Morning Set',
@@ -128,12 +198,12 @@ export const products: Product[] = [
     price: 2500,
     currency: 'AMD',
     unit: 'set',
-    imageUrl: pastryImages[0] ?? pastryImages[0],
+    imageUrl: pastryImages[0],
     isBestseller: true,
     status: 'available',
     isFavorite: false,
-  },
-  {
+  }),
+  withCatalogDetails({
     id: 'prod-seasonal-1',
     categoryId: 'cat-seasonal',
     name: 'Harvest Loaf',
@@ -145,5 +215,5 @@ export const products: Product[] = [
     isBestseller: false,
     status: 'available',
     isFavorite: false,
-  },
+  }),
 ]

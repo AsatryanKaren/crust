@@ -3,7 +3,6 @@ import { HeaderActions } from '../../features/header/HeaderActions'
 import { HeaderNav } from '../../features/header/HeaderNav'
 import { LanguageSelect } from '../../features/header/LanguageSelect'
 import { MobileMenu } from '../../features/header/MobileMenu'
-import { HEADER_CART_COUNT_STUB } from '../../features/header/consts'
 import type { Props } from './types'
 import styles from './styles.module.css'
 
@@ -24,7 +23,7 @@ export const Header: Props = () => {
           <div className={styles.desktopLang}>
             <LanguageSelect />
           </div>
-          <HeaderActions cartCount={HEADER_CART_COUNT_STUB} />
+          <HeaderActions />
         </div>
       </div>
     </header>

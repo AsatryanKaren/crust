@@ -24,7 +24,10 @@
   min-width: 0;
 }
 
-.link {
+.link,
+.link:hover,
+.link:focus,
+.link:active {
   align-items: center;
   color: var(--color-ink);
   display: flex;
@@ -36,6 +39,11 @@
   padding-inline: 4px;
   text-decoration: none;
   width: 100%;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 .icon {
@@ -55,7 +63,10 @@
   white-space: nowrap;
 }
 
-.active {
+.active,
+.active:hover,
+.active:focus,
+.active:active {
   color: var(--color-accent);
 }
 

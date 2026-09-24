@@ -1,0 +1,166 @@
+.root {
+  margin-inline: var(--layout-main-margin-x);
+}
+
+.title {
+  margin: 0 0 48px;
+  color: var(--color-ink);
+  font-size: var(--font-size-heading-m);
+  font-weight: 400;
+  line-height: var(--line-height-heading-m);
+  letter-spacing: -0.016em;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+
+.mediaCell {
+  position: relative;
+  min-height: 360px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textCell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 360px;
+  overflow: hidden;
+  background-color: var(--color-bg-1);
+}
+
+.textBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.textContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 48px;
+}
+
+.panelTitle {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: var(--font-size-heading-xs);
+  font-weight: 700;
+  line-height: var(--line-height-heading-xs);
+}
+
+.body {
+  margin: 0;
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-body-b-m-semibold);
+  font-weight: 400;
+  line-height: var(--line-height-body-b-m-semibold);
+}
+
+.quote {
+  margin: 8px 0 0;
+  color: var(--color-ink);
+  font-size: var(--font-size-body-b-m-semibold);
+  font-weight: 700;
+  line-height: var(--line-height-body-b-m-semibold);
+}
+
+@media (max-width: 1100px) {
+  .textContent {
+    padding: 40px 32px;
+  }
+
+  .mediaCell,
+  .textCell {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 960px) {
+  .root {
+    padding-block: 64px;
+  }
+
+  .title {
+    margin-bottom: 32px;
+    font-size: var(--font-size-heading-s);
+    line-height: var(--line-height-heading-s);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Image → text → image → text so text panels are not stacked. */
+  .grid > :nth-child(1) {
+    order: 1;
+  }
+
+  .grid > :nth-child(2) {
+    order: 2;
+  }
+
+  .grid > :nth-child(3) {
+    order: 4;
+  }
+
+  .grid > :nth-child(4) {
+    order: 3;
+  }
+
+  .mediaCell,
+  .textCell {
+    min-height: 280px;
+  }
+
+  .textContent {
+    padding: 40px 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .root {
+    padding-block: 48px;
+  }
+
+  .title {
+    margin-bottom: 24px;
+  }
+
+  .mediaCell,
+  .textCell {
+    min-height: 240px;
+  }
+
+  .textContent {
+    padding: 32px 24px;
+    gap: 12px;
+  }
+
+  .body,
+  .quote {
+    font-size: var(--font-size-body-b-s-regular);
+    line-height: var(--line-height-body-b-s-regular);
+  }
+}

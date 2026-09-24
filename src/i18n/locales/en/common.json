@@ -42,6 +42,41 @@
     "reservation": "Reserve table",
     "imageAlt": "Bakery interior"
   },
+  "aboutStory": {
+    "title": "Our Story",
+    "panel1Title": "Artisanal Heritage & Modern Precision",
+    "panel1Body1": "For three generations, Crust has carried the quiet discipline of traditional French baking into every loaf that leaves our ovens.",
+    "panel1Body2": "We work with four essentials — flour, water, salt, and time — trusting slow craft over shortcuts, and letting the grain speak for itself.",
+    "quote": "Baking is not just a profession; it’s a rhythmic conversation between the grain, the weather, and the hands of the maker.",
+    "panel2Title": "Artisanal Heritage & Modern Precision",
+    "panel2Body1": "Each dough rests through a patient 48-hour fermentation, building depth of flavor and a crumb that feels alive.",
+    "panel2Body2": "From heritage starters to the final bake, we balance old-world ritual with the precision of a modern kitchen.",
+    "kneadingAlt": "Hands kneading dough on a floured surface",
+    "breadsAlt": "Assorted artisan breads and pastries on display"
+  },
+  "aboutPhilosophy": {
+    "title": "Our Philosophy",
+    "items": {
+      "organic": {
+        "title": "Organic Ingredients",
+        "description": "We source heirloom grains from sustainable farmers who care for the soil as carefully as we care for the bake."
+      },
+      "fermentation": {
+        "title": "Slow Fermentation",
+        "description": "Our 48-hour fermentation unlocks richer taste and a gentler loaf — flavor and nourishment, without haste."
+      },
+      "community": {
+        "title": "Community First",
+        "description": "Bread is meant to be shared. Crust is a gathering place where neighbors meet, celebrate, and break bread together."
+      }
+    }
+  },
+  "aboutCta": {
+    "titleLine1": "Interested?",
+    "titleLine2": "Try Our Flavors",
+    "orderNow": "Order Now",
+    "imageAlt": "Stack of cream-filled pastries"
+  },
   "header": {
     "mainNav": "Main navigation",
     "nav": {

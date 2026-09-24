@@ -72,7 +72,7 @@
 
 .body {
   margin: 0;
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   font-size: var(--font-size-body-b-m-semibold);
   font-weight: 400;
   line-height: var(--line-height-body-b-m-semibold);

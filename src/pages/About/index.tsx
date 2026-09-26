@@ -1,15 +1,15 @@
-import { PageShell } from '../../components/_shared/PageShell'
-
+import { AboutCtaSection } from './AboutCtaSection'
+import { OurPhilosophySection } from './OurPhilosophySection'
+import { OurStorySection } from './OurStorySection'
 import type { Props } from './types'
 import styles from './styles.module.css'
 
 export const About: Props = () => {
   return (
     <div className={styles.root}>
-      <PageShell
-        titleKey="pages.about.title"
-        descriptionKey="pages.about.description"
-      />
+      <OurStorySection />
+      <OurPhilosophySection />
+      <AboutCtaSection />
     </div>
   )
 }
